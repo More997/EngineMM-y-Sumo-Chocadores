@@ -1,0 +1,5 @@
+﻿  Actor.cpp
+c:\users\18\downloads\sumochocadores\enginemm\actor.cpp(21): warning C4838: la conversión de 'D3DCOLOR' en 'FLOAT' requiere una conversión de restricción
+c:\users\18\downloads\sumochocadores\enginemm\actor.cpp(21): warning C4305: 'inicializando': truncamiento de 'D3DCOLOR' a 'FLOAT'
+  EngineMM.vcxproj -> C:\Users\18\Downloads\SumoChocadores\Debug\EngineMM.dll
+  EngineMM.vcxproj -> C:\Users\18\Downloads\SumoChocadores\Debug\EngineMM.pdb (Full PDB)
