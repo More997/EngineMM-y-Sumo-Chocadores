@@ -4,9 +4,10 @@
 #pragma comment (lib, "d3d9.lib")
 #include <d3dx9.h> //Busca el header de directx en los path
 #pragma comment (lib, "d3dx9.lib") //Incluyo la lib a mi proyecto
+#include "Vertex.h"
+#include "Mesh.h"
 class IMPORTEXPORT Game
 {
-
 public:
 	LPDIRECT3DDEVICE9 dev;
 	Game();

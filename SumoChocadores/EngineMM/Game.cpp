@@ -2,12 +2,9 @@
 #include "Game.h"
 #include "Actor.h"
 
-#pragma comment (lib, "d3d9.lib") //Incluyo la lib a mi proyecto
+//#pragma comment (lib, "d3d9.lib") //Incluyo la lib a mi proyecto
 #define CUSTOMFVF (D3DFVF_XYZRHW | D3DFVF_DIFFUSE)
-struct Vertex {
-	FLOAT x, y, z, rhw;
-	DWORD color;
-};
+
 Game::Game()
 {
 }
@@ -124,7 +121,9 @@ void Game::Run(_In_     HINSTANCE hInstance, _In_     int       nCmdShow) {
 		D3DCREATE_HARDWARE_VERTEXPROCESSING, //Proceso de vertices por soft o hard
 		&d3dpp, //Los parametros de buffers
 		&dev); //El device que se crea
-	Actor * Obj = new Actor(dev);
+	Actor* Obj = new Actor();
+	Mesh* mesh = new Mesh(dev);
+	Obj->SetMesh(mesh);
 	/*Vertex vertexes[] = {
 		{0.0f,0.0f,0.0f,1.0f, D3DCOLOR_XRGB(255,0,0)},
 		{100.0f,0.0f,100.0f,1.0f, D3DCOLOR_XRGB(0,255,0)},
@@ -168,6 +167,8 @@ void Game::Run(_In_     HINSTANCE hInstance, _In_     int       nCmdShow) {
 
 	dev->Release();
 	d3d->Release();
+	delete Obj;
+	delete mesh;
 }
 
 /*

@@ -1,5 +1,41 @@
 ﻿  Actor.cpp
-c:\users\18\downloads\sumochocadores\enginemm\actor.cpp(21): warning C4838: la conversión de 'D3DCOLOR' en 'FLOAT' requiere una conversión de restricción
-c:\users\18\downloads\sumochocadores\enginemm\actor.cpp(21): warning C4305: 'inicializando': truncamiento de 'D3DCOLOR' a 'FLOAT'
-  EngineMM.vcxproj -> C:\Users\18\Downloads\SumoChocadores\Debug\EngineMM.dll
-  EngineMM.vcxproj -> C:\Users\18\Downloads\SumoChocadores\Debug\EngineMM.pdb (Full PDB)
+c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(5): warning C4005: 'CUSTOMFVF': redefinición de macro
+  c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(3): note: vea la definición anterior de 'CUSTOMFVF'
+c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(5): warning C4273: 'Actor::Actor': vinculación de DLL incoherente
+  c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(11): note: vea la definición anterior de '{ctor}'
+c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(9): warning C4273: 'Actor::Actor': vinculación de DLL incoherente
+  c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(12): note: vea la definición anterior de '{ctor}'
+c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(14): warning C4273: 'Actor::~Actor': vinculación de DLL incoherente
+  c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(13): note: vea la definición anterior de '{dtor}'
+c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(19): warning C4273: 'Actor::DrawV': vinculación de DLL incoherente
+  c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(14): note: vea la definición anterior de 'DrawV'
+c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(28): warning C4273: 'Actor::SetMesh': vinculación de DLL incoherente
+  c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(15): note: vea la definición anterior de 'SetMesh'
+c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(33): warning C4273: 'Actor::Move': vinculación de DLL incoherente
+  c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(16): note: vea la definición anterior de 'Move'
+c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(38): warning C4273: 'Actor::GetViewMatrix': vinculación de DLL incoherente
+  c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(17): note: vea la definición anterior de 'GetViewMatrix'
+c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(47): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(48): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(49): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(50): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(57): warning C4273: 'Actor::GetModelMatrix': vinculación de DLL incoherente
+  c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(18): note: vea la definición anterior de 'GetModelMatrix'
+c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(72): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(73): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(74): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(75): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+  Generando código...
+  Omitiendo... (no se detectaron cambios relevantes)
+  Game.cpp
+     Creando biblioteca C:\Users\822\Desktop\EngineMM\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\EngineMM.lib y objeto C:\Users\822\Desktop\EngineMM\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\EngineMM.exp
+Actor.obj : warning LNK4217: se import¾ el sÝmbolo ?GetVb@Mesh@@QAEPAUIDirect3DVertexBuffer9@@XZ (public: struct IDirect3DVertexBuffer9 * __thiscall Mesh::GetVb(void)) definido localmente en la funci¾n "public: void __thiscall Actor::DrawV(struct IDirect3DDevice9 *)" (?DrawV@Actor@@QAEXPAUIDirect3DDevice9@@@Z)
+Actor.obj : warning LNK4217: se import¾ el sÝmbolo ?GetInd@Mesh@@QAEPAUIDirect3DIndexBuffer9@@XZ (public: struct IDirect3DIndexBuffer9 * __thiscall Mesh::GetInd(void)) definido localmente en la funci¾n "public: void __thiscall Actor::DrawV(struct IDirect3DDevice9 *)" (?DrawV@Actor@@QAEXPAUIDirect3DDevice9@@@Z)
+Game.obj : warning LNK4217: se import¾ el sÝmbolo ??0Mesh@@QAE@PAUIDirect3DDevice9@@@Z (public: __thiscall Mesh::Mesh(struct IDirect3DDevice9 *)) definido localmente en la funci¾n "public: void __thiscall Game::Run(struct HINSTANCE__ *,int)" (?Run@Game@@QAEXPAUHINSTANCE__@@H@Z)
+Game.obj : warning LNK4217: se import¾ el sÝmbolo ??1Mesh@@QAE@XZ (public: __thiscall Mesh::~Mesh(void)) definido localmente en la funci¾n "public: void * __thiscall Mesh::`scalar deleting destructor'(unsigned int)" (??_GMesh@@QAEPAXI@Z)
+Game.obj : warning LNK4217: se import¾ el sÝmbolo ??0Actor@@QAE@XZ (public: __thiscall Actor::Actor(void)) definido localmente en la funci¾n "public: void __thiscall Game::Run(struct HINSTANCE__ *,int)" (?Run@Game@@QAEXPAUHINSTANCE__@@H@Z)
+Game.obj : warning LNK4217: se import¾ el sÝmbolo ??1Actor@@QAE@XZ (public: __thiscall Actor::~Actor(void)) definido localmente en la funci¾n "public: void * __thiscall Actor::`scalar deleting destructor'(unsigned int)" (??_GActor@@QAEPAXI@Z)
+Game.obj : warning LNK4217: se import¾ el sÝmbolo ?DrawV@Actor@@QAEXPAUIDirect3DDevice9@@@Z (public: void __thiscall Actor::DrawV(struct IDirect3DDevice9 *)) definido localmente en la funci¾n "public: void __thiscall Game::Run(struct HINSTANCE__ *,int)" (?Run@Game@@QAEXPAUHINSTANCE__@@H@Z)
+Game.obj : warning LNK4217: se import¾ el sÝmbolo ?SetMesh@Actor@@QAEXPAVMesh@@@Z (public: void __thiscall Actor::SetMesh(class Mesh *)) definido localmente en la funci¾n "public: void __thiscall Game::Run(struct HINSTANCE__ *,int)" (?Run@Game@@QAEXPAUHINSTANCE__@@H@Z)
+  EngineMM.vcxproj -> C:\Users\822\Desktop\EngineMM\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\EngineMM.dll
+  EngineMM.vcxproj -> C:\Users\822\Desktop\EngineMM\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\EngineMM.pdb (Full PDB)
