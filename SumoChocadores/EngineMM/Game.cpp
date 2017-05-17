@@ -5,6 +5,24 @@
 //#pragma comment (lib, "d3d9.lib") //Incluyo la lib a mi proyecto
 #define CUSTOMFVF (D3DFVF_XYZRHW | D3DFVF_DIFFUSE)
 
+D3DXMATRIX GetViewMatrix(D3DXVECTOR3 pos, D3DXVECTOR3 rot)
+{
+	D3DXMATRIX transMat;
+	D3DXMatrixIdentity(&transMat);
+	transMat._41 = -pos.x;
+	transMat._42 = -pos.y;
+	transMat._43 = -pos.z;
+
+	D3DXMATRIX rotZMat;
+	D3DXMatrixIdentity(&rotZMat);
+	rotZMat._11 = cos(-rot.z);
+	rotZMat._12 = sin(-rot.z);
+	rotZMat._21 = -sin(-rot.z);
+	rotZMat._22 = cos(-rot.z);
+
+	return transMat * rotZMat;
+};
+
 Game::Game()
 {
 }
@@ -13,6 +31,7 @@ Game::Game()
 Game::~Game()
 {
 }
+
 
 /*void Game::Draw()
 {
@@ -124,6 +143,7 @@ void Game::Run(_In_     HINSTANCE hInstance, _In_     int       nCmdShow) {
 	Actor* Obj = new Actor();
 	Mesh* mesh = new Mesh(dev);
 	Obj->SetMesh(mesh);
+	Obj->Move(dev);
 	/*Vertex vertexes[] = {
 		{0.0f,0.0f,0.0f,1.0f, D3DCOLOR_XRGB(255,0,0)},
 		{100.0f,0.0f,100.0f,1.0f, D3DCOLOR_XRGB(0,255,0)},
@@ -150,13 +170,29 @@ void Game::Run(_In_     HINSTANCE hInstance, _In_     int       nCmdShow) {
 		{
 			break;
 		}
+		//Camara
+		D3DXMATRIX view = GetViewMatrix(
+			D3DXVECTOR3(0, 0, 0),
+			D3DXVECTOR3(0, 0, 0));
+		D3DXMATRIX projection;
+		D3DXMatrixPerspectiveFovLH(
+			&projection,
+			D3DXToRadian(60),
+			(float)640 / 480, //ancho der la pantalla dividido por el alto
+			0.0f, //Distancia minima de vision
+			50); //Distancia maxima de vision
 
+		dev->SetTransform(D3DTS_VIEW, &view);
+		dev->SetTransform(D3DTS_PROJECTION, &projection);
+
+		dev->Clear(0, NULL, D3DCLEAR_TARGET, /*D3DCOLOR_XRGB(255, 0, 0)*/ D3DCOLOR_ARGB(0, 100, 0, 100), 1.0f, 0);
+		dev->BeginScene();
 		//Actualizar (Ventana)
 		dev->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_ARGB(0, 0, 102, 0), 1.0f, 0);
 		dev->BeginScene();
 		 
 		//TODO: Dibujar objetos
-		Obj->DrawV(dev);
+		Obj->Move(dev);
 
 		dev->EndScene();
 		dev->Present(NULL, NULL, NULL, NULL);
