@@ -1,0 +1,1 @@
+Borrar datos repetidos, añadir como atributos a los vertices en Actor y Camara.

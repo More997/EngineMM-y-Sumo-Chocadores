@@ -6,6 +6,7 @@
 #pragma comment (lib, "d3dx9.lib") //Incluyo la lib a mi proyecto
 #include "Vertex.h"
 #include "Mesh.h"
+#include "Camera.h"
 class IMPORTEXPORT Game
 {
 public:
@@ -14,4 +15,5 @@ public:
 	~Game();
 	//void Draw();
 	void Run(_In_     HINSTANCE hInstance, _In_     int       nCmdShow);
+	//virtual void setMeshes() = 0;
 };

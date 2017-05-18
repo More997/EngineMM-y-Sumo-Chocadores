@@ -1,8 +1,11 @@
-﻿  Personaje.cpp
-c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\juego\personaje.cpp(86): fatal error C1010: final de archivo inesperado al buscar la directiva de encabezado precompilado. Compruebe si olvidó agregar '#include "stdafx.h"' al código fuente?
+﻿  Juego.cpp
+c:\users\18\desktop\engine mm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(5): warning C4005: 'CUSTOMFVF': redefinición de macro
+  c:\users\18\desktop\engine mm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(3): note: vea la definición anterior de 'CUSTOMFVF'
   Generando código...
   Compilando...
-  Juego.cpp
-c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(5): warning C4005: 'CUSTOMFVF': redefinición de macro
-  c:\users\822\desktop\enginemm\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(3): note: vea la definición anterior de 'CUSTOMFVF'
+  SumosChocadores.cpp
   Generando código...
+  Omitiendo... (no se detectaron cambios relevantes)
+  Personaje.cpp
+  Juego.vcxproj -> C:\Users\18\Desktop\Engine MM\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.exe
+  Juego.vcxproj -> C:\Users\18\Desktop\Engine MM\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.pdb (Full PDB)

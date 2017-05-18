@@ -152,7 +152,7 @@ void Game::Run(_In_     HINSTANCE hInstance, _In_     int       nCmdShow) {
 	};
 	WORD indexes[] = {0,3,2,0,1,3};*/
 	
-
+	//setMeshes();
 
 	while (true)
 	{
@@ -170,23 +170,22 @@ void Game::Run(_In_     HINSTANCE hInstance, _In_     int       nCmdShow) {
 		{
 			break;
 		}
-		//Camara
-		D3DXMATRIX view = GetViewMatrix(
-			D3DXVECTOR3(0, 0, 0),
-			D3DXVECTOR3(0, 0, 0));
-		D3DXMATRIX projection;
-		D3DXMatrixPerspectiveFovLH(
-			&projection,
-			D3DXToRadian(60),
-			(float)640 / 480, //ancho der la pantalla dividido por el alto
-			0.0f, //Distancia minima de vision
-			50); //Distancia maxima de vision
-
-		dev->SetTransform(D3DTS_VIEW, &view);
-		dev->SetTransform(D3DTS_PROJECTION, &projection);
-
-		dev->Clear(0, NULL, D3DCLEAR_TARGET, /*D3DCOLOR_XRGB(255, 0, 0)*/ D3DCOLOR_ARGB(0, 100, 0, 100), 1.0f, 0);
-		dev->BeginScene();
+		Camera* cam = new Camera();
+		float CamPosZ = 0;
+		float CamRotX = 0;
+		D3DXMATRIX _transl;
+		D3DXMatrixIdentity(&_transl);
+		_transl._41 = 0;	//Esto mueve en X (columna 4, fila 1)
+		_transl._42 = 0;	//Esto mueve en Y (columna 4, fila 2)
+		_transl._43 = CamPosZ;	//Esto mueve en Z (columna 4, fila 3)
+		
+		D3DXMATRIX _rotation;
+		D3DXMatrixIdentity(&_rotation);
+		_rotation._11 = cos(D3DXToRadian(CamRotX));
+		_rotation._12 = sin(D3DXToRadian(CamRotX));
+		_rotation._21 = -sin(D3DXToRadian(CamRotX));
+		_rotation._22 = cos(D3DXToRadian(CamRotX));
+		cam->createCamera(dev, _transl, _rotation);
 		//Actualizar (Ventana)
 		dev->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_ARGB(0, 0, 102, 0), 1.0f, 0);
 		dev->BeginScene();
