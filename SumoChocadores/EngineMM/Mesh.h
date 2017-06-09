@@ -1,6 +1,6 @@
 #pragma once
 #include "Vertex.h"
-#define CUSTOMFVF (D3DFVF_XYZ| D3DFVF_DIFFUSE)
+#include "FVF.h"
 class IMPORTEXPORT Mesh
 {
 	LPDIRECT3DVERTEXBUFFER9 vb;

@@ -2,17 +2,23 @@
 #include "Game.h"
 #include "Vertex.h"
 #include "Mesh.h"
-#define CUSTOMFVF (D3DFVF_XYZRHW | D3DFVF_DIFFUSE)
-
+#include "FVF.h"
 class IMPORTEXPORT Actor
 {
 	Mesh* mesh2;
+	D3DXMATRIX matFinal;
+	D3DXMATRIX trasl;
+	D3DXMATRIX scale;
+	D3DXMATRIX rotation;
 public:
 	Actor();
+	void setModelPos(float transx, float transy, float transz);
+	void setModelScale(float scaleX, float scaleY, float scaleZ);
+	void defTransMat();
+	void setModelRot(float rotZ);
 	Actor(LPDIRECT3DDEVICE9 dev);
 	~Actor();
-	void DrawV(LPDIRECT3DDEVICE9 dev, D3DXMATRIX _trasl, D3DXMATRIX _scale,D3DXMATRIX _rotation);
+	void DrawV(LPDIRECT3DDEVICE9 dev);
 	void SetMesh(Mesh* mesh);
-	void Move(LPDIRECT3DDEVICE9 dev);
 };
 
