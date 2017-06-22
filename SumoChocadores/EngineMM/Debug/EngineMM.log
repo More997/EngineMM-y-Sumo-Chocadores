@@ -1,17 +1,21 @@
 ﻿  Game.cpp
-c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(9): warning C4251: 'Actor::matFinal': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(10): warning C4251: 'Actor::trasl': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(11): warning C4251: 'Actor::scale': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(12): warning C4251: 'Actor::rotation': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\game.cpp(8): warning C4273: 'Game::Game': vinculación de DLL incoherente
-  c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\game.h(14): note: vea la definición anterior de '{ctor}'
-c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\game.cpp(13): warning C4273: 'Game::~Game': vinculación de DLL incoherente
-  c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\game.h(15): note: vea la definición anterior de '{dtor}'
-c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\game.cpp(19): warning C4273: 'Game::Run': vinculación de DLL incoherente
-  c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\game.h(17): note: vea la definición anterior de 'Run'
-  EngineMM.vcxproj -> C:\Users\822\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\EngineMM.dll
-  EngineMM.vcxproj -> C:\Users\822\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\EngineMM.pdb (Full PDB)
+c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(9): warning C4251: 'Actor::matFinal': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
+  c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(10): warning C4251: 'Actor::trasl': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
+  c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(11): warning C4251: 'Actor::scale': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
+  c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(12): warning C4251: 'Actor::rotation': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
+  c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\game.cpp(16): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\game.cpp(17): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\game.cpp(18): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\game.cpp(19): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\game.cpp(24): warning C4273: 'Game::Game': vinculación de DLL incoherente
+  c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\game.h(14): note: vea la definición anterior de '{ctor}'
+c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\game.cpp(29): warning C4273: 'Game::~Game': vinculación de DLL incoherente
+  c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\game.h(15): note: vea la definición anterior de '{dtor}'
+c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\game.cpp(35): warning C4273: 'Game::Run': vinculación de DLL incoherente
+  c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\game.h(17): note: vea la definición anterior de 'Run'
+  EngineMM.vcxproj -> C:\Users\51\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\EngineMM.dll
+  EngineMM.vcxproj -> C:\Users\51\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\EngineMM.pdb (Full PDB)

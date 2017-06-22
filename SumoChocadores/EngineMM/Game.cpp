@@ -3,7 +3,23 @@
 #include "Actor.h"
 
 //#pragma comment (lib, "d3d9.lib") //Incluyo la lib a mi proyecto
+D3DXMATRIX GetViewMatrix(D3DXVECTOR3 pos, D3DXVECTOR3 rot)
+{
+	D3DXMATRIX transMat;
+	D3DXMatrixIdentity(&transMat);
+	transMat._41 = -pos.x;
+	transMat._42 = -pos.y;
+	transMat._43 = -pos.z;
 
+	D3DXMATRIX rotZMat;
+	D3DXMatrixIdentity(&rotZMat);
+	rotZMat._11 = cos(-rot.z);
+	rotZMat._12 = sin(-rot.z);
+	rotZMat._21 = -sin(-rot.z);
+	rotZMat._22 = cos(-rot.z);
+
+	return transMat * rotZMat;
+};
 Game::Game()
 {
 }
@@ -71,9 +87,15 @@ void Game::Run(_In_     HINSTANCE hInstance, _In_     int       nCmdShow) {
 		D3DCREATE_HARDWARE_VERTEXPROCESSING, //Proceso de vertices por soft o hard
 		&d3dpp, //Los parametros de buffers
 		&dev); //El device que se crea
-	Mesh* mesh = new Mesh(dev);
+
+	dev->SetRenderState(D3DRS_LIGHTING, false);
+
+ 	Mesh* mesh = new Mesh(dev);
 	Actor* Obj = new Actor();
-		Obj->SetMesh(mesh);
+	Actor* Obj1 = new Actor();
+	Obj->SetMesh(mesh);
+	Obj1->SetMesh(mesh);
+	float num = 7.0f;
 
 	while (true)
 	{
@@ -81,6 +103,19 @@ void Game::Run(_In_     HINSTANCE hInstance, _In_     int       nCmdShow) {
 
 		//Saco un mensaje de la cola de mensajes si es que hay
 		//sino continuo
+		D3DXMATRIX view = GetViewMatrix(
+			D3DXVECTOR3(0, 0, 0),
+			D3DXVECTOR3(0, 0, 0));
+		D3DXMATRIX projection;
+		D3DXMatrixPerspectiveFovLH(
+			&projection,
+			D3DXToRadian(60),
+			(float)640 / 480, //ancho der la pantalla dividido por el alto
+			0.0f, //Distancia minima de vision
+			50); //Distancia maxima de vision
+
+		dev->SetTransform(D3DTS_VIEW, &view);
+		dev->SetTransform(D3DTS_PROJECTION, &projection);
 		while (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
 		{
 			TranslateMessage(&msg);
@@ -99,8 +134,12 @@ void Game::Run(_In_     HINSTANCE hInstance, _In_     int       nCmdShow) {
 		dev->BeginScene();
 		 
 		//TODO: Dibujar objetos
-		Obj->setModelPos(1.0f, 0.0f, 5);
+		Obj->setModelPos(-0.5f, -0.25f,5.0f);
 		Obj->DrawV(dev);
+		Obj1->setModelPos(0.5, -0.25f, num);
+		Obj1->setModelRot(num);
+		num -= 0.005f;
+		Obj1->DrawV(dev);
 
 		dev->EndScene();
 		dev->Present(NULL, NULL, NULL, NULL);
@@ -112,6 +151,7 @@ void Game::Run(_In_     HINSTANCE hInstance, _In_     int       nCmdShow) {
 	dev->Release();
 	d3d->Release();
 	delete Obj;
+	delete Obj1;
 	delete mesh;
 }
 

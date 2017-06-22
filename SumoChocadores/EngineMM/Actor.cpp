@@ -23,11 +23,11 @@ void Actor::setModelRot(float rotZ)
 }
 void Actor::defTransMat()
 {
-	D3DXMatrixIdentity(&matFinal);
-	D3DXMatrixMultiply(&matFinal, &trasl, &matFinal);
-	D3DXMatrixMultiply(&matFinal, &rotation, &matFinal);
+	/*D3DXMatrixIdentity(&matFinal);
 	D3DXMatrixMultiply(&matFinal, &scale, &matFinal);
-	//matFinal = scale * rotation * trasl;
+	D3DXMatrixMultiply(&matFinal, &rotation, &matFinal);
+	D3DXMatrixMultiply(&matFinal, &trasl, &matFinal);*/
+	matFinal = scale * rotation * trasl;
 }
 
 Actor::Actor(LPDIRECT3DDEVICE9 dev)

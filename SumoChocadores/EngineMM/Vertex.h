@@ -1,6 +1,6 @@
 #pragma once
 #include "Game.h"
 struct Vertex {
-	FLOAT x, y, z, rhw;
+	FLOAT x, y, z;
 	DWORD color;
 };

@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Camera.h"
 
-D3DXMATRIX GetViewMatrix(D3DXVECTOR3 pos, D3DXVECTOR3 rot)
+/*D3DXMATRIX GetViewMatrix(D3DXVECTOR3 pos, D3DXVECTOR3 rot)
 {
 	D3DXMATRIX transMat;
 	D3DXMatrixIdentity(&transMat);
@@ -17,7 +17,7 @@ D3DXMATRIX GetViewMatrix(D3DXVECTOR3 pos, D3DXVECTOR3 rot)
 	rotZMat._22 = cos(-rot.z);
 
 	return transMat * rotZMat;
-};
+};*/
 Camera::Camera()
 {
 }
@@ -30,7 +30,7 @@ Camera::~Camera()
 void Camera::createCamera(LPDIRECT3DDEVICE9 dev, D3DXMATRIX _trasl,	D3DXMATRIX _rotation)
 {
 	//Camara
-	D3DXMATRIX view = GetViewMatrix(
+	/*D3DXMATRIX view = GetViewMatrix(
 		D3DXVECTOR3(0, 0, 0),
 		D3DXVECTOR3(0, 0, 0));
 	D3DXMATRIX projection;
@@ -44,6 +44,7 @@ void Camera::createCamera(LPDIRECT3DDEVICE9 dev, D3DXMATRIX _trasl,	D3DXMATRIX _
 	dev->SetTransform(D3DTS_VIEW, &view);
 	dev->SetTransform(D3DTS_PROJECTION, &projection);
 
-	dev->Clear(0, NULL, D3DCLEAR_TARGET, /*D3DCOLOR_XRGB(255, 0, 0)*/ D3DCOLOR_ARGB(0, 100, 0, 100), 1.0f, 0);
-	dev->BeginScene();
+	dev->Clear(0, NULL, D3DCLEAR_TARGET, /*D3DCOLOR_XRGB(255, 0, 0);
+	D3DCOLOR_ARGB(0, 100, 0, 100), 1.0f, 0);
+	dev->BeginScene();*/
 }

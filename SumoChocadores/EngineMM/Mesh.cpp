@@ -5,10 +5,10 @@
 Mesh::Mesh(LPDIRECT3DDEVICE9 dev)
 {
 	Vertex vertexes[] = {
-		{ 0.0f,0.0f,0.0f,1.0f, D3DCOLOR_XRGB(255,0,0) },
-		{ 100.0f,0.0f,0.0f,1.0f, D3DCOLOR_XRGB(0,255,0) },
-		{ 0.0f,100.0f,0.0f,1.0f, D3DCOLOR_XRGB(0,0,255) },
-		{ 100.0f,100.0f,0.0f,1.0f, D3DCOLOR_XRGB(255,255,0) }
+		{ -0.5f,0.5f,-0.5f, D3DCOLOR_XRGB(255,0,0) },
+		{ 0.5f,0.5f,-0.5f, D3DCOLOR_XRGB(0,255,0) },
+		{ -0.5f,-0.5f,-0.5f, D3DCOLOR_XRGB(0,0,255) },
+		{ 0.5f,-0.5f,-0.5f, D3DCOLOR_XRGB(255,255,0) }
 	};
 	WORD indexes[] = { 0,3,2,0,1,3 };
 	//dev->DrawIndexedPrimitive(D3DPT_TRIANGLELIST, 0, 0, 4, 0, 2);
@@ -35,7 +35,6 @@ Mesh::Mesh(LPDIRECT3DDEVICE9 dev)
 	ind->Lock(0, 0, &data, 0);
 	memcpy(data, indexes, 6 * sizeof(WORD));
 	ind->Unlock();
-	//dev->SetRenderState(D3DRS_LIGHTING, false);
 
 }
 
