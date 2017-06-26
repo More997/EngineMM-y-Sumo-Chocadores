@@ -3,7 +3,7 @@
 #include "Actor.h"
 
 //#pragma comment (lib, "d3d9.lib") //Incluyo la lib a mi proyecto
-D3DXMATRIX GetViewMatrix(D3DXVECTOR3 pos, D3DXVECTOR3 rot)
+/*D3DXMATRIX GetViewMatrix(D3DXVECTOR3 pos, D3DXVECTOR3 rot)
 {
 	D3DXMATRIX transMat;
 	D3DXMatrixIdentity(&transMat);
@@ -19,7 +19,7 @@ D3DXMATRIX GetViewMatrix(D3DXVECTOR3 pos, D3DXVECTOR3 rot)
 	rotZMat._22 = cos(-rot.z);
 
 	return transMat * rotZMat;
-};
+};*/
 Game::Game()
 {
 }
@@ -81,7 +81,7 @@ void Game::Run(_In_     HINSTANCE hInstance, _In_     int       nCmdShow) {
 
 	//Creo la interfaz con la placa de video
 	//LPDIRECT3DDEVICE9 dev;
-	HRESULT res =  d3d->CreateDevice(D3DADAPTER_DEFAULT, //Cual placa de vido
+	HRESULT res = d3d->CreateDevice(D3DADAPTER_DEFAULT, //Cual placa de vido
 		D3DDEVTYPE_HAL, //Soft o hard
 		hWnd, //Ventana
 		D3DCREATE_HARDWARE_VERTEXPROCESSING, //Proceso de vertices por soft o hard
@@ -90,32 +90,29 @@ void Game::Run(_In_     HINSTANCE hInstance, _In_     int       nCmdShow) {
 
 	dev->SetRenderState(D3DRS_LIGHTING, false);
 
- 	Mesh* mesh = new Mesh(dev);
+	Mesh* mesh = new Mesh(dev);
 	Actor* Obj = new Actor();
 	Actor* Obj1 = new Actor();
+	Actor* Obj3 = new Actor();
+	Actor* Per = new Actor(); //perseguido
+	Actor* Cap = new Actor(); //Captura!
+	Camera* Cam = new Camera();
 	Obj->SetMesh(mesh);
 	Obj1->SetMesh(mesh);
+	Obj3->SetMesh(mesh);
+	Per->SetMesh(mesh);
+	Cap->SetMesh(mesh);
+	Per->setModelPos(2, 1, 5);
+	Cap->setModelPos(-2, 2, 5);	
+	Obj3->setModelPos(0.5f, -0.25f, 5);
 	float num = 7.0f;
-
+	float num2 = -5.0f;
 	while (true)
 	{
 		MSG msg;
 
 		//Saco un mensaje de la cola de mensajes si es que hay
 		//sino continuo
-		D3DXMATRIX view = GetViewMatrix(
-			D3DXVECTOR3(0, 0, 0),
-			D3DXVECTOR3(0, 0, 0));
-		D3DXMATRIX projection;
-		D3DXMatrixPerspectiveFovLH(
-			&projection,
-			D3DXToRadian(60),
-			(float)640 / 480, //ancho der la pantalla dividido por el alto
-			0.0f, //Distancia minima de vision
-			50); //Distancia maxima de vision
-
-		dev->SetTransform(D3DTS_VIEW, &view);
-		dev->SetTransform(D3DTS_PROJECTION, &projection);
 		while (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
 		{
 			TranslateMessage(&msg);
@@ -132,15 +129,32 @@ void Game::Run(_In_     HINSTANCE hInstance, _In_     int       nCmdShow) {
 		//Actualizar (Ventana)
 		dev->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_ARGB(0, 0, 102, 0), 1.0f, 0);
 		dev->BeginScene();
-		 
+		Cam->update(dev);
+
 		//TODO: Dibujar objetos
-		Obj->setModelPos(-0.5f, -0.25f,5.0f);
-		Obj->DrawV(dev);
+		D3DXVECTOR3 diff = Per->getVector() - Cap->getVector();
+		float distance = D3DXVec3Length(&diff);
+		D3DXVECTOR3 dir = diff / distance;
+		D3DXVECTOR3 pos = Cap->getVector();
+	//	if (pos.x >= ((Per->getVector()).x + 1.5)&& pos.y >= ((Per->getVector()).y + 1.5) && pos.x >= ((Per->getVector()).x + 1.5)){
+			Cap->setVector(pos + (dir*0.1f));
+	//	}
+			diff = Obj->getVector() - Obj3->getVector();
+			distance = D3DXVec3Length(&diff);
+		    dir = diff / distance;
+			pos = Obj3->getVector();
+			Obj3->setVector(pos - (dir*0.001f));
+
+		Per->DrawV(dev);
+		Cap->DrawV(dev);
+		Obj->setModelPos(num2, -0.25f,5);
 		Obj1->setModelPos(0.5, -0.25f, num);
 		Obj1->setModelRot(num);
-		num -= 0.005f;
+		num += 0.005f;
+		num2 += 0.005f;
+		Obj->DrawV(dev);
 		Obj1->DrawV(dev);
-
+		Obj3->DrawV(dev);
 		dev->EndScene();
 		dev->Present(NULL, NULL, NULL, NULL);
 
@@ -152,7 +166,11 @@ void Game::Run(_In_     HINSTANCE hInstance, _In_     int       nCmdShow) {
 	d3d->Release();
 	delete Obj;
 	delete Obj1;
+	delete Obj3;
+	delete Per;
+	delete Cap;
 	delete mesh;
+	delete Cam;
 }
 
 /*

@@ -1,15 +1,19 @@
 #include "stdafx.h"
 #include "Actor.h"
 
-Actor::Actor()
+Actor::Actor() :vector (0,0,0)
 {
 	D3DXMatrixIdentity(&scale);
 	D3DXMatrixIdentity(&trasl);
 	D3DXMatrixIdentity(&rotation);
+	defTransMat();
 }
 
 void Actor::setModelPos(float transX, float transY, float transZ)
 {
+	vector.x = transX;
+	vector.y = transY;
+	vector.z = transZ;
 	D3DXMatrixTranslation(&trasl, transX, transY, transZ);
 }
 
@@ -20,6 +24,14 @@ void Actor::setModelScale(float scaleX, float scaleY, float scaleZ)
 void Actor::setModelRot(float rotZ)
 {
 	D3DXMatrixRotationZ(&rotation, rotZ);
+}
+D3DXVECTOR3 Actor::getVector()
+{
+	return vector; //ACA TAAAA
+}
+void Actor::setVector(D3DXVECTOR3 _vector)
+{
+	setModelPos(_vector.x, _vector.y, _vector.z);
 }
 void Actor::defTransMat()
 {
