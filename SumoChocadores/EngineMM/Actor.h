@@ -22,7 +22,7 @@ public:
 	void setModelRotZ(float rotZ);
 	void setModelRotY(float rotY);
 	void setModelRotX(float rotX);
-		D3DXVECTOR3 getVector(); //Donde ta Vector???
+	D3DXVECTOR3 getVector(); //Donde ta Vector???
 	void setVector(D3DXVECTOR3 _vector); //ponemos al vector aca.
 	Actor(LPDIRECT3DDEVICE9 dev);
 	~Actor();

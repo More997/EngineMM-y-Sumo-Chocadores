@@ -1,2 +1,32 @@
-﻿  Juego.vcxproj -> C:\Users\51\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.exe
+﻿  stdafx.cpp
+  SumosChocadores.cpp
+  c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  Ring.cpp
+  Personaje.cpp
+  c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(11): warning C4251: 'Actor::matFinal': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
+  c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(12): warning C4251: 'Actor::trasl': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
+  c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(13): warning C4251: 'Actor::scale': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
+  c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(14): warning C4251: 'Actor::rotation': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
+  c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(15): warning C4251: 'Actor::vector': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
+  c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+  Juego.cpp
+  c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(11): warning C4251: 'Actor::matFinal': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
+  c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(12): warning C4251: 'Actor::trasl': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
+  c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(13): warning C4251: 'Actor::scale': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
+  c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(14): warning C4251: 'Actor::rotation': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
+  c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(15): warning C4251: 'Actor::vector': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
+  c:\users\51\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+  Items.cpp
+  Generando código...
+  Juego.vcxproj -> C:\Users\51\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.exe
   Juego.vcxproj -> C:\Users\51\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.pdb (Full PDB)

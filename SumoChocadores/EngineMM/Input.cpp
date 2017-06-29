@@ -36,36 +36,32 @@ map<string, vector<int>>& Input::GetMap()
 	return inputMap;
 }
 
-bool Input::GetKeyDown(vector<int>* myVectorInt)
+bool Input::GetKeyDown(vector<int>* vectorinput)
 {
 	keyDev->GetDeviceState(sizeof(keys), &keys);
-	for (int i = 0; i < myVectorInt->size(); i++) 
+	for (int i = 0; i < vectorinput->size(); i++) 
 	{
-		int key = myVectorInt->at(i);
+		int key = vectorinput->at(i);
 		if (keys[key])
 		{
-			keyprev = key;
+			prevkeys[key] = keys[key];
 			return true;
 		}
 	}
 	return false;
 }
 
-bool Input::GetKeyUp(vector<int>* myVectorInt)
+bool Input::GetKeyUp(vector<int>* vectorinput)
 {
 	keyDev->GetDeviceState(sizeof(keys), &keys);
-	for (int i = 0; i < myVectorInt->size(); i++)
+	for (int i = 0; i < vectorinput->size(); i++)
 	{ 
-		int key = myVectorInt->at(i);
-		if (keys[key])
+		int key = vectorinput->at(i);
+		if (prevkeys[key]!= keys[key])
 		{
-		return false;
+		return true;
 		}
 	}
-	return true;
+	return false;
 }
 
-int & Input::GetLastKey()
-{
-	return keyprev;
-}

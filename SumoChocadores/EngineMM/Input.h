@@ -18,13 +18,11 @@ private:
 	map<string, vector<int>> inputMap;
 	byte keys[256];
 	byte prevkeys[256];
-	int keyprev = 0;
 public:
 	Input(HINSTANCE &hInstance, HWND hWnd);
 	~Input();
 	map<string, vector<int>>& GetMap();
 	bool GetKeyDown(vector<int>*myVectorInt);
 	bool GetKeyUp(vector<int>*myVectorInt);
-	int& GetLastKey();
 };
 

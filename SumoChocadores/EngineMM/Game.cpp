@@ -134,12 +134,12 @@ void Game::Run(_In_     HINSTANCE hInstance,_In_opt_ HINSTANCE hPrevInstance, _I
 		float distance = D3DXVec3Length(&diff);
 		D3DXVECTOR3 dir = diff / distance;
 		D3DXVECTOR3 pos = Cap->getVector();
-			Cap->setVector(pos + (dir*0.01f));
-			diff = Obj->getVector() - Obj3->getVector();
-			distance = D3DXVec3Length(&diff);
-		    dir = diff / distance;
-			pos = Obj3->getVector();
-			Obj3->setVector(pos - (dir*0.001f));
+		Cap->setVector(pos + (dir*0.01f));
+		diff = Obj->getVector() - Obj3->getVector();
+		distance = D3DXVec3Length(&diff);
+		dir = diff / distance;
+		pos = Obj3->getVector();
+		Obj3->setVector(pos - (dir*0.001f));
 
 		Per->DrawV(dev,1); //Se mueve con el Input
 		Cap->DrawV(dev, 2); //Persigue a Per
