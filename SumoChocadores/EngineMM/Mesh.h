@@ -1,5 +1,7 @@
 #pragma once
 #include "Vertex.h"
+#include <d3dx9.h>
+#pragma comment (lib, "d3dx9.lib")
 #include "FVF.h"
 class IMPORTEXPORT Mesh
 {

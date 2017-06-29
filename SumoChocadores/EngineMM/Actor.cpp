@@ -8,7 +8,14 @@ Actor::Actor() :vector (0,0,0)
 	D3DXMatrixIdentity(&rotation);
 	defTransMat();
 }
-
+Actor::Actor(Textura* tex)
+{
+	D3DXMatrixIdentity(&scale);
+	D3DXMatrixIdentity(&trasl);
+	D3DXMatrixIdentity(&rotation);
+	texture = tex;
+	defTransMat();
+}
 void Actor::setModelPos(float transX, float transY, float transZ)
 {
 	vector.x = transX;
@@ -54,6 +61,10 @@ Actor::~Actor()
 
 void Actor::DrawV(LPDIRECT3DDEVICE9 dev)
 {
+	if (texture != NULL)
+		dev->SetTexture(0, texture->GetText());
+	else
+		dev->SetTexture(0, NULL);
 	defTransMat();
 	dev->SetFVF(CUSTOMFVF);
 	//Multiplicación de Matrices
@@ -79,4 +90,5 @@ void Actor::SetMesh(Mesh * mesh)
 {
 	mesh2 = mesh;
 }
+
 

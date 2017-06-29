@@ -7,6 +7,7 @@
 #include "Vertex.h"
 #include "Mesh.h"
 #include "Camera.h"
+#include "Input.h"
 class IMPORTEXPORT Game
 {
 public:
@@ -14,6 +15,6 @@ public:
 	Game();
 	~Game();
 	//void Draw();
-	void Run(_In_     HINSTANCE hInstance, _In_     int       nCmdShow);
+	void Run(_In_     HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_     int       nCmdShow);
 	//virtual void setMeshes() = 0;
 };

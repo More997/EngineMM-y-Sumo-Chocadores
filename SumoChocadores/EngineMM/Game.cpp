@@ -1,25 +1,7 @@
 #include "stdafx.h"
 #include "Game.h"
 #include "Actor.h"
-
-//#pragma comment (lib, "d3d9.lib") //Incluyo la lib a mi proyecto
-/*D3DXMATRIX GetViewMatrix(D3DXVECTOR3 pos, D3DXVECTOR3 rot)
-{
-	D3DXMATRIX transMat;
-	D3DXMatrixIdentity(&transMat);
-	transMat._41 = -pos.x;
-	transMat._42 = -pos.y;
-	transMat._43 = -pos.z;
-
-	D3DXMATRIX rotZMat;
-	D3DXMatrixIdentity(&rotZMat);
-	rotZMat._11 = cos(-rot.z);
-	rotZMat._12 = sin(-rot.z);
-	rotZMat._21 = -sin(-rot.z);
-	rotZMat._22 = cos(-rot.z);
-
-	return transMat * rotZMat;
-};*/
+#include "Textura.h"
 Game::Game()
 {
 }
@@ -32,7 +14,7 @@ Game::~Game()
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 
-void Game::Run(_In_     HINSTANCE hInstance, _In_     int       nCmdShow) {
+void Game::Run(_In_     HINSTANCE hInstance,_In_opt_ HINSTANCE hPrevInstance, _In_     int       nCmdShow) {
 
 	//Creamos la clase de la ventana
 	WNDCLASSEX wcex;
@@ -88,25 +70,34 @@ void Game::Run(_In_     HINSTANCE hInstance, _In_     int       nCmdShow) {
 		&d3dpp, //Los parametros de buffers
 		&dev); //El device que se crea
 
-	dev->SetRenderState(D3DRS_LIGHTING, false);
-
+	dev->SetRenderState(D3DRS_LIGHTING, FALSE);
+	string name = "yaya.jpg";
 	Mesh* mesh = new Mesh(dev);
-	Actor* Obj = new Actor();
-	Actor* Obj1 = new Actor();
-	Actor* Obj3 = new Actor();
-	Actor* Per = new Actor(); //perseguido
-	Actor* Cap = new Actor(); //Captura!
-	Camera* Cam = new Camera();
+	Textura* Tex = new Textura(dev);
+	Textura* Tex2 = new Textura(dev, name);
+	Actor* Obj = new Actor(Tex);
 	Obj->SetMesh(mesh);
+	Actor* Obj1 = new Actor(Tex2);
 	Obj1->SetMesh(mesh);
+	Actor* Obj3 = new Actor(Tex);
 	Obj3->SetMesh(mesh);
+	Actor* Per = new Actor(Tex); //perseguido
 	Per->SetMesh(mesh);
+	Actor* Cap = new Actor(Tex); //Captura!
 	Cap->SetMesh(mesh);
-	Per->setModelPos(2, 1, 5);
+	Camera* Cam = new Camera();
 	Cap->setModelPos(-2, 2, 5);	
 	Obj3->setModelPos(0.5f, -0.25f, 5);
+	float numx = 2;
+	float numy = 1;
 	float num = 7.0f;
 	float num2 = -5.0f;
+	Input *inputKey = new Input(hInstance, hWnd);
+	map<string, vector<int>> map = inputKey->GetMap();
+	vector<int> *vUp = &map["Up"];
+	vector<int> *vLeft = &map["Left"];
+	vector<int> *vRight = &map["Right"];
+	vector<int> *vDown = &map["Down"];
 	while (true)
 	{
 		MSG msg;
@@ -123,22 +114,27 @@ void Game::Run(_In_     HINSTANCE hInstance, _In_     int       nCmdShow) {
 		{
 			break;
 		}
-		//Camera* cam = new Camera();
-		//float CamPosZ = 0;
-		//float CamRotX = 0;
 		//Actualizar (Ventana)
 		dev->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_ARGB(0, 0, 102, 0), 1.0f, 0);
 		dev->BeginScene();
 		Cam->update(dev);
-
-		//TODO: Dibujar objetos
+		
+		if (inputKey->GetKeyDown(vUp) == true)
+			numy += 0.1;
+		if (inputKey->GetKeyDown(vDown) == true)
+			numy -= 0.1;
+		if (inputKey->GetKeyDown(vLeft) == true)
+			numx -= 0.1;
+		if (inputKey->GetKeyDown(vRight) == true)
+			numx += 0.1;
+		Per->setModelPos(numx, numy, 5);
 		D3DXVECTOR3 diff = Per->getVector() - Cap->getVector();
 		float distance = D3DXVec3Length(&diff);
 		D3DXVECTOR3 dir = diff / distance;
 		D3DXVECTOR3 pos = Cap->getVector();
-	//	if (pos.x >= ((Per->getVector()).x + 1.5)&& pos.y >= ((Per->getVector()).y + 1.5) && pos.x >= ((Per->getVector()).x + 1.5)){
-			Cap->setVector(pos + (dir*0.1f));
-	//	}
+		//if (pos.x >= ((Per->getVector()).x + 1.5)&& pos.y >= ((Per->getVector()).y + 1.5) && pos.x >= ((Per->getVector()).x + 1.5)){
+			Cap->setVector(pos + (dir*0.01f));
+		//}
 			diff = Obj->getVector() - Obj3->getVector();
 			distance = D3DXVec3Length(&diff);
 		    dir = diff / distance;
@@ -157,9 +153,6 @@ void Game::Run(_In_     HINSTANCE hInstance, _In_     int       nCmdShow) {
 		Obj3->DrawV(dev);
 		dev->EndScene();
 		dev->Present(NULL, NULL, NULL, NULL);
-
-		//Release();
-
 	}
 
 	dev->Release();
@@ -173,15 +166,7 @@ void Game::Run(_In_     HINSTANCE hInstance, _In_     int       nCmdShow) {
 	delete Cam;
 }
 
-/*
-void Game::Release()
-{
-	dev->Release();
-	vb->Release();
-	ind->Release();
-	d3d->Release();
-}
-*/
+
 
 //Manejo de mensajes por ventana
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)

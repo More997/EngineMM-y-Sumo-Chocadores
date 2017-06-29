@@ -1,28 +1,17 @@
 ﻿  Juego.cpp
-c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(9): warning C4251: 'Actor::matFinal': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(10): warning C4251: 'Actor::trasl': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(11): warning C4251: 'Actor::scale': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(12): warning C4251: 'Actor::rotation': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(13): warning C4251: 'Actor::vector': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(11): warning C4251: 'Actor::matFinal': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
+  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(12): warning C4251: 'Actor::trasl': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
+  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(13): warning C4251: 'Actor::scale': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
+  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(14): warning C4251: 'Actor::rotation': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
+  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(15): warning C4251: 'Actor::vector': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
+  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
   Generando código...
-cl : Línea de comandos warning D9028: error de recompilación mínimo, revirtiendo a la compilación normal
-  Compilando...
+  Omitiendo... (no se detectaron cambios relevantes)
+  SumosChocadores.cpp
   Personaje.cpp
-c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(9): warning C4251: 'Actor::matFinal': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(10): warning C4251: 'Actor::trasl': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(11): warning C4251: 'Actor::scale': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(12): warning C4251: 'Actor::rotation': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(13): warning C4251: 'Actor::vector': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
-  Generando código...
-  Juego.vcxproj -> C:\Users\822\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.exe
-  Juego.vcxproj -> C:\Users\822\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.pdb (Full PDB)
+  Juego.vcxproj -> C:\Users\def\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.exe

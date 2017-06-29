@@ -3,9 +3,11 @@
 #include "Vertex.h"
 #include "Mesh.h"
 #include "FVF.h"
+#include "Textura.h"
 class IMPORTEXPORT Actor
 {
 	Mesh* mesh2;
+	Textura* texture;
 	D3DXMATRIX matFinal;
 	D3DXMATRIX trasl;
 	D3DXMATRIX scale;
@@ -13,6 +15,7 @@ class IMPORTEXPORT Actor
 	D3DXVECTOR3 vector;
 public:
 	Actor();
+	Actor(Textura* tex);
 	void setModelPos(float transx, float transy, float transz);
 	void setModelScale(float scaleX, float scaleY, float scaleZ);
 	void defTransMat();

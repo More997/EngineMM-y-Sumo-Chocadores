@@ -69,4 +69,3 @@ void Camera::update(LPDIRECT3DDEVICE9 dev)
 	dev->SetTransform(D3DTS_VIEW, &view);
 	dev->SetTransform(D3DTS_PROJECTION, &projection);
 }
-

@@ -2,5 +2,5 @@
 #include "Game.h"
 struct Vertex {
 	FLOAT x, y, z;
-	DWORD color;
+	FLOAT tu, uv;
 };

@@ -10,5 +10,5 @@ int APIENTRY _tWinMain(_In_     HINSTANCE hInstance,
 	_In_     int       nCmdShow)
 {
 	Game Play;
-	Play.Run(hInstance, nCmdShow);
+	Play.Run(hInstance, hPrevInstance ,nCmdShow);
 }
