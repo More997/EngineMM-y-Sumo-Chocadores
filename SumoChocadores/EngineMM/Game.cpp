@@ -71,10 +71,10 @@ void Game::Run(_In_     HINSTANCE hInstance,_In_opt_ HINSTANCE hPrevInstance, _I
 		&dev); //El device que se crea
 
 	dev->SetRenderState(D3DRS_LIGHTING, FALSE);
-	string name = "yaya.jpg";
 	Mesh* mesh = new Mesh(dev);
 	Textura* Tex = new Textura(dev);
-	Textura* Tex2 = new Textura(dev, name);
+	Textura* Tex2 = new Textura(dev, L"yaya.jpg");
+	Textura* Tex3 = new Textura(dev, L"tem.png");
 	Actor* Obj = new Actor(Tex);
 	Obj->SetMesh(mesh);
 	Actor* Obj1 = new Actor(Tex2);
@@ -83,8 +83,10 @@ void Game::Run(_In_     HINSTANCE hInstance,_In_opt_ HINSTANCE hPrevInstance, _I
 	Obj3->SetMesh(mesh);
 	Actor* Per = new Actor(Tex); //perseguido
 	Per->SetMesh(mesh);
-	Actor* Cap = new Actor(Tex); //Captura!
+	Actor* Cap = new Actor(Tex3); //Captura!
 	Cap->SetMesh(mesh);
+	Actor* rotY = new Actor(Tex2); 
+	rotY->SetMesh(mesh);
 	Camera* Cam = new Camera();
 	Cap->setModelPos(-2, 2, 5);	
 	Obj3->setModelPos(0.5f, -0.25f, 5);
@@ -132,25 +134,26 @@ void Game::Run(_In_     HINSTANCE hInstance,_In_opt_ HINSTANCE hPrevInstance, _I
 		float distance = D3DXVec3Length(&diff);
 		D3DXVECTOR3 dir = diff / distance;
 		D3DXVECTOR3 pos = Cap->getVector();
-		//if (pos.x >= ((Per->getVector()).x + 1.5)&& pos.y >= ((Per->getVector()).y + 1.5) && pos.x >= ((Per->getVector()).x + 1.5)){
 			Cap->setVector(pos + (dir*0.01f));
-		//}
 			diff = Obj->getVector() - Obj3->getVector();
 			distance = D3DXVec3Length(&diff);
 		    dir = diff / distance;
 			pos = Obj3->getVector();
 			Obj3->setVector(pos - (dir*0.001f));
 
-		Per->DrawV(dev);
-		Cap->DrawV(dev);
-		Obj->setModelPos(num2, -0.25f,5);
-		Obj1->setModelPos(0.5, -0.25f, num);
-		Obj1->setModelRot(num);
+		Per->DrawV(dev,1); //Se mueve con el Input
+		Cap->DrawV(dev, 2); //Persigue a Per
+		Obj->setModelPos(num2, -0.25f,5); //Se mueve a la derecha
+		rotY->setModelPos(1, 1.0f, 5); //Se mueve a la derecha
+		Obj1->setModelPos(0.5, -0.25f, num); //gira
+		Obj1->setModelRotZ(num);
+		rotY->setModelRotY(num); //Rota en Y
 		num += 0.005f;
 		num2 += 0.005f;
-		Obj->DrawV(dev);
-		Obj1->DrawV(dev);
-		Obj3->DrawV(dev);
+		rotY->DrawV(dev, 1);
+		Obj->DrawV(dev,0);
+		Obj1->DrawV(dev,1);
+		Obj3->DrawV(dev, 5); //huye de Obj
 		dev->EndScene();
 		dev->Present(NULL, NULL, NULL, NULL);
 	}
@@ -164,6 +167,8 @@ void Game::Run(_In_     HINSTANCE hInstance,_In_opt_ HINSTANCE hPrevInstance, _I
 	delete Cap;
 	delete mesh;
 	delete Cam;
+	delete Tex;
+	delete Tex2;
 }
 
 

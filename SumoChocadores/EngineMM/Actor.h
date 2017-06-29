@@ -19,12 +19,16 @@ public:
 	void setModelPos(float transx, float transy, float transz);
 	void setModelScale(float scaleX, float scaleY, float scaleZ);
 	void defTransMat();
-	void setModelRot(float rotZ);
-	D3DXVECTOR3 getVector(); //Donde ta Vector???
+	void setModelRotZ(float rotZ);
+	void setModelRotY(float rotY);
+	void setModelRotX(float rotX);
+		D3DXVECTOR3 getVector(); //Donde ta Vector???
 	void setVector(D3DXVECTOR3 _vector); //ponemos al vector aca.
 	Actor(LPDIRECT3DDEVICE9 dev);
 	~Actor();
-	void DrawV(LPDIRECT3DDEVICE9 dev);
+	void DrawV(LPDIRECT3DDEVICE9 dev, int typeblend);
 	void SetMesh(Mesh* mesh);
+	void Blending(int numBlend, LPDIRECT3DDEVICE9 dev);
+
 };
 

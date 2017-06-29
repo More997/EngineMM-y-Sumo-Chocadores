@@ -10,11 +10,11 @@ Textura::Textura(LPDIRECT3DDEVICE9 dev)
 	//dev->SetTexture(0, text);
 }
 
-Textura::Textura(LPDIRECT3DDEVICE9 dev, string & newTex)
+Textura::Textura(LPDIRECT3DDEVICE9 dev, LPWSTR newTex)
 {
 	textname = newTex;
 	D3DXCreateTextureFromFile(dev,
-		L"yaya.jpg",
+		newTex,
 		&text);
 }
 
@@ -27,3 +27,4 @@ IDirect3DTexture9 * Textura::GetText()
 {
 	return text;
 }
+

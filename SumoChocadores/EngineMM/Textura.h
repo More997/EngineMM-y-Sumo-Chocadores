@@ -7,10 +7,10 @@ class Textura
 {
 private:
 	IDirect3DTexture9* text;
-	string textname;
+	LPWSTR textname;
 public:
 	Textura(LPDIRECT3DDEVICE9 dev);
-	Textura(LPDIRECT3DDEVICE9 dev, string &newTex);
+	Textura(LPDIRECT3DDEVICE9 dev, LPWSTR newTex);
 	~Textura();
 	IDirect3DTexture9* GetText();
 };
