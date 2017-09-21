@@ -2,6 +2,12 @@
 #include "Game.h"
 #include "Actor.h"
 #include "Textura.h"
+
+#include <d3d9.h> //Busca el header de directx en los path
+#include "FVF.h"
+#pragma comment (lib, "d3d9.lib") //Incluyo la lib a mi proyecto
+
+
 Game::Game()
 {
 }
@@ -14,7 +20,11 @@ Game::~Game()
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 
-void Game::Run(_In_     HINSTANCE hInstance,_In_opt_ HINSTANCE hPrevInstance, _In_     int       nCmdShow) {
+void Game::Run(_In_     HINSTANCE hInstance,
+	_In_opt_ HINSTANCE hPrevInstance, 
+	_In_ LPTSTR lpCmdLine,
+	_In_     int       nCmdShow, 
+	ConectorDeEngine* conector) {
 
 	//Creamos la clase de la ventana
 	WNDCLASSEX wcex;
@@ -71,6 +81,8 @@ void Game::Run(_In_     HINSTANCE hInstance,_In_opt_ HINSTANCE hPrevInstance, _I
 		&dev); //El device que se crea
 
 	dev->SetRenderState(D3DRS_LIGHTING, FALSE);
+	ConectorDeEngine* Conectando = conector;
+	/*
 	Mesh* mesh = new Mesh(dev);
 	Textura* Tex = new Textura(dev);
 	Textura* Tex2 = new Textura(dev, L"yaya.jpg");
@@ -100,6 +112,7 @@ void Game::Run(_In_     HINSTANCE hInstance,_In_opt_ HINSTANCE hPrevInstance, _I
 	vector<int> *vLeft = &map["Left"];
 	vector<int> *vRight = &map["Right"];
 	vector<int> *vDown = &map["Down"];
+	*/
 	while (true)
 	{
 		MSG msg;
@@ -119,6 +132,7 @@ void Game::Run(_In_     HINSTANCE hInstance,_In_opt_ HINSTANCE hPrevInstance, _I
 		//Actualizar (Ventana)
 		dev->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_ARGB(0, 0, 102, 0), 1.0f, 0);
 		dev->BeginScene();
+		/*
 		Cam->update(dev);
 		
 		if (inputKey->GetKeyDown(vUp) == true)
@@ -154,12 +168,14 @@ void Game::Run(_In_     HINSTANCE hInstance,_In_opt_ HINSTANCE hPrevInstance, _I
 		Obj->DrawV(dev,0);
 		Obj1->DrawV(dev,1);
 		Obj3->DrawV(dev, 5); //huye de Obj
+		*/
 		dev->EndScene();
 		dev->Present(NULL, NULL, NULL, NULL);
 	}
 
 	dev->Release();
 	d3d->Release();
+	/*
 	delete Obj;
 	delete Obj1;
 	delete Obj3;
@@ -169,6 +185,7 @@ void Game::Run(_In_     HINSTANCE hInstance,_In_opt_ HINSTANCE hPrevInstance, _I
 	delete Cam;
 	delete Tex;
 	delete Tex2;
+	*/
 }
 
 

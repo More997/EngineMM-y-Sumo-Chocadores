@@ -89,7 +89,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;ENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
@@ -151,6 +151,9 @@
     <ClInclude Include="Actor.h" />
     <ClInclude Include="ActorAnimador.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="Component.h" />
+    <ClInclude Include="Composite.h" />
+    <ClInclude Include="ConectorDeEngine.h" />
     <ClInclude Include="EngineMM.h" />
     <ClInclude Include="EngineMMAPI.h" />
     <ClInclude Include="FVF.h" />
@@ -168,6 +171,9 @@
     <ClCompile Include="Actor.cpp" />
     <ClCompile Include="ActorAnimador.cpp" />
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Component.cpp" />
+    <ClCompile Include="Composite.cpp" />
+    <ClCompile Include="ConectorDeEngine.cpp" />
     <ClCompile Include="Dllmain.cpp" />
     <ClCompile Include="EngineMM.cpp" />
     <ClCompile Include="Game.cpp" />

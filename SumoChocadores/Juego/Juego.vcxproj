@@ -154,7 +154,7 @@
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Ring.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="SumosChocadores.h" />
+    <ClInclude Include="SumosChocadoresPlay.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
@@ -168,7 +168,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="SumosChocadores.cpp" />
+    <ClCompile Include="SumosChocadoresPlay.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Juego.rc" />
