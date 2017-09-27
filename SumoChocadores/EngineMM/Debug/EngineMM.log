@@ -1,103 +1,41 @@
-﻿  Actor.cpp
+﻿  Component.cpp
   c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(11): warning C4251: 'Actor::matFinal': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(12): warning C4251: 'Actor::trasl': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(13): warning C4251: 'Actor::scale': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(14): warning C4251: 'Actor::rotation': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(15): warning C4251: 'Actor::vector': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(4): warning C4273: 'Actor::Actor': vinculación de DLL incoherente
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(17): note: vea la definición anterior de '{ctor}'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(12): warning C4273: 'Actor::Actor': vinculación de DLL incoherente
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(18): note: vea la definición anterior de '{ctor}'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(20): warning C4273: 'Actor::setModelPos': vinculación de DLL incoherente
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(19): note: vea la definición anterior de 'setModelPos'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(28): warning C4273: 'Actor::setModelScale': vinculación de DLL incoherente
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(20): note: vea la definición anterior de 'setModelScale'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(32): warning C4273: 'Actor::setModelRotZ': vinculación de DLL incoherente
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(22): note: vea la definición anterior de 'setModelRotZ'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(36): warning C4273: 'Actor::setModelRotY': vinculación de DLL incoherente
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(23): note: vea la definición anterior de 'setModelRotY'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(40): warning C4273: 'Actor::setModelRotX': vinculación de DLL incoherente
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(24): note: vea la definición anterior de 'setModelRotX'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(45): warning C4273: 'Actor::getVector': vinculación de DLL incoherente
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(25): note: vea la definición anterior de 'getVector'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(49): warning C4273: 'Actor::setVector': vinculación de DLL incoherente
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(26): note: vea la definición anterior de 'setVector'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(53): warning C4273: 'Actor::defTransMat': vinculación de DLL incoherente
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(21): note: vea la definición anterior de 'defTransMat'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(63): warning C4273: 'Actor::Actor': vinculación de DLL incoherente
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(27): note: vea la definición anterior de '{ctor}'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(68): warning C4273: 'Actor::~Actor': vinculación de DLL incoherente
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(28): note: vea la definición anterior de '{dtor}'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(73): warning C4273: 'Actor::DrawV': vinculación de DLL incoherente
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(29): note: vea la definición anterior de 'DrawV'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(101): warning C4273: 'Actor::SetMesh': vinculación de DLL incoherente
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(30): note: vea la definición anterior de 'SetMesh'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.cpp(105): warning C4273: 'Actor::Blending': vinculación de DLL incoherente
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(31): note: vea la definición anterior de 'Blending'
-  Generando código...
-  Compilando...
-  Mesh.cpp
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.cpp(6): warning C4273: 'Mesh::Mesh': vinculación de DLL incoherente
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(11): note: vea la definición anterior de '{ctor}'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.cpp(43): warning C4273: 'Mesh::~Mesh': vinculación de DLL incoherente
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(12): note: vea la definición anterior de '{dtor}'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.cpp(49): warning C4273: 'Mesh::GetVb': vinculación de DLL incoherente
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(13): note: vea la definición anterior de 'GetVb'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.cpp(54): warning C4273: 'Mesh::GetInd': vinculación de DLL incoherente
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(14): note: vea la definición anterior de 'GetInd'
-  Input.cpp
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\input.cpp(42): warning C4018: '<': no coinciden signed/unsigned
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\input.cpp(57): warning C4018: '<': no coinciden signed/unsigned
-  Game.cpp
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(11): warning C4251: 'Actor::matFinal': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(12): warning C4251: 'Actor::trasl': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(13): warning C4251: 'Actor::scale': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(14): warning C4251: 'Actor::rotation': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(15): warning C4251: 'Actor::vector': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\game.cpp(12): warning C4273: 'Game::Game': vinculación de DLL incoherente
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\game.h(15): note: vea la definición anterior de '{ctor}'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\game.cpp(17): warning C4273: 'Game::~Game': vinculación de DLL incoherente
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\game.h(17): note: vea la definición anterior de '{dtor}'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\game.cpp(27): warning C4273: 'Game::Run': vinculación de DLL incoherente
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\game.h(19): note: vea la definición anterior de 'Run'
-  ConectorDeEngine.cpp
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\conectordeengine.cpp(5): warning C4273: 'ConectorDeEngine::ConectorDeEngine': vinculación de DLL incoherente
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\conectordeengine.h(13): note: vea la definición anterior de '{ctor}'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\conectordeengine.cpp(9): warning C4273: 'ConectorDeEngine::~ConectorDeEngine': vinculación de DLL incoherente
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\conectordeengine.h(14): note: vea la definición anterior de '{dtor}'
-  Camera.cpp
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-  ActorAnimador.cpp
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(11): warning C4251: 'Actor::matFinal': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(12): warning C4251: 'Actor::trasl': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(13): warning C4251: 'Actor::scale': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(14): warning C4251: 'Actor::rotation': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\actor.h(15): warning C4251: 'Actor::vector': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Actor'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
-  Generando código...
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.cpp(5): warning C4273: 'Component::Component': vinculación de DLL incoherente
+  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(30): note: vea la definición anterior de '{ctor}'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.cpp(16): warning C4273: 'Component::~Component': vinculación de DLL incoherente
+  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(31): note: vea la definición anterior de '{dtor}'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.cpp(20): warning C4273: 'Component::setModelScale': vinculación de DLL incoherente
+  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(32): note: vea la definición anterior de 'setModelScale'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.cpp(25): warning C4273: 'Component::defTransMat': vinculación de DLL incoherente
+  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(33): note: vea la definición anterior de 'defTransMat'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.cpp(30): warning C4273: 'Component::setModelRotZ': vinculación de DLL incoherente
+  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(34): note: vea la definición anterior de 'setModelRotZ'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.cpp(35): warning C4273: 'Component::setModelRotY': vinculación de DLL incoherente
+  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(35): note: vea la definición anterior de 'setModelRotY'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.cpp(40): warning C4273: 'Component::setModelRotX': vinculación de DLL incoherente
+  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(36): note: vea la definición anterior de 'setModelRotX'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.cpp(45): warning C4273: 'Component::setModelPos': vinculación de DLL incoherente
+  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(37): note: vea la definición anterior de 'setModelPos'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.cpp(52): warning C4273: 'Component::getTransMat': vinculación de DLL incoherente
+  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(38): note: vea la definición anterior de 'getTransMat'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.cpp(66): warning C4273: 'Component::SetParent': vinculación de DLL incoherente
+  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(41): note: vea la definición anterior de 'SetParent'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.cpp(71): warning C4273: 'Component::getVector': vinculación de DLL incoherente
+  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(42): note: vea la definición anterior de 'getVector'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.cpp(76): warning C4273: 'Component::setVector': vinculación de DLL incoherente
+  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(43): note: vea la definición anterior de 'setVector'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.cpp(81): warning C4273: 'Component::GetParent': vinculación de DLL incoherente
+  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(44): note: vea la definición anterior de 'GetParent'
      Creando biblioteca C:\Users\def\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\EngineMM.lib y objeto C:\Users\def\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\EngineMM.exp
-Actor.obj : warning LNK4217: se importó el símbolo ?GetVb@Mesh@@QAEPAUIDirect3DVertexBuffer9@@XZ (public: struct IDirect3DVertexBuffer9 * __thiscall Mesh::GetVb(void)) definido localmente en la función "public: void __thiscall Actor::DrawV(struct IDirect3DDevice9 *,int)" (?DrawV@Actor@@QAEXPAUIDirect3DDevice9@@H@Z)
-Actor.obj : warning LNK4217: se importó el símbolo ?GetInd@Mesh@@QAEPAUIDirect3DIndexBuffer9@@XZ (public: struct IDirect3DIndexBuffer9 * __thiscall Mesh::GetInd(void)) definido localmente en la función "public: void __thiscall Actor::DrawV(struct IDirect3DDevice9 *,int)" (?DrawV@Actor@@QAEXPAUIDirect3DDevice9@@H@Z)
-ActorAnimador.obj : warning LNK4217: se importó el símbolo ??0Actor@@QAE@XZ (public: __thiscall Actor::Actor(void)) definido localmente en la función "public: __thiscall ActorAnimador::ActorAnimador(void)" (??0ActorAnimador@@QAE@XZ)
-ActorAnimador.obj : warning LNK4217: se importó el símbolo ??1Actor@@QAE@XZ (public: __thiscall Actor::~Actor(void)) definido localmente en la función "public: __thiscall ActorAnimador::~ActorAnimador(void)" (??1ActorAnimador@@QAE@XZ)
-ConectorDeEngine.obj : error LNK2019: símbolo externo "__declspec(dllimport) const ConectorDeEngine::`vftable'" (__imp_??_7ConectorDeEngine@@6B@) sin resolver al que se hace referencia en la función "public: __thiscall ConectorDeEngine::ConectorDeEngine(void)" (??0ConectorDeEngine@@QAE@XZ)
-C:\Users\def\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\EngineMM.dll : fatal error LNK1120: 1 externos sin resolver
+Composite.obj : warning LNK4217: se import≤ el sφmbolo ??0Component@@QAE@XZ (public: __thiscall Component::Component(void)) definido localmente en la funci≤n "public: __thiscall Composite::Composite(void)" (??0Composite@@QAE@XZ)
+Composite.obj : warning LNK4217: se import≤ el sφmbolo ??1Component@@QAE@XZ (public: __thiscall Component::~Component(void)) definido localmente en la funci≤n "public: __thiscall Composite::~Composite(void)" (??1Composite@@QAE@XZ)
+Composite.obj : warning LNK4217: se import≤ el sφmbolo ?SetParent@Component@@QAEXPAVComposite@@@Z (public: void __thiscall Component::SetParent(class Composite *)) definido localmente en la funci≤n "public: void __thiscall Composite::Add(class Component *)" (?Add@Composite@@QAEXPAVComponent@@@Z)
+Mesh.obj : warning LNK4217: se import≤ el sφmbolo ?getInstance@Game@@SAPAV1@XZ (public: static class Game * __cdecl Game::getInstance(void)) definido localmente en la funci≤n "public: __thiscall Mesh::Mesh(void)" (??0Mesh@@QAE@XZ)
+MeshRender.obj : warning LNK4049: se import≤ el sφmbolo ?getInstance@Game@@SAPAV1@XZ (public: static class Game * __cdecl Game::getInstance(void)) definido localmente
+MeshRender.obj : warning LNK4217: se import≤ el sφmbolo ?GetVb@Mesh@@QAEPAUIDirect3DVertexBuffer9@@XZ (public: struct IDirect3DVertexBuffer9 * __thiscall Mesh::GetVb(void)) definido localmente en la funci≤n "public: virtual void __thiscall MeshRender::RenderingComposite(void)" (?RenderingComposite@MeshRender@@UAEXXZ)
+MeshRender.obj : warning LNK4217: se import≤ el sφmbolo ?GetInd@Mesh@@QAEPAUIDirect3DIndexBuffer9@@XZ (public: struct IDirect3DIndexBuffer9 * __thiscall Mesh::GetInd(void)) definido localmente en la funci≤n "public: virtual void __thiscall MeshRender::RenderingComposite(void)" (?RenderingComposite@MeshRender@@UAEXXZ)
+MeshRender.obj : warning LNK4217: se import≤ el sφmbolo ?getTransMat@Component@@QAE?AUD3DXMATRIX@@XZ (public: struct D3DXMATRIX __thiscall Component::getTransMat(void)) definido localmente en la funci≤n "public: virtual void __thiscall MeshRender::RenderingComposite(void)" (?RenderingComposite@MeshRender@@UAEXXZ)
+MeshRender.obj : warning LNK4217: se import≤ el sφmbolo ??0Composite@@QAE@XZ (public: __thiscall Composite::Composite(void)) definido localmente en la funci≤n "public: __thiscall MeshRender::MeshRender(class Textura *)" (??0MeshRender@@QAE@PAVTextura@@@Z)
+MeshRender.obj : warning LNK4217: se import≤ el sφmbolo ??1Composite@@QAE@XZ (public: __thiscall Composite::~Composite(void)) definido localmente en la funci≤n "public: __thiscall MeshRender::~MeshRender(void)" (??1MeshRender@@QAE@XZ)
+  EngineMM.vcxproj -> C:\Users\def\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\EngineMM.dll
+  EngineMM.vcxproj -> C:\Users\def\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\EngineMM.pdb (Full PDB)

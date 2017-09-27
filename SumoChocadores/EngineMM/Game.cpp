@@ -7,11 +7,18 @@
 #include "FVF.h"
 #pragma comment (lib, "d3d9.lib") //Incluyo la lib a mi proyecto
 
+Game* Game::Instance = nullptr;
 
 Game::Game()
 {
+	Game::Instance = this;
 }
 
+
+LPDIRECT3DDEVICE9 Game::getDev()
+{
+	return dev;
+}
 
 Game::~Game()
 {
@@ -186,6 +193,15 @@ void Game::Run(_In_     HINSTANCE hInstance,
 	delete Tex;
 	delete Tex2;
 	*/
+}
+
+Game * Game::getInstance()
+{
+	if (Instance == 0)
+	{
+		Instance = new Game();
+	}
+	return Instance;
 }
 
 

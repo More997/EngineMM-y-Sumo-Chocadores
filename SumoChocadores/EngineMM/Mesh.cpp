@@ -2,8 +2,9 @@
 #include "Mesh.h"
 
 
-Mesh::Mesh(LPDIRECT3DDEVICE9 dev)
+Mesh::Mesh()
 {
+	Game* game = Game::getInstance();
 	Vertex vertexes[] = {
 		{ -0.5f,0.5f,0.0f, 0.0f, 0.0f },
 		{ 0.5f,0.5f,0.0f, 1.0f, 0.0f },
@@ -12,13 +13,13 @@ Mesh::Mesh(LPDIRECT3DDEVICE9 dev)
 	};
 	WORD indexes[] = { 0,3,2,0,1,3 };
 	//dev->DrawIndexedPrimitive(D3DPT_TRIANGLELIST, 0, 0, 4, 0, 2);
-	dev->CreateVertexBuffer(4 * sizeof(Vertex),
+	game->getDev()->CreateVertexBuffer(4 * sizeof(Vertex),
 		D3DUSAGE_WRITEONLY,
 		CUSTOMFVF,
 		D3DPOOL_MANAGED,
 		&vb,
 		NULL);
-	dev->CreateIndexBuffer(
+	game->getDev()->CreateIndexBuffer(
 		6 * sizeof(WORD),
 		D3DUSAGE_WRITEONLY,
 		D3DFMT_INDEX16,

@@ -9,15 +9,19 @@
 #include "Camera.h"
 #include "Input.h"
 #include "EngineMMAPI.h"
-class IMPORTEXPORT Game
+class  Game
 {
-public:
-	Game();
+private:
+	IMPORTEXPORT Game();
+	static Game* Instance;
 	LPDIRECT3DDEVICE9 dev;
-	~Game();
+public:
+	LPDIRECT3DDEVICE9 getDev();
+	IMPORTEXPORT ~Game();
 	//void Draw();
-	void Run(_In_     HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance,
+	IMPORTEXPORT void Run(_In_     HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance,
 		_In_ LPTSTR lpCmdLine, _In_     int       nCmdShow,
 		ConectorDeEngine* conector);
+	IMPORTEXPORT static Game* getInstance();
 	//virtual void setMeshes() = 0;
 };
