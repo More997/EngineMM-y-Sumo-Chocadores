@@ -13,13 +13,11 @@ Composite::~Composite()
 
 void Composite::Add(Component * comp)
 {
-
 	objectComponents.push_back(comp);
-	comp->SetParent(this); //Me pongo a mi mismo como padre del componente.
+	comp->SetParent(this); 
 }
 void Composite::Remove(Component * component)
 {
-	//Porque pide un componente como parametro si lo que hace es remover? Preguntar.
 }
 void Composite::Update()
 {

@@ -2,6 +2,7 @@
 #ifndef TEXTURA_H
 #define TEXTURA_H
 #include <string>
+#include "Game.h"
 using namespace std;
 class Textura
 {
@@ -9,9 +10,9 @@ private:
 	IDirect3DTexture9* text;
 	LPWSTR textname;
 public:
-	Textura(LPDIRECT3DDEVICE9 dev);
-	Textura(LPDIRECT3DDEVICE9 dev, LPWSTR newTex);
-	~Textura();
-	IDirect3DTexture9* GetText();
+	IMPORTEXPORT Textura();
+	IMPORTEXPORT Textura(LPWSTR newTex);
+	IMPORTEXPORT ~Textura();
+	IMPORTEXPORT IDirect3DTexture9* GetText();
 };
 #endif

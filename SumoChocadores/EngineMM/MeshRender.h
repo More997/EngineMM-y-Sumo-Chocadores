@@ -1,20 +1,23 @@
 #ifndef MESHRENDER_H
 #define MESHRENDER_H
 #include "Composite.h"
-class MeshRender :
+#include "Textura.h"
+class IMPORTEXPORT MeshRender :
 	public Composite
 {
 private:
 	Mesh* mesh2;
 	Textura* texture;
 public:
-	IMPORTEXPORT MeshRender();
-	IMPORTEXPORT MeshRender(Textura* tex);
-	IMPORTEXPORT void SetMesh(Mesh* mesh);
-	IMPORTEXPORT Mesh* GetMesh();
-	IMPORTEXPORT ~MeshRender();
-	IMPORTEXPORT void RenderingComposite() override;
-	IMPORTEXPORT void Blending(int numBlend);
+	MeshRender();
+	MeshRender(Textura* tex);
+	void SetTexture(Textura* tex);
+	Textura* GetTexture();
+	void SetMesh(Mesh* mesh);
+	Mesh* GetMesh();
+	~MeshRender();
+	void RenderingComposite() override;
+	void Blending(int numBlend);
 };
 #endif
 

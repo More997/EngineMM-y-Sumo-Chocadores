@@ -53,11 +53,10 @@ D3DXMATRIX Camera::GetViewMatrix()
 	return transMat * rotZMat;
 }
 
-void Camera::update(LPDIRECT3DDEVICE9 dev)
+void Camera::update()
 {
-	D3DXMATRIX view = GetViewMatrix(/*
-		D3DXVECTOR3(0, 0, 0),
-		D3DXVECTOR3(0, 0, 0)*/);
+	Game* g = Game::getInstance();
+	D3DXMATRIX view = GetViewMatrix();
 	D3DXMATRIX projection;
 	D3DXMatrixPerspectiveFovLH(
 		&projection,
@@ -66,6 +65,6 @@ void Camera::update(LPDIRECT3DDEVICE9 dev)
 		0.0f, //Distancia minima de vision
 		50); //Distancia maxima de vision
 
-	dev->SetTransform(D3DTS_VIEW, &view);
-	dev->SetTransform(D3DTS_PROJECTION, &projection);
+	g->getDev()->SetTransform(D3DTS_VIEW, &view);
+	g->getDev()->SetTransform(D3DTS_PROJECTION, &projection);
 }

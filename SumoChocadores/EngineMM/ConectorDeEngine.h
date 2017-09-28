@@ -1,11 +1,11 @@
 #ifndef CONECTORDEENGINE_H
 #define CONECTORDEENGINE_H
 #include "EngineMMAPI.h"
-class ConectorDeEngine
+class IMPORTEXPORT ConectorDeEngine
 {
 public:
-	IMPORTEXPORT ConectorDeEngine();
-	IMPORTEXPORT ~ConectorDeEngine();
+	ConectorDeEngine();
+	~ConectorDeEngine();
 	virtual void Create() = 0;
 	virtual void Update() = 0;
 };

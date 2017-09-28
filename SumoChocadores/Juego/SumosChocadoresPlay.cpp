@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include "../EngineMM/Textura.h"
 #include "SumosChocadoresPlay.h"
 
 
@@ -13,18 +14,26 @@ SumosChocadoresPlay::~SumosChocadoresPlay()
 
 void SumosChocadoresPlay::Create()
 {
-	sumo = new Composite();
+	camara = new Camera();
+
 	sumoMesh = new Mesh();
-	sumoRender = new MeshRender();
-	sumoRender->SetMesh(sumoMesh);
+	sumoTex = new Textura(L"yaya.jpg");
+	sumoRender = new MeshRender(sumoTex);
+	sumo = new Composite();
 	sumo->Add(sumoRender);
-	sumo->setVector(D3DXVECTOR3(-1, 0, 10));
+	sumoRender->SetMesh(sumoMesh);
+	sumoRender->Blending(1);
+	//sumoRender->setModelScale(1, 1, 1);
+	//sumoRender->setVector(D3DXVECTOR3(0, 0, 10));
+	sumo->setModelScale(1, 1, 1);
+	sumo->setVector(D3DXVECTOR3(0, 0, 5));
 }
 
 void SumosChocadoresPlay::Update()
 {
-	sumo->getVector();
-	sumoRender->Render();
+	camara->update();
+	sumo->setVector(sumo->getVector());
+	sumo->Render();
 }
 
 

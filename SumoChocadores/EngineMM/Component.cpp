@@ -1,5 +1,11 @@
 #include "stdafx.h"
 #include "Component.h"
+#include "Composite.h"
+#include "Game.h"
+#include "Vertex.h"
+#include "Mesh.h"
+#include "FVF.h"
+#include "Textura.h"
 
 
 Component::Component() :vectorTrans(0, 0, 0)
@@ -24,6 +30,9 @@ void Component::setModelScale(float scaleX, float scaleY, float scaleZ)
 void Component::defTransMat()
 {
 	matFinal = scale * rotation * trasl;
+
+	if (parent != NULL)
+		matFinal = (parent->getTransMat() * matFinal);
 }
 
 void Component::setModelRotZ(float rotZ)
@@ -62,10 +71,6 @@ void Component::Update()
 {
 }
 
-void Component::SetParent(Composite * parent)
-{
-	this->parent = parent;
-}
 
 D3DXVECTOR3 Component::getVector()
 {
@@ -77,7 +82,12 @@ void Component::setVector(D3DXVECTOR3 _vector)
 	setModelPos(_vector.x, _vector.y, _vector.z);
 }
 
-Composite * Component::GetParent()
+Composite* Component::GetParent()
 {
 	return parent;
+}
+
+void Component::SetParent(Composite* parent)
+{
+	this->parent = parent;
 }

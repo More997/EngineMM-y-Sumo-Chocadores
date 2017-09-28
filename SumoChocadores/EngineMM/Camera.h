@@ -1,6 +1,9 @@
-#pragma once
+#ifndef CAMERA_H
+#define CAMERA_H
 #include "Game.h"
-class Camera
+#include "Composite.h"
+class IMPORTEXPORT Camera:
+	public Composite
 {
 private:
 	D3DXVECTOR3 _pos;
@@ -15,6 +18,6 @@ public:
 	D3DXVECTOR3 GetPos();
 	D3DXVECTOR3 GetRot();
 	D3DXMATRIX GetViewMatrix();
-	void update(LPDIRECT3DDEVICE9 dev);
+	void update();
 };
-
+#endif 

@@ -1,6 +1,10 @@
 #include "stdafx.h"
 #include "MeshRender.h"
-
+#include "stdafx.h"
+#include <d3d9.h> //Busca el header de directx en los path
+#pragma comment (lib, "d3d9.lib") //Incluyo la lib a mi proyecto
+#include <d3dx9.h>
+#pragma comment (lib, "d3dx9.lib")
 
 MeshRender::MeshRender()
 {
@@ -11,8 +15,17 @@ MeshRender::MeshRender(Textura * tex)
 	/*D3DXMatrixIdentity(&scale);
 	D3DXMatrixIdentity(&trasl);
 	D3DXMatrixIdentity(&rotation);*/
-	//texture = tex;
+	texture = tex;
 	//defTransMat();
+}
+void MeshRender::SetTexture(Textura * tex)
+{
+	texture = tex;
+}
+
+Textura * MeshRender::GetTexture()
+{
+	return texture;
 }
 
 void MeshRender::SetMesh(Mesh * mesh)
@@ -50,14 +63,14 @@ void MeshRender::RenderingComposite()
 
 
 	//Especificamos cual VB vamos a usar
-	game->getDev()->SetStreamSource(0, mesh2->GetVb(), 0, sizeof(Vertex));
+/*	game->getDev()->SetStreamSource(0, mesh2->GetVb(), 0, sizeof(Vertex));
 
 	//Especificamos indices
 	game->getDev()->SetIndices(mesh2->GetInd());
 
 	//dibujamos
 	game->getDev()->DrawIndexedPrimitive(D3DPT_TRIANGLELIST, 0, 0, 4, 0, 2);
-	
+	*/
 }
 void MeshRender::Blending(int numBlend)
 {

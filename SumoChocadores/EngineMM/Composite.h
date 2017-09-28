@@ -3,7 +3,7 @@
 #include <vector>
 #include "Component.h"
 using namespace std;
-class Composite :
+class IMPORTEXPORT Composite :
 	public Component
 {
 private:
@@ -13,12 +13,12 @@ private:
 protected:
 	virtual void UpdateComposite(); // Y esto que hace? Preguntar.
 public:
-	IMPORTEXPORT Composite();
-	IMPORTEXPORT ~Composite();
-	IMPORTEXPORT void Add(Component* comp);
-	IMPORTEXPORT void Remove(Component * component); //Porque pide un componente como parametro si lo que hace es remover? Preguntar.
-	IMPORTEXPORT void Update();
-	IMPORTEXPORT void Render() override final;
+	Composite();
+	~Composite();
+	void Add(Component* comp);
+	void Remove(Component * component); //Porque pide un componente como parametro si lo que hace es remover? Preguntar.
+	void Update();
+	void Render() override final;
 	virtual void RenderingComposite();
 	template<class T> 
 	T* GetComponent();

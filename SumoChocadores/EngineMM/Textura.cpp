@@ -2,19 +2,21 @@
 #include "Textura.h"
 
 
-Textura::Textura(LPDIRECT3DDEVICE9 dev)
+Textura::Textura()
 {
-	D3DXCreateTextureFromFile(dev,
+	Game*d = Game::getInstance();
+	D3DXCreateTextureFromFile(d->getDev(),
 		L"perfil.jpg",
 		&text);
 
 }
 
-Textura::Textura(LPDIRECT3DDEVICE9 dev, LPWSTR newTex)
+Textura::Textura(LPWSTR newTex)
 {
+	Game*d = Game::getInstance();
 	textname = newTex;
-	D3DXCreateTextureFromFile(dev,
-		newTex,
+	D3DXCreateTextureFromFile(d->getDev(),
+		textname,
 		&text);
 }
 

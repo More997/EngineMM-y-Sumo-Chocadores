@@ -89,6 +89,7 @@ void Game::Run(_In_     HINSTANCE hInstance,
 
 	dev->SetRenderState(D3DRS_LIGHTING, FALSE);
 	ConectorDeEngine* Conectando = conector;
+	conector->Create();
 	/*
 	Mesh* mesh = new Mesh(dev);
 	Textura* Tex = new Textura(dev);
@@ -139,6 +140,7 @@ void Game::Run(_In_     HINSTANCE hInstance,
 		//Actualizar (Ventana)
 		dev->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_ARGB(0, 0, 102, 0), 1.0f, 0);
 		dev->BeginScene();
+		conector->Update();
 		/*
 		Cam->update(dev);
 		

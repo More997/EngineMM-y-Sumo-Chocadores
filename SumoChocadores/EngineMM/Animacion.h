@@ -1,7 +1,7 @@
 #ifndef ANIMACION_H
 #define ANIMACION_H
 #include "Composite.h"
-class Animacion :
+class IMPORTEXPORT Animacion :
 	public Composite
 {
 public:
