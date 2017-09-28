@@ -59,3 +59,29 @@ void MeshRender::RenderingComposite()
 	game->getDev()->DrawIndexedPrimitive(D3DPT_TRIANGLELIST, 0, 0, 4, 0, 2);
 	
 }
+void MeshRender::Blending(int numBlend)
+{
+	Game* game = Game::getInstance();
+	switch (numBlend)
+	{
+	case 0://Aditivo
+		game->getDev()->SetRenderState(D3DRS_ALPHABLENDENABLE, true);
+		game->getDev()->SetRenderState(D3DRS_SRCBLEND, D3DBLEND_ONE);
+		game->getDev()->SetRenderState(D3DRS_DESTBLEND, D3DBLEND_ONE);
+		break;
+	case 1: //Multiplicativo
+		game->getDev()->SetRenderState(D3DRS_ALPHABLENDENABLE, true);
+		game->getDev()->SetRenderState(D3DRS_SRCBLEND, D3DBLEND_ZERO);
+		game->getDev()->SetRenderState(D3DRS_DESTBLEND, D3DBLEND_SRCCOLOR);
+		break;
+	case 2://alphaBlending
+		game->getDev()->SetRenderState(D3DRS_ALPHABLENDENABLE, true);
+		game->getDev()->SetRenderState(D3DRS_SRCBLEND, D3DBLEND_SRCALPHA);
+		game->getDev()->SetRenderState(D3DRS_DESTBLEND, D3DBLEND_INVSRCALPHA);
+		break;
+	default:
+		game->getDev()->SetRenderState(D3DRS_ALPHABLENDENABLE, false);
+		break;
+	}
+}
+

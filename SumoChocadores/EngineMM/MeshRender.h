@@ -1,9 +1,10 @@
-#pragma once
+#ifndef MESHRENDER_H
+#define MESHRENDER_H
 #include "Composite.h"
 class MeshRender :
 	public Composite
 {
-private: 
+private:
 	Mesh* mesh2;
 	Textura* texture;
 public:
@@ -13,6 +14,7 @@ public:
 	IMPORTEXPORT Mesh* GetMesh();
 	IMPORTEXPORT ~MeshRender();
 	IMPORTEXPORT void RenderingComposite() override;
-	//void Blending(int numBlend, LPDIRECT3DDEVICE9 dev);
+	IMPORTEXPORT void Blending(int numBlend);
 };
+#endif
 
