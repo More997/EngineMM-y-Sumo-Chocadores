@@ -39,11 +39,49 @@ Mesh::Mesh()
 
 }
 
+/*Mesh::Mesh(vector<Vertex> _Vertex, vector<WORD> _Word)
+{
+	Game* game = Game::getInstance();
+	game->getDev()->CreateVertexBuffer(
+		4 * sizeof(Vertex),
+		D3DUSAGE_WRITEONLY,
+		CUSTOMFVF,
+		D3DPOOL_MANAGED,
+		&vb,
+		NULL);
+	game->getDev()->CreateIndexBuffer(
+		6 * sizeof(WORD),
+		D3DUSAGE_WRITEONLY,
+		D3DFMT_INDEX16,
+		D3DPOOL_DEFAULT,
+		&ind,
+		NULL);
+	VOID *data;
+	vb->Lock(0, 0, &data, 0);
+	memcpy(data, _Vertex.data(), _Vertex.size());
+	vb->Unlock();
+
+	ind->Lock(0, 0, &data, 0);
+	memcpy(data, _Word.data(), _Word.size());
+	ind->Unlock();
+		
+}*/
+
 
 Mesh::~Mesh()
 {
 	vb->Release();
 	ind->Release();
+}
+
+void Mesh::editVertex()
+{
+	Vertex vertexes[] = {
+		{ -0.5f,0.5f,0.0f, 0.0f, 0.0f },
+		{ 0.5f,0.5f,0.0f, 1.0f, 0.0f },
+		{ -0.5f,-0.5f,0.0f,0.0f, 1.0f },
+		{ 0.5f,-0.5f,0.0f,1.0f,1.0f }
+	};
 }
 
 LPDIRECT3DVERTEXBUFFER9 Mesh::GetVb()
