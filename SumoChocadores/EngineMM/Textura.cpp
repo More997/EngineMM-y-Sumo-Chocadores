@@ -8,6 +8,7 @@ Textura::Textura()
 	D3DXCreateTextureFromFile(d->getDev(),
 		L"perfil.jpg",
 		&text);
+	d->getDev()->SetTexture(0, text);
 
 }
 

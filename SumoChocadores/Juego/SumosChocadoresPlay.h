@@ -8,6 +8,12 @@ class SumosChocadoresPlay :
 	 public ConectorDeEngine
 {
 private:
+	Camera* camara;
+	Mesh* cosoMesh;
+	Textura* cosoTex;
+	MeshRender* cosoRender;
+	Composite*coso;
+	/*
 	Animacion * sumoAnima;
 	Composite* sumo;
 	Mesh* sumoMesh;
@@ -17,12 +23,12 @@ private:
 	Tilemap*  tilesMap;
 	Mesh* tileMesh;
 	MeshRender* tileRender;
-	Camera* camara;
 	Composite* tiles2;
 	Tilemap* tilesMap2;
 	Mesh* tileMesh2;
 	MeshRender* tileRender2;
 	vector<Tilemap*> tilesVector;
+	*/
 public:
 	SumosChocadoresPlay();
 	~SumosChocadoresPlay();
