@@ -9,8 +9,10 @@
 #include "Mesh.h"
 #include <map>
 #include <vector>
+#include "Composite.h"
 using namespace std;
-class Input
+class Input :
+	public Composite
 {
 private:
 	LPDIRECTINPUT8 dip;
