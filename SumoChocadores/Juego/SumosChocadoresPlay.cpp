@@ -23,22 +23,37 @@ void SumosChocadoresPlay::Create()
 	tiles = new Composite();
 	tileMesh = new Mesh();
 	tilesMap = new Tilemap(L"grass.jpg",L"Water.jpg",tileMesh);
+	tileRender = new MeshRender();
+	tiles2 = new Composite();
+	tileMesh2 = new Mesh();
+	tilesMap2 = new Tilemap(L"tem.png", L"tem.png", tileMesh);
+	tileRender2 = new MeshRender();
 	sumo->Add(sumoRender);
 	sumoRender->SetMesh(sumoMesh);
-	sumoRender->Blending(2);
 	tiles->Add(tilesMap);
+	tileRender->SetMesh(tileMesh);
 	tiles->setVector(D3DXVECTOR3(-2, 15, 10));
 	sumo->setModelScale(1, 1, 1);
 	sumo->setVector(D3DXVECTOR3(0, 0, 2));
+	tilesVector.push_back(tilesMap);
+	tilesVector.push_back(tilesMap2);
 }
 
 void SumosChocadoresPlay::Update()
 {
 	camara->update();
 	sumo->setVector(sumo->getVector());
+	sumoRender->Blending(2);
 	sumo->Render();
-	tiles->setVector(tiles->getVector());
-	tiles->Render();
+	for (int i = 0; i < tilesVector.size(); i++) 
+	{
+		tilesVector[i]->setVector(tilesVector[i]->getVector());
+
+		tilesVector[i]->Render();
+	}
+	/*tiles->setVector(tiles->getVector());
+	tileRender->Blending(0);
+	tiles->Render();*/
 }
 
 

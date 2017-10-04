@@ -16,9 +16,9 @@ private:
 	LPDIRECT3DTEXTURE9 tex2;
 	vector<vector<int>> tileMap =
 	{
-		{ 0,0,0,0,0 },
-		{ 1,1,1,1,1 },
-		{ 0,0,0,0,0 },
+		{ 1,0,1,0,1 },
+		{ 0,1,0,1,0 },
+		{ 1,0,1,0,1 },
 	};
 public:
 	Tilemap(LPWSTR texA, LPWSTR texB, Mesh* mesh);
