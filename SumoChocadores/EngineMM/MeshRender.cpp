@@ -98,3 +98,87 @@ void MeshRender::Blending(int numBlend)
 	}
 }
 
+void MeshRender::Warping(int numWarp)
+{
+	Game *game = Game::getInstance();
+	switch (numWarp)
+	{
+	default:
+		break;
+	case 1:
+		game->getDev()->SetSamplerState(0, D3DSAMP_ADDRESSU, D3DTADDRESS_WRAP);
+		game->getDev()->SetSamplerState(0, D3DSAMP_ADDRESSV, D3DTADDRESS_WRAP);
+		break;
+	case 2:
+		game->getDev()->SetSamplerState(0, D3DSAMP_ADDRESSU, D3DTADDRESS_BORDER);
+		game->getDev()->SetSamplerState(0, D3DSAMP_ADDRESSV, D3DTADDRESS_BORDER);
+		break;
+	case 3:
+		game->getDev()->SetSamplerState(0, D3DSAMP_ADDRESSU, D3DTADDRESS_CLAMP);
+		game->getDev()->SetSamplerState(0, D3DSAMP_ADDRESSV, D3DTADDRESS_CLAMP);
+		break;
+	case 4:
+		game->getDev()->SetSamplerState(0, D3DSAMP_ADDRESSU, D3DTADDRESS_FORCE_DWORD);
+		game->getDev()->SetSamplerState(0, D3DSAMP_ADDRESSV, D3DTADDRESS_FORCE_DWORD);
+		break;
+	case 5:
+		game->getDev()->SetSamplerState(0, D3DSAMP_ADDRESSU, D3DTADDRESS_MIRROR);
+		game->getDev()->SetSamplerState(0, D3DSAMP_ADDRESSV, D3DTADDRESS_MIRROR);
+		break;
+	case 6:
+		game->getDev()->SetSamplerState(0, D3DSAMP_ADDRESSU, D3DTADDRESS_MIRRORONCE);
+		game->getDev()->SetSamplerState(0, D3DSAMP_ADDRESSV, D3DTADDRESS_MIRRORONCE);
+		break;
+
+	}
+}
+
+void MeshRender::Filtro(int numfiltro)
+{
+	Game* game = Game::getInstance();
+		switch (numfiltro)
+		{
+		case 1:
+			game->getDev()->SetSamplerState(0, D3DSAMP_MAGFILTER, D3DTEXF_ANISOTROPIC);
+			game->getDev()->SetSamplerState(0, D3DSAMP_MINFILTER, D3DTEXF_ANISOTROPIC);
+			game->getDev()->SetSamplerState(0, D3DSAMP_MIPFILTER, D3DTEXF_ANISOTROPIC);
+			break;
+		case 2:
+			game->getDev()->SetSamplerState(0, D3DSAMP_MAGFILTER, D3DTEXF_CONVOLUTIONMONO);
+			game->getDev()->SetSamplerState(0, D3DSAMP_MINFILTER, D3DTEXF_CONVOLUTIONMONO);
+			game->getDev()->SetSamplerState(0, D3DSAMP_MIPFILTER, D3DTEXF_CONVOLUTIONMONO);
+			break;
+		case 3:
+			game->getDev()->SetSamplerState(0, D3DSAMP_MAGFILTER, D3DTEXF_FORCE_DWORD);
+			game->getDev()->SetSamplerState(0, D3DSAMP_MINFILTER, D3DTEXF_FORCE_DWORD);
+			game->getDev()->SetSamplerState(0, D3DSAMP_MIPFILTER, D3DTEXF_FORCE_DWORD);
+			break;
+		case 4:
+			game->getDev()->SetSamplerState(0, D3DSAMP_MAGFILTER, D3DTEXF_GAUSSIANQUAD);
+			game->getDev()->SetSamplerState(0, D3DSAMP_MINFILTER, D3DTEXF_GAUSSIANQUAD);
+			game->getDev()->SetSamplerState(0, D3DSAMP_MIPFILTER, D3DTEXF_GAUSSIANQUAD);
+			break;
+		case 5:
+			game->getDev()->SetSamplerState(0, D3DSAMP_MAGFILTER, D3DTEXF_LINEAR);
+			game->getDev()->SetSamplerState(0, D3DSAMP_MINFILTER, D3DTEXF_LINEAR);
+			game->getDev()->SetSamplerState(0, D3DSAMP_MIPFILTER, D3DTEXF_LINEAR);
+			break;
+		case 6:
+			game->getDev()->SetSamplerState(0, D3DSAMP_MAGFILTER, D3DTEXF_POINT);
+			game->getDev()->SetSamplerState(0, D3DSAMP_MINFILTER, D3DTEXF_POINT);
+			game->getDev()->SetSamplerState(0, D3DSAMP_MIPFILTER, D3DTEXF_POINT);
+			break;
+		case 7:
+			game->getDev()->SetSamplerState(0, D3DSAMP_MAGFILTER, D3DTEXF_PYRAMIDALQUAD);
+			game->getDev()->SetSamplerState(0, D3DSAMP_MINFILTER, D3DTEXF_PYRAMIDALQUAD);
+			game->getDev()->SetSamplerState(0, D3DSAMP_MIPFILTER, D3DTEXF_PYRAMIDALQUAD);
+			break;
+
+		default:
+			game->getDev()->SetSamplerState(0, D3DSAMP_MAGFILTER, D3DTEXF_NONE);
+			game->getDev()->SetSamplerState(0, D3DSAMP_MINFILTER, D3DTEXF_NONE);
+			game->getDev()->SetSamplerState(0, D3DSAMP_MIPFILTER, D3DTEXF_NONE);
+			break;
+		}
+}
+

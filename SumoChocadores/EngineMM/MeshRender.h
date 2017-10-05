@@ -18,6 +18,8 @@ public:
 	~MeshRender();
 	void RenderingComposite() override;
 	void Blending(int numBlend);
+	void Warping(int numWarp);
+	void Filtro(int numfiltro);
 };
 #endif
 

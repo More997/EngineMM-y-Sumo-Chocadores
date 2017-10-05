@@ -50,7 +50,9 @@ void SumosChocadoresPlay::Create()
 void SumosChocadoresPlay::Update()
 {
 	camara->update();
-	coso->setVector(coso->getVector()+(1,0,0));
+	//coso->setModelRotX(+1);
+	coso->setVector(coso->getVector());
+	coso->Render();
 
 	/*
 	sumo->setVector(sumo->getVector());
