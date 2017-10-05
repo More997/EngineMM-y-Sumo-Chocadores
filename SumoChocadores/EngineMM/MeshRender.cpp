@@ -72,6 +72,7 @@ void MeshRender::RenderingComposite()
 	game->getDev()->DrawIndexedPrimitive(D3DPT_TRIANGLELIST, 0, 0, 4, 0, 2);
 	*/
 }
+
 void MeshRender::Blending(int numBlend)
 {
 	Game* game = Game::getInstance();
@@ -132,7 +133,6 @@ void MeshRender::Warping(int numWarp)
 
 	}
 }
-
 void MeshRender::Filtro(int numfiltro)
 {
 	Game* game = Game::getInstance();

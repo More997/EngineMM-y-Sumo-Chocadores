@@ -3,25 +3,11 @@
 
 
 
-Animacion::Animacion()
+
+Animacion::Animacion(Textura * tex) : MeshRender (tex)
 {
+	animationPosition = 0;
 }
-
-Animacion::Animacion(int tileXA, int tileYA, int tileF, int tileC)
-{
-	tileXCant = tileXA;
-	tileYCant = tileYA;
-	tileFila = tileF;
-	tileColumna = tileC;
-
-	aspectRatio = (float)tileXCant / (float)tileYCant;
-	width = 1 / aspectRatio;
-	tileFila = 1.0f / tileXCant;
-	tileColumna = 1.0f / tileYCant;
-	lastFrame = getMS();
-	minFrameTime = 0.167f;
-}
-
 
 Animacion::~Animacion()
 {
@@ -35,17 +21,27 @@ float Animacion::getMS()
 	return ms.count();
 }
 
-void Animacion::Draw()
-{
-	float actualMS = getMS();
-	float deltatime = (actualMS - lastFrame) / 1000.0f;
-	lastFrame = actualMS;
-	int currentFrame = (int)FrameporSec;
-	currentFrame %= 2;
-}
 
 void Animacion::Update()
 {
+	float actualMs = getMS();
+	float deltaTime = (actualMs - lastFrameMs) / 1000.0f;
+	lastFrameMs = actualMs;
+
+	//animationPosition = (int)num;
+	//animationPosition %= 2;
+	if (lastFrameMs >= 0)
+	{
+
+		//if (animationPosition <= /*4*/(sizeof(frames) - 2 ))
+		if (animationPosition < spritesheet.size() - 1)
+			animationPosition++;
+		else
+			animationPosition = 0;
+		SetMesh(spritesheet[animationPosition]);
+	}
+	//Render();
+	//Draw();
 }
 
 void Animacion::setFramesPerSec(int frames)
@@ -53,16 +49,37 @@ void Animacion::setFramesPerSec(int frames)
 	FrameporSec = frames;
 }
 
-void Animacion::addFrames(int spriteStartX, int spriteStartY, int spriteWidth, int spriteHeight,
-								int spriteTotalX, int spriteTotalY, int totalframes)
+void Animacion::addFrames(int spriteWidth, int spriteHeight)
 {
-	width = spriteWidth;
-	height = spriteHeight;
-	for (int i = 0; i < totalframes; i++)
+	tileXAmount = spriteWidth;
+	tileYAmount = spriteHeight;
+	aspectRatio = (float)tileXAmount / (float)tileYAmount;
+	float width = 1 / aspectRatio;
+
+	tileWidth = 1.0f / tileXAmount;
+	tileHeight = 1.0f / tileYAmount;
+
+	tileFila = 1;
+	tileCol = 1;
+	int toAdvance = tileCol;
+
+
+	WORD indexes[] = { 3,0,1,3,1,2 };
+
+	for (int i = 0; i < tileXAmount; i++)
 	{
+		if (i > 0)
+			tileCol += toAdvance;
+		Vertex vertexes2[4] =
+		{
+			{ 0.00f, 0.0f, 0.0f, tileWidth * tileCol     , tileHeight * (tileFila + 1) },
+			{ -width, 0.0f, 0.0f, tileWidth * (tileCol - 1) , tileHeight * (tileFila + 1) },
+			{ -width, 1.0f, 0.0f, tileWidth * (tileCol - 1) , tileHeight * tileFila },
+			{ 0.00f, 1.0f, 0.0f, tileWidth * tileCol     , tileHeight * tileFila }
+		};
 		
-		spriteStartX += width;
-		spriteWidth += width;
+		spritesheet.push_back(new Mesh(vertexes2, indexes));
+
 	}
 }
 

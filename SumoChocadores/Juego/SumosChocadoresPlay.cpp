@@ -14,19 +14,20 @@ SumosChocadoresPlay::~SumosChocadoresPlay()
 
 void SumosChocadoresPlay::Create()
 {
-	coso = new Composite();
 	camara = new Camera();
+
+	/*coso = new Composite();
 	cosoMesh = new Mesh();
 	cosoMesh->Load3D("Model.obj");
 	cosoTex = new Textura(L"Pickups_lambert1_Normal.png");
 	cosoRender = new MeshRender(cosoTex);
 	cosoRender->SetMesh(cosoMesh);
 	coso->Add(cosoRender);
-	/*sumoAnima = new Animacion();
-	
+	*/
+
 	sumoMesh = new Mesh();
 	sumoTex = new Textura(L"Sprite.png");
-	sumoRender = new MeshRender(sumoTex);
+	sumoAnima = new Animacion(sumoTex);
 	sumo = new Composite();
 	tiles = new Composite();
 	tileMesh = new Mesh();
@@ -36,32 +37,34 @@ void SumosChocadoresPlay::Create()
 	tileMesh2 = new Mesh();
 	tilesMap2 = new Tilemap(L"tem.png", L"tem.png", tileMesh);
 	tileRender2 = new MeshRender();
-	sumo->Add(sumoRender);
-	sumoRender->SetMesh(sumoMesh);
+	//sumo->Add(sumoRender);
+	sumoAnima->SetMesh(sumoMesh);
+	sumo->setModelScale(1, 1, 1);
+	sumo->setVector(D3DXVECTOR3(0, 0, 2));
+	sumo->Add(sumoAnima);
+	sumoAnima->addFrames(8, 2);
 	tiles->Add(tilesMap);
 	tileRender->SetMesh(tileMesh);
 	tiles->setVector(D3DXVECTOR3(-2, 15, 10));
-	sumo->setModelScale(1, 1, 1);
-	sumo->setVector(D3DXVECTOR3(0, 0, 2));
 	tilesVector.push_back(tilesMap);
-	tilesVector.push_back(tilesMap2);*/
+	tilesVector.push_back(tilesMap2);
+	
 }
 
 void SumosChocadoresPlay::Update()
 {
 	camara->update();
 	//coso->setModelRotX(+1);
-	coso->setVector(coso->getVector());
-	coso->Render();
+	//coso->setVector(coso->getVector());
+	//coso->Render();
 
-	/*
+	sumoAnima->Update();
 	sumo->setVector(sumo->getVector());
-	sumoRender->Blending(2);
+	sumoAnima->Blending(2);
 	sumo->Render();
 	for (int i = 0; i < tilesVector.size(); i++) 
 	{
 		tilesVector[i]->setVector(tilesVector[i]->getVector());
-
 		tilesVector[i]->Render();
 	}
 	/*tiles->setVector(tiles->getVector());

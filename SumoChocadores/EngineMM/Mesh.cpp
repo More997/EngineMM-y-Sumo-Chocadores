@@ -4,7 +4,6 @@
 
 Mesh::Mesh()
 {
-	/* 
 	Game* game = Game::getInstance();
 	Vertex vertexes[] = {
 		{ -0.5f,0.5f,0.0f, 0.0f, 0.0f },
@@ -37,12 +36,9 @@ Mesh::Mesh()
 	ind->Lock(0, 0, &data, 0);
 	memcpy(data, indexes, 6 * sizeof(WORD));
 	ind->Unlock();
-	*/
-	
-
 }
 
-/*Mesh::Mesh(vector<Vertex> _Vertex, vector<WORD> _Word)
+Mesh::Mesh(Vertex _Vertexes[], WORD _WORD[])
 {
 	Game* game = Game::getInstance();
 	game->getDev()->CreateVertexBuffer(
@@ -61,12 +57,17 @@ Mesh::Mesh()
 		NULL);
 	VOID *data;
 	vb->Lock(0, 0, &data, 0);
-	memcpy(data, _Vertex.data(), _Vertex.size());
+	memcpy(data, _Vertexes, 4*sizeof(Vertex));
 	vb->Unlock();
 
 	ind->Lock(0, 0, &data, 0);
-	memcpy(data, _Word.data(), _Word.size());
+	memcpy(data, _WORD, 6*sizeof(WORD));
 	ind->Unlock();
+}
+
+/*Mesh::Mesh(vector<Vertex> _Vertex, vector<WORD> _Word)
+{
+	
 		
 }*/
 
@@ -86,7 +87,7 @@ void Mesh::editVertex()
 		{ 0.5f,-0.5f,0.0f,1.0f,1.0f }
 	};
 }
-
+/*
 void Mesh::Load3D(const char* newModel)
 {
 	Game *game = Game::getInstance();
@@ -180,7 +181,7 @@ void Mesh::Load3D(const char* newModel)
 	game->getDev()->SetRenderState(D3DRS_ZWRITEENABLE, true);
 	game->getDev()->SetRenderState(D3DRS_ZFUNC, D3DCMP_LESS);
 
-}
+}*/
 
 LPDIRECT3DVERTEXBUFFER9 Mesh::GetVb()
 {

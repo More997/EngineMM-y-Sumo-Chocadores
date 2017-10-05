@@ -17,9 +17,9 @@ public:
 	Mesh* GetMesh();
 	~MeshRender();
 	void RenderingComposite() override;
-	void Blending(int numBlend);
-	void Warping(int numWarp);
-	void Filtro(int numfiltro);
+	void Blending(int numBlend); //numero del 0 al 2
+	void Warping(int numWarp);//numero del 1 al 6
+	void Filtro(int numfiltro);//numero del 1 al 7
 };
 #endif
 

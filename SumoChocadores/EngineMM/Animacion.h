@@ -3,32 +3,37 @@
 #include "MeshRender.h"
 #include <chrono>
 #include "Game.h"
+#include "MeshRender.h"
 using namespace std::chrono;
 class IMPORTEXPORT Animacion :
 	public MeshRender
 {
 private: 
-	int tileXCant;
-	int tileYCant;
-	int tileFila;
-	int tileColumna;
+	int tileXAmount;
+	int tileYAmount;
 	float aspectRatio;
-	float height;
 	float width;
-	float FrameporSec = 30;
-	int lastFrame;
+	float height;
+
+	float tileWidth;
+	float tileHeight;
+
+	int tileFila;
+	int tileCol;
+
+	float lastFrameMs;
 	float minFrameTime;
-	vector<Mesh> spritesheet;
+	float FrameporSec = 60;
+	vector <Vertex> _vertex;
+	int animationPosition;
+	vector<Mesh*> spritesheet;
 public:
-	Animacion();
-	Animacion(int tileXA, int tileYA, int tileF, int tileC);
+	Animacion(Textura* tex);
 	~Animacion();
 	float getMS();
-	void Draw();
 	void Update();
 	void setFramesPerSec(int frames);
-	void addFrames (int spriteStartX, int spriteStartY, int spriteWidth, int spriteHeight,
-							int spriteTotalX, int spriteTotalY, int totalframes);
+	void addFrames (int spriteColum, int spriteFila);
 };
 #endif
 
