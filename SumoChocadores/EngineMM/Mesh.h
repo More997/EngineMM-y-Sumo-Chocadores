@@ -15,7 +15,7 @@ public:
 	Mesh(Vertex _Vertexes[], WORD _WORD[]);
 	~Mesh();
 	void editVertex();
-	//void Load3D(const char* newModel);
+	void Load3D(const char* newModel);
 	LPDIRECT3DVERTEXBUFFER9 GetVb();
 	LPDIRECT3DINDEXBUFFER9 GetInd();
 	vector<Vertex> vertexes;

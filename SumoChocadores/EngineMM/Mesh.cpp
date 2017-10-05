@@ -87,7 +87,7 @@ void Mesh::editVertex()
 		{ 0.5f,-0.5f,0.0f,1.0f,1.0f }
 	};
 }
-/*
+
 void Mesh::Load3D(const char* newModel)
 {
 	Game *game = Game::getInstance();
@@ -181,7 +181,7 @@ void Mesh::Load3D(const char* newModel)
 	game->getDev()->SetRenderState(D3DRS_ZWRITEENABLE, true);
 	game->getDev()->SetRenderState(D3DRS_ZFUNC, D3DCMP_LESS);
 
-}*/
+}
 
 LPDIRECT3DVERTEXBUFFER9 Mesh::GetVb()
 {

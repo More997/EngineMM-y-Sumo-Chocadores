@@ -16,15 +16,16 @@ void SumosChocadoresPlay::Create()
 {
 	camara = new Camera();
 
-	/*coso = new Composite();
+	coso = new Composite();
 	cosoMesh = new Mesh();
-	cosoMesh->Load3D("Model.obj");
-	cosoTex = new Textura(L"Pickups_lambert1_Normal.png");
+	cosoMesh->Load3D("TracerGun.obj");
+	cosoTex = new Textura(L"TracerGun.png");
 	cosoRender = new MeshRender(cosoTex);
 	cosoRender->SetMesh(cosoMesh);
+	coso->setModelScale(1, 1, 1);
+	coso->setVector(D3DXVECTOR3(0, 0, 5));
 	coso->Add(cosoRender);
-	*/
-
+	/*
 	sumoMesh = new Mesh();
 	sumoTex = new Textura(L"Sprite.png");
 	sumoAnima = new Animacion(sumoTex);
@@ -48,17 +49,17 @@ void SumosChocadoresPlay::Create()
 	tiles->setVector(D3DXVECTOR3(-2, 15, 10));
 	tilesVector.push_back(tilesMap);
 	tilesVector.push_back(tilesMap2);
-	
+	*/
 }
 
 void SumosChocadoresPlay::Update()
 {
 	camara->update();
-	//coso->setModelRotX(+1);
-	//coso->setVector(coso->getVector());
-	//coso->Render();
+	coso->setModelRotX(+1);
+	coso->setVector(coso->getVector());
+	coso->Render();
 
-	sumoAnima->Update();
+	/*sumoAnima->Update();
 	sumo->setVector(sumo->getVector());
 	sumoAnima->Blending(2);
 	sumo->Render();

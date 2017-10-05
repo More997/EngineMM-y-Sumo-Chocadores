@@ -116,6 +116,5 @@ c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tilemap.
           [
               _Ty=int
           ]
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(65): warning C4018: '<': no coinciden signed/unsigned
   Juego.vcxproj -> C:\Users\def\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.exe
   Juego.vcxproj -> C:\Users\def\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.pdb (Full PDB)
