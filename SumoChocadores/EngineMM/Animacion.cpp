@@ -13,7 +13,7 @@ Animacion::~Animacion()
 {
 }
 
-float Animacion::getMS()
+int Animacion::getMS()
 {
 	time_point<system_clock> actualTime = system_clock::now();
 	system_clock::duration duration = actualTime.time_since_epoch();
@@ -22,18 +22,18 @@ float Animacion::getMS()
 }
 
 
-void Animacion::Update()
+void Animacion::Update(float num)
 {
-	float actualMs = getMS();
-	float deltaTime = (actualMs - lastFrameMs) / 1000.0f;
+	actualMs = getMS();
+	deltaTime = (actualMs - lastFrameMs) / 1000.0f;
 	lastFrameMs = actualMs;
-
+	spriteTime += lastFrameMs;
 	//animationPosition = (int)num;
 	//animationPosition %= 2;
-	if (lastFrameMs >= 0)
+	if (spriteTime >= actualMs * num)
 	{
-
 		//if (animationPosition <= /*4*/(sizeof(frames) - 2 ))
+		spriteTime = 0;
 		if (animationPosition < spritesheet.size() - 1)
 			animationPosition++;
 		else

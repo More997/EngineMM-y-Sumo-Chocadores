@@ -4,16 +4,18 @@
 #include "../EngineMM/Animacion.h"
 #include "../EngineMM/Camera.h"
 #include "../EngineMM/Tilemap.h"
+#include "../EngineMM/MeshRender.h"
 class SumosChocadoresPlay :
 	 public ConectorDeEngine
 {
 private:
 	Camera* camara;
+	/*
 	Mesh* cosoMesh;
 	Textura* cosoTex;
 	MeshRender* cosoRender;
 	Composite*coso;
-	/*
+	*/
 	Animacion * sumoAnima;
 	Composite* sumo;
 	Mesh* sumoMesh;
@@ -28,7 +30,6 @@ private:
 	Mesh* tileMesh2;
 	MeshRender* tileRender2;
 	vector<Tilemap*> tilesVector;
-	*/
 public:
 	SumosChocadoresPlay();
 	~SumosChocadoresPlay();

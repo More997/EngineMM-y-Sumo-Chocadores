@@ -21,17 +21,20 @@ private:
 	int tileFila;
 	int tileCol;
 
-	float lastFrameMs;
+	int lastFrameMs;
 	float minFrameTime;
 	float FrameporSec = 60;
 	vector <Vertex> _vertex;
 	int animationPosition;
 	vector<Mesh*> spritesheet;
+	float actualMs;
+	float deltaTime;
+	float spriteTime = 0;
 public:
 	Animacion(Textura* tex);
 	~Animacion();
-	float getMS();
-	void Update();
+	int getMS();
+	void Update(float num);
 	void setFramesPerSec(int frames);
 	void addFrames (int spriteColum, int spriteFila);
 };
