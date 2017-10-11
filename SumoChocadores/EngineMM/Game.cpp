@@ -120,7 +120,7 @@ void Game::Run(_In_     HINSTANCE hInstance,
 	vector<int> *vLeft = &map["Left"];
 	vector<int> *vRight = &map["Right"];
 	vector<int> *vDown = &map["Down"];
-	*/
+	*/ 
 	while (true)
 	{
 		MSG msg;

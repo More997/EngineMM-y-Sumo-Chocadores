@@ -56,10 +56,11 @@ void MeshRender::RenderingComposite()
 	//Multiplicación de Matrices
 	//Le digo a la placa que la matriz de mundo es "mat"
 	game->getDev()->SetTransform(D3DTS_WORLD, &getTransMat());
-	game->getDev()->SetFVF(CUSTOMFVF);
-	game->getDev()->SetStreamSource(0, mesh2->GetVb(), 0, sizeof(Vertex));
+	//game->getDev()->SetFVF(CUSTOMFVF);
 	game->getDev()->SetIndices(mesh2->GetInd());
-	game->getDev()->DrawIndexedPrimitive(D3DPT_TRIANGLELIST, 0, 0, 4, 0, 2);
+	game->getDev()->SetStreamSource(0, mesh2->GetVb(), 0, sizeof(Vertex));
+	game->getDev()->DrawIndexedPrimitive(D3DPT_TRIANGLELIST, 0, 0, mesh2->vertexes.size(), 0, mesh2->indexes.size() / 3);
+	//game->getDev()->DrawIndexedPrimitive(D3DPT_TRIANGLELIST, 0, 0, 4, 0, 2); 2D
 
 
 	//Especificamos cual VB vamos a usar

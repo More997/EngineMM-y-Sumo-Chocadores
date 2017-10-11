@@ -6,7 +6,7 @@
 
 Animacion::Animacion(Textura * tex) : MeshRender (tex)
 {
-	animationPosition = 0;
+	animationPositionX = 0;
 }
 
 Animacion::~Animacion()
@@ -22,7 +22,7 @@ int Animacion::getMS()
 }
 
 
-void Animacion::Update(float num)
+void Animacion::UpdateAn(float num)
 {
 	actualMs = getMS();
 	deltaTime = (actualMs - lastFrameMs) / 1000.0f;
@@ -34,11 +34,11 @@ void Animacion::Update(float num)
 	{
 		//if (animationPosition <= /*4*/(sizeof(frames) - 2 ))
 		spriteTime = 0;
-		if (animationPosition < spritesheet.size() - 1)
-			animationPosition++;
-		else
-			animationPosition = 0;
-		SetMesh(spritesheet[animationPosition]);
+		if (animationPositionX < spritesheet.size() - 1)
+			animationPositionX++;
+		else if (animationPositionX)
+			animationPositionX = 0;
+		SetMesh(spritesheet[animationPositionX]);
 	}
 	//Render();
 	//Draw();
@@ -61,25 +61,23 @@ void Animacion::addFrames(int spriteWidth, int spriteHeight)
 
 	tileFila = 1;
 	tileCol = 1;
-	int toAdvance = tileCol;
-
 
 	WORD indexes[] = { 3,0,1,3,1,2 };
-
-	for (int i = 0; i < tileXAmount; i++)
+	for (int o = 0; o < tileYAmount; o++)
 	{
-		if (i > 0)
-			tileCol += toAdvance;
-		Vertex vertexes2[4] =
+		for (int i = 0; i < tileXAmount; i++)
 		{
-			{ 0.00f, 0.0f, 0.0f, tileWidth * tileCol     , tileHeight * (tileFila + 1) },
-			{ -width, 0.0f, 0.0f, tileWidth * (tileCol - 1) , tileHeight * (tileFila + 1) },
-			{ -width, 1.0f, 0.0f, tileWidth * (tileCol - 1) , tileHeight * tileFila },
-			{ 0.00f, 1.0f, 0.0f, tileWidth * tileCol     , tileHeight * tileFila }
-		};
-		
-		spritesheet.push_back(new Mesh(vertexes2, indexes));
-
+			Vertex vertexes2[4] =
+			{
+				{ 0.00f, 0.0f, 0.0f, tileWidth * tileCol     , tileHeight * (tileFila + 1) },
+				{ -width, 0.0f, 0.0f, tileWidth * (tileCol - 1) , tileHeight * (tileFila + 1) },
+				{ -width, 1.0f, 0.0f, tileWidth * (tileCol - 1) , tileHeight * tileFila },
+				{ 0.00f, 1.0f, 0.0f, tileWidth * tileCol     , tileHeight * tileFila }
+			};
+			spritesheet.push_back(new Mesh(vertexes2, indexes));
+			tileCol++;
+		}
+		tileFila++;
 	}
 }
 

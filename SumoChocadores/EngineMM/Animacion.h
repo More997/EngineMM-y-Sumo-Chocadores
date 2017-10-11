@@ -25,7 +25,7 @@ private:
 	float minFrameTime;
 	float FrameporSec = 60;
 	vector <Vertex> _vertex;
-	int animationPosition;
+	int animationPositionX;
 	vector<Mesh*> spritesheet;
 	float actualMs;
 	float deltaTime;
@@ -34,7 +34,7 @@ public:
 	Animacion(Textura* tex);
 	~Animacion();
 	int getMS();
-	void Update(float num);
+	void UpdateAn(float num);
 	void setFramesPerSec(int frames);
 	void addFrames (int spriteColum, int spriteFila);
 };
