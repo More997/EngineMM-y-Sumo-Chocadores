@@ -33,12 +33,13 @@ void SumosChocadoresPlay::Create()
 	coso = new Composite();
 	cosoMesh = new Mesh();
 	cosoMesh->Load3D("model.obj");
-	//cosoTex = new Textura(L"TracerGun.png");
-	cosoRender = new MeshRender(/*cosoTex*/);
+	cosoTex = new Textura(L"Pickups_lambert1_AlbedoTransparency.png");
+	cosoRender = new MeshRender(cosoTex);
 	cosoRender->SetMesh(cosoMesh);
 	coso->Add(cosoRender);
 	coso->setModelScale(10, 10, 10);
-	coso->setVector(D3DXVECTOR3(0, 0, 10));
+	coso->setModelRotY(30);
+	coso->setVector(D3DXVECTOR3(0, -21, 30));
 	
 	/*
 	sumoMesh = new Mesh();
@@ -70,7 +71,7 @@ void SumosChocadoresPlay::Create()
 void SumosChocadoresPlay::Update()
 {
 	camara->update();
-	coso->setModelRotX(+1);
+
 	coso->setVector(coso->getVector());
 	coso->Render();
 	/*
