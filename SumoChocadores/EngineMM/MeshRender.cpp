@@ -59,8 +59,8 @@ void MeshRender::RenderingComposite()
 	//game->getDev()->SetFVF(CUSTOMFVF);
 	game->getDev()->SetIndices(mesh2->GetInd());
 	game->getDev()->SetStreamSource(0, mesh2->GetVb(), 0, sizeof(Vertex));
-	game->getDev()->DrawIndexedPrimitive(D3DPT_TRIANGLELIST, 0, 0, mesh2->vertexes.size(), 0, mesh2->indexes.size() / 3);
-	//game->getDev()->DrawIndexedPrimitive(D3DPT_TRIANGLELIST, 0, 0, 4, 0, 2); 2D
+	//game->getDev()->DrawIndexedPrimitive(D3DPT_TRIANGLELIST, 0, 0, mesh2->vertexes.size(), 0, mesh2->indexes.size() / 3); //3D
+	game->getDev()->DrawIndexedPrimitive(D3DPT_TRIANGLELIST, 0, 0, 4, 0, 2); //2D
 
 
 	//Especificamos cual VB vamos a usar
