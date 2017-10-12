@@ -20,6 +20,7 @@ private:
 		{ 0,1,0,1,0 },
 		{ 1,0,1,0,1 },
 	};
+	Mesh* _mesh;
 public:
 	Tilemap(LPWSTR texA, LPWSTR texB, Mesh* mesh);
 	~Tilemap();

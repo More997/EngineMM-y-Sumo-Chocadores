@@ -6,10 +6,7 @@ Tilemap::Tilemap(LPWSTR texA, LPWSTR texB, Mesh * mesh)
 	Game* game = Game::getInstance();
 	D3DXMatrixScaling(&Scale, ancho, alto, 1);
 
-	game->getDev()->SetFVF(CUSTOMFVF);
-	game->getDev()->SetIndices(mesh->GetInd());
-	game->getDev()->SetStreamSource(0, mesh->GetVb(), 0, sizeof(Vertex));
-
+	_mesh = mesh;
 	D3DXCreateTextureFromFile(game->getDev(), texA, &tex1);
 	D3DXCreateTextureFromFile(game->getDev(), texB, &tex2);
 	Texturas = { tex1, tex2 };
@@ -22,6 +19,11 @@ Tilemap::~Tilemap()
 void Tilemap::RenderingComposite()
 {
 	Game* game = Game::getInstance();
+
+	game->getDev()->SetFVF(CUSTOMFVF);
+	game->getDev()->SetIndices(_mesh->GetInd());
+	game->getDev()->SetStreamSource(0, _mesh->GetVb(), 0, sizeof(Vertex));
+
 	for (int iFila = 0; iFila < tileMap.size(); iFila++)
 	{
 		vector<int>* fila = &tileMap[iFila];
