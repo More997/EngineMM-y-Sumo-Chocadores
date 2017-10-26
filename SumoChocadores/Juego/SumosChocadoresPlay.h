@@ -11,7 +11,8 @@ class SumosChocadoresPlay :
 private:
 	Camera* camara;
 	
-
+	float num = 0;
+	float num2 = 0;
 	Mesh* cosoMesh;
 	Textura* cosoTex;
 	MeshRender* cosoRender;

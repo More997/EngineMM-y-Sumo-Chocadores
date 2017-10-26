@@ -155,6 +155,14 @@ void Mesh::Load3D(const char* newModel)
 		{
 			D3DXVECTOR3 position;
 			fscanf(file, "%f %f %f\n", &position.x, &position.y, &position.z);
+
+			/*bb.xMin = min(position.x, bb.xMin);
+			bb.yMin = min(position.y, bb.yMin);
+			bb.zMin = min(position.z, bb.zMin);
+
+			bb.xMax = max(position.x, bb.xMax);
+			bb.yMax = max(position.y, bb.yMax);
+			bb.zMax = max(position.z, bb.zMax);*/
 			positions.push_back(position);
 		}
 		else if (strcmp(lineHeader, "vn") == 0)

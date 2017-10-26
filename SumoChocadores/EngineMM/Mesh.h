@@ -1,5 +1,6 @@
 #pragma once
 #include "Vertex.h"
+//#include "BoundingBox.h"
 #include <vector>
 #include <d3dx9.h>
 #pragma comment (lib, "d3dx9.lib")
@@ -8,6 +9,7 @@
 using namespace std;
 class IMPORTEXPORT Mesh
 {
+	//BoundingBox bb;
 	LPDIRECT3DVERTEXBUFFER9 vb;
 	LPDIRECT3DINDEXBUFFER9 ind;
 public:

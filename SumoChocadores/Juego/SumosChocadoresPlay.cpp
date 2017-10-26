@@ -29,7 +29,6 @@ SumosChocadoresPlay::~SumosChocadoresPlay()
 void SumosChocadoresPlay::Create()
 {
 	camara = new Camera();
-	
 	coso = new Composite();
 	cosoMesh = new Mesh();
 	cosoMesh->Load3D("model.obj");
@@ -37,9 +36,9 @@ void SumosChocadoresPlay::Create()
 	cosoRender = new MeshRender(cosoTex);
 	cosoRender->SetMesh(cosoMesh);
 	coso->Add(cosoRender);
-	coso->setModelScale(10, 10, 10);
-	coso->setModelRotY(30);
-	coso->setVector(D3DXVECTOR3(0, -21, 30));
+	coso->setModelScale(0, 0,0);
+	coso->setModelRotY(45);
+	coso->setVector(D3DXVECTOR3(0, -5, 30));
 	
 	/*
 	sumoMesh = new Mesh();
@@ -75,9 +74,12 @@ void SumosChocadoresPlay::Create()
 void SumosChocadoresPlay::Update()
 {
 	camara->update();
-
+	coso->setModelRotY(num2);
+	coso->setModelScale(num, num, num);
 	coso->setVector(coso->getVector());
 	coso->Render();
+	num += 0.025;
+	num2 += 0.25;
 
 /*	
 	sumo->setVector(sumo->getVector());
