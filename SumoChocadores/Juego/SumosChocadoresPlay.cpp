@@ -30,7 +30,6 @@ void SumosChocadoresPlay::Create()
 {
 	camara = new Camera();
 	
-	/* 
 	coso = new Composite();
 	cosoMesh = new Mesh();
 	cosoMesh->Load3D("model.obj");
@@ -41,8 +40,8 @@ void SumosChocadoresPlay::Create()
 	coso->setModelScale(10, 10, 10);
 	coso->setModelRotY(30);
 	coso->setVector(D3DXVECTOR3(0, -21, 30));
-	*/
 	
+	/*
 	sumoMesh = new Mesh();
 	sumoTex = new Textura(L"walk.png");
 	sumoAnima = new Animacion(sumoTex);
@@ -69,17 +68,18 @@ void SumosChocadoresPlay::Create()
 	tiles->setVector(D3DXVECTOR3(-2, 15, 10));
 	tilesVector.push_back(tilesMap);
 	tilesVector.push_back(tilesMap2);
+	*/
 	
 }
 
 void SumosChocadoresPlay::Update()
 {
 	camara->update();
-/*
+
 	coso->setVector(coso->getVector());
 	coso->Render();
-*/
-	
+
+/*	
 	sumo->setVector(sumo->getVector());
 	sumoAnima->Blending(2);
 	sumo->Render();
@@ -93,7 +93,7 @@ void SumosChocadoresPlay::Update()
 	tileRender->Blending(2);
 	//tiles->Render();
 	sumoAnima->UpdateAn(2);
-
+	*/
 }
 
 
