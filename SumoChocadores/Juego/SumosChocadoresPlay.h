@@ -10,7 +10,7 @@ class SumosChocadoresPlay :
 {
 private:
 	Camera* camara;
-	
+	bool achicar = false;
 	float num = 0;
 	float num2 = 0;
 	Mesh* cosoMesh;

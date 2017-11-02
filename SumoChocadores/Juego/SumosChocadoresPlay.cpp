@@ -32,12 +32,11 @@ void SumosChocadoresPlay::Create()
 	coso = new Composite();
 	cosoMesh = new Mesh();
 	cosoMesh->Load3D("model.obj");
-	cosoTex = new Textura(L"Pickups_lambert1_AlbedoTransparency.png");
+	cosoTex = new Textura(L"Yaya.jpg");
 	cosoRender = new MeshRender(cosoTex);
 	cosoRender->SetMesh(cosoMesh);
 	coso->Add(cosoRender);
 	coso->setModelScale(0, 0,0);
-	coso->setModelRotY(45);
 	coso->setVector(D3DXVECTOR3(0, -5, 30));
 	
 	/*
@@ -77,9 +76,28 @@ void SumosChocadoresPlay::Update()
 	coso->setModelRotY(num2);
 	coso->setModelScale(num, num, num);
 	coso->setVector(coso->getVector());
+	cosoRender->Blending(1);
 	coso->Render();
-	num += 0.025;
-	num2 += 0.25;
+	if (num > 6)
+	{
+		achicar = true;
+	}
+	else if (num < 2)
+	{
+		achicar = false;
+	}
+	if (achicar)
+	{
+		num -= 0.05;
+		num2 += 0.25;
+	}
+	else
+	{
+		num += 0.05;
+		num2 -= 0.25;
+	}
+	
+	
 
 /*	
 	sumo->setVector(sumo->getVector());
