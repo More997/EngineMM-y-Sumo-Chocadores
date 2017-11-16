@@ -117,6 +117,8 @@ c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tilemap.
               _Ty=int
           ]
 c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(91): warning C4305: '-=': truncamiento de 'double' a 'float'
+c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(92): warning C4305: '+=': truncamiento de 'double' a 'float'
 c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(96): warning C4305: '+=': truncamiento de 'double' a 'float'
+c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(97): warning C4305: '-=': truncamiento de 'double' a 'float'
   Juego.vcxproj -> C:\Users\822\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.exe
   Juego.vcxproj -> C:\Users\822\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.pdb (Full PDB)

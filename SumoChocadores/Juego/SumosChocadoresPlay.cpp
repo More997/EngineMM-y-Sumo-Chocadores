@@ -32,12 +32,12 @@ void SumosChocadoresPlay::Create()
 	coso = new Composite();
 	cosoMesh = new Mesh();
 	cosoMesh->Load3D("model.obj");
-	cosoTex = new Textura(L"Yaya.jpg");
+	cosoTex = new Textura(L"verde.jpg");
 	cosoRender = new MeshRender(cosoTex);
 	cosoRender->SetMesh(cosoMesh);
 	coso->Add(cosoRender);
 	coso->setModelScale(0, 0,0);
-	coso->setVector(D3DXVECTOR3(0, -5, 30));
+	coso->setVector(D3DXVECTOR3(0, -19, 30));
 	
 	/*
 	sumoMesh = new Mesh();
@@ -76,25 +76,25 @@ void SumosChocadoresPlay::Update()
 	coso->setModelRotY(num2);
 	coso->setModelScale(num, num, num);
 	coso->setVector(coso->getVector());
-	cosoRender->Blending(1);
+	//cosoRender->Blending(1);
 	coso->Render();
-	if (num > 6)
+	if (num > 9.5f)
 	{
 		achicar = true;
 	}
-	else if (num < 2)
+	else if (num < 2.5f)
 	{
 		achicar = false;
 	}
 	if (achicar)
 	{
 		num -= 0.05;
-		num2 += 0.25;
+		num2 += 0.30;
 	}
 	else
 	{
 		num += 0.05;
-		num2 -= 0.25;
+		num2 -= 0.30;
 	}
 	
 	

@@ -786,6 +786,7 @@ c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\animacio
 c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\animacion.cpp(49): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
   Actor.cpp
   Generando código...
+  LINK : no se encontró C:\Users\822\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\EngineMM.dll o no lo generó el último vínculo incremental; ejecutando vínculo completo
      Creando biblioteca C:\Users\822\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\EngineMM.lib y objeto C:\Users\822\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\EngineMM.exp
   EngineMM.vcxproj -> C:\Users\822\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\EngineMM.dll
   EngineMM.vcxproj -> C:\Users\822\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\EngineMM.pdb (Full PDB)
