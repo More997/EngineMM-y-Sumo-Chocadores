@@ -1,14 +1,12 @@
 #include "stdafx.h"
 #include "BoundingBox.h"
 
-
 BoundingBox::BoundingBox() : xMin(+10000000), yMin(+10000000), zMin(+10000000),
-							 xMax(-10000000), yMax(-10000000), zMax(-10000000)
+xMax(-10000000), yMax(-10000000), zMax(-10000000)
 {
 
 }
 
-/*
 void BoundingBox::Refresh()
 {
 	vertexes[0] = D3DXVECTOR3(xMax, yMax, zMax);
@@ -59,7 +57,7 @@ BoundingBox BoundingBox::Transform(D3DXMATRIX mat)
 	return bb;
 }
 
- void BoundingBox::Combine(BoundingBox otherBb)
+void BoundingBox::Combine(BoundingBox otherBb)
 {
 	xMin = min(xMin, otherBb.xMin);
 	yMin = min(yMin, otherBb.yMin);
@@ -69,4 +67,3 @@ BoundingBox BoundingBox::Transform(D3DXMATRIX mat)
 	yMax = max(yMax, otherBb.yMax);
 	zMax = max(zMax, otherBb.zMax);
 }
-*/
