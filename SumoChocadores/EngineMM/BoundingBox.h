@@ -1,5 +1,7 @@
 #ifndef BOUNDINGBOX_H
 #define BOUNDINGBOX_H
+#include <d3dx9.h>
+#pragma comment (lib, "d3dx9.lib")
 class IMPORTEXPORT BoundingBox
 {
 D3DXVECTOR3 vertexes[8];

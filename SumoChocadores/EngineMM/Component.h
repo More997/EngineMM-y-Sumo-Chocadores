@@ -2,6 +2,7 @@
 #define COMPONENT_H
 
 #include "EngineMMAPI.h"
+#include "BoundingBox.h" 
 
 class Composite;
 
@@ -14,6 +15,7 @@ private:
 	D3DXMATRIX scale;
 	D3DXMATRIX rotation;
 	D3DXVECTOR3 vectorTrans;
+	BoundingBox transBB;
 protected:
 	float x;
 	float y;
@@ -31,7 +33,8 @@ public:
 	D3DXVECTOR3 getVector();
 	void setVector(D3DXVECTOR3 _vector);
 	Composite* GetParent();
-
+	void SetBoundingBox(BoundingBox _transBB);
+	BoundingBox GetBoundingBox();
 	virtual void Render();
 	virtual void Update();
 };

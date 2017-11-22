@@ -156,14 +156,19 @@ void Mesh::Load3D(const char* newModel)
 			D3DXVECTOR3 position;
 			fscanf(file, "%f %f %f\n", &position.x, &position.y, &position.z);
 
-			/*bb.xMin = min(position.x, bb.xMin);
+			bb.xMin = min(position.x, bb.xMin);
 			bb.yMin = min(position.y, bb.yMin);
 			bb.zMin = min(position.z, bb.zMin);
 
 			bb.xMax = max(position.x, bb.xMax);
 			bb.yMax = max(position.y, bb.yMax);
-			bb.zMax = max(position.z, bb.zMax);*/
+			bb.zMax = max(position.z, bb.zMax);
 			positions.push_back(position);
+
+			/*
+			bb.xMin = min(posicionXGuardada, bb.xmin)
+			positions es un vector donde guard
+			*/
 		}
 		else if (strcmp(lineHeader, "vn") == 0)
 		{
@@ -237,6 +242,16 @@ void Mesh::Load3D(const char* newModel)
 	game->getDev()->SetRenderState(D3DRS_ZWRITEENABLE, true);
 	game->getDev()->SetRenderState(D3DRS_ZFUNC, D3DCMP_LESS);
 
+}
+
+void Mesh::SetBB(BoundingBox _bb)
+{
+	bb = _bb;
+}
+
+BoundingBox Mesh::GetBB()
+{
+	return bb;
 }
 
 LPDIRECT3DVERTEXBUFFER9 Mesh::GetVb()

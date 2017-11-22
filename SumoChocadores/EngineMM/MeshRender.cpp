@@ -12,11 +12,7 @@ MeshRender::MeshRender()
 
 MeshRender::MeshRender(Textura * tex)
 {
-	/*D3DXMatrixIdentity(&scale);
-	D3DXMatrixIdentity(&trasl);
-	D3DXMatrixIdentity(&rotation);*/
 	texture = tex;
-	//defTransMat();
 }
 void MeshRender::SetTexture(Textura * tex)
 {

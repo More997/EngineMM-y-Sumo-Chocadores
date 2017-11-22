@@ -33,11 +33,13 @@ void SumosChocadoresPlay::Create()
 	cosoMesh = new Mesh();
 	cosoMesh->Load3D("model.obj");
 	cosoTex = new Textura(L"verde.jpg");
+	coso->SetBoundingBox(cosoMesh->GetBB());
 	cosoRender = new MeshRender(cosoTex);
 	cosoRender->SetMesh(cosoMesh);
 	coso->Add(cosoRender);
 	coso->setModelScale(0, 0,0);
 	coso->setVector(D3DXVECTOR3(0, -19, 30));
+	
 	
 	/*
 	sumoMesh = new Mesh();

@@ -5,12 +5,9 @@
 Composite::Composite()
 {
 }
-
-
 Composite::~Composite()
 {
 }
-
 void Composite::Add(Component * comp)
 {
 	objectComponents.push_back(comp);

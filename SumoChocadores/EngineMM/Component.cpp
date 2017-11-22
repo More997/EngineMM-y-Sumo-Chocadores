@@ -30,26 +30,26 @@ void Component::setModelScale(float scaleX, float scaleY, float scaleZ)
 void Component::defTransMat()
 {
 	matFinal = scale * rotation * trasl;
-
+	transBB.Transform(matFinal);
 	if (parent != NULL)
+	{
 		matFinal = (parent->getTransMat() * matFinal);
-}
+		//BoundingBox * parentBB = GetParent()->GetComponent<BoundingBox>();
+	}
 
+}
 void Component::setModelRotZ(float rotZ)
 {
 	D3DXMatrixRotationZ(&rotation, rotZ);
 }
-
 void Component::setModelRotY(float rotY)
 {
 	D3DXMatrixRotationY(&rotation, rotY);
 }
-
 void Component::setModelRotX(float rotX)
 {
 	D3DXMatrixRotationX(&rotation, rotX);
 }
-
 void Component::setModelPos(float transX, float transY, float transZ)
 {
 	vectorTrans.x = transX;
@@ -61,17 +61,13 @@ D3DXMATRIX Component::getTransMat()
 {
 	return matFinal;
 }
-
 void Component::Render()
 {
 	defTransMat();
 }
-
 void Component::Update()
 {
 }
-
-
 D3DXVECTOR3 Component::getVector()
 {
 	return vectorTrans; 
@@ -87,7 +83,18 @@ Composite* Component::GetParent()
 	return parent;
 }
 
+void Component::SetBoundingBox(BoundingBox _transBB)
+{
+	transBB = _transBB;
+}
+
+BoundingBox Component::GetBoundingBox()
+{
+	return transBB;
+}
+
 void Component::SetParent(Composite* parent)
 {
 	this->parent = parent;
 }
+

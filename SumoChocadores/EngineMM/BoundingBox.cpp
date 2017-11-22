@@ -2,7 +2,7 @@
 #include "BoundingBox.h"
 
 BoundingBox::BoundingBox() : xMin(+10000000), yMin(+10000000), zMin(+10000000),
-xMax(-10000000), yMax(-10000000), zMax(-10000000)
+							 xMax(-10000000), yMax(-10000000), zMax(-10000000)
 {
 
 }
