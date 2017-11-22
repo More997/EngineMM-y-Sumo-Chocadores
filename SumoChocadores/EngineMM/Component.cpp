@@ -36,6 +36,7 @@ void Component::defTransMat()
 		matFinal = (parent->getTransMat() * matFinal);
 		//BoundingBox * parentBB = GetParent()->GetComponent<BoundingBox>();
 	}
+	transBB.Refresh();
 
 }
 void Component::setModelRotZ(float rotZ)
@@ -77,7 +78,6 @@ void Component::setVector(D3DXVECTOR3 _vector)
 {
 	setModelPos(_vector.x, _vector.y, _vector.z);
 }
-
 Composite* Component::GetParent()
 {
 	return parent;

@@ -1,10 +1,10 @@
 #pragma once
 #include "Vertex.h"
-#include "BoundingBox.h"
 #include <vector>
 #include <d3dx9.h>
 #pragma comment (lib, "d3dx9.lib")
 #include "FVF.h"
+#include "BoundingBox.h"
 
 using namespace std;
 class IMPORTEXPORT Mesh

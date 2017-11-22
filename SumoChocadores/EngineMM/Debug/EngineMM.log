@@ -1,4 +1,84 @@
-﻿  Tilemap.cpp
+﻿  Component.cpp
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\boundingbox.h(7): warning C4251: 'BoundingBox::vertexes': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'BoundingBox'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(13): warning C4251: 'Component::matFinal': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(14): warning C4251: 'Component::trasl': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(15): warning C4251: 'Component::scale': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(16): warning C4251: 'Component::rotation': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(17): warning C4251: 'Component::vectorTrans': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\composite.h(12): warning C4251: 'Composite::objectComponents': class 'std::vector<Component *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Composite'
+          with
+          [
+              _Ty=Component *
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\composite.h(12): note: vea la declaración de 'std::vector<Component *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Component *
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(25): warning C4251: 'Mesh::vertexes': class 'std::vector<Vertex,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=Vertex
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(25): note: vea la declaración de 'std::vector<Vertex,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Vertex
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(26): warning C4251: 'Mesh::indexes': class 'std::vector<WORD,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=WORD
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(26): note: vea la declaración de 'std::vector<WORD,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=WORD
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(27): warning C4251: 'Mesh::positions': class 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(27): note: vea la declaración de 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(28): warning C4251: 'Mesh::normals': class 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(27): note: vea la declaración de 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(29): warning C4251: 'Mesh::uvs': class 'std::vector<D3DXVECTOR2,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=D3DXVECTOR2
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(29): note: vea la declaración de 'std::vector<D3DXVECTOR2,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR2
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(9): warning C4251: 'Camera::_pos': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(10): warning C4251: 'Camera::_rot': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  Generando código...
+  Compilando...
+  Tilemap.cpp
 c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\boundingbox.h(7): warning C4251: 'BoundingBox::vertexes': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'BoundingBox'
   c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
 c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(13): warning C4251: 'Component::matFinal': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
@@ -100,7 +180,85 @@ c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm
           ]
 c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tilemap.cpp(27): warning C4018: '<': no coinciden signed/unsigned
 c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tilemap.cpp(32): warning C4018: '<': no coinciden signed/unsigned
-  Component.cpp
+  Textura.cpp
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\boundingbox.h(7): warning C4251: 'BoundingBox::vertexes': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'BoundingBox'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(25): warning C4251: 'Mesh::vertexes': class 'std::vector<Vertex,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=Vertex
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(25): note: vea la declaración de 'std::vector<Vertex,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Vertex
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(26): warning C4251: 'Mesh::indexes': class 'std::vector<WORD,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=WORD
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(26): note: vea la declaración de 'std::vector<WORD,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=WORD
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(27): warning C4251: 'Mesh::positions': class 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(27): note: vea la declaración de 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(28): warning C4251: 'Mesh::normals': class 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(27): note: vea la declaración de 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(29): warning C4251: 'Mesh::uvs': class 'std::vector<D3DXVECTOR2,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=D3DXVECTOR2
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(29): note: vea la declaración de 'std::vector<D3DXVECTOR2,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR2
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(13): warning C4251: 'Component::matFinal': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(14): warning C4251: 'Component::trasl': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(15): warning C4251: 'Component::scale': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(16): warning C4251: 'Component::rotation': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(17): warning C4251: 'Component::vectorTrans': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\composite.h(12): warning C4251: 'Composite::objectComponents': class 'std::vector<Component *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Composite'
+          with
+          [
+              _Ty=Component *
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\composite.h(12): note: vea la declaración de 'std::vector<Component *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Component *
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(9): warning C4251: 'Camera::_pos': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(10): warning C4251: 'Camera::_rot': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  MeshRender.cpp
 c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\boundingbox.h(7): warning C4251: 'BoundingBox::vertexes': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'BoundingBox'
   c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
 c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(13): warning C4251: 'Component::matFinal': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
@@ -178,6 +336,426 @@ c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm
 c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(10): warning C4251: 'Camera::_rot': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
   c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
   c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  Mesh.cpp
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\boundingbox.h(7): warning C4251: 'BoundingBox::vertexes': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'BoundingBox'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(13): warning C4251: 'Component::matFinal': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(14): warning C4251: 'Component::trasl': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(15): warning C4251: 'Component::scale': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(16): warning C4251: 'Component::rotation': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(17): warning C4251: 'Component::vectorTrans': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\composite.h(12): warning C4251: 'Composite::objectComponents': class 'std::vector<Component *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Composite'
+          with
+          [
+              _Ty=Component *
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\composite.h(12): note: vea la declaración de 'std::vector<Component *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Component *
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(9): warning C4251: 'Camera::_pos': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(10): warning C4251: 'Camera::_rot': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(25): warning C4251: 'Mesh::vertexes': class 'std::vector<Vertex,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=Vertex
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(25): note: vea la declaración de 'std::vector<Vertex,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Vertex
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(26): warning C4251: 'Mesh::indexes': class 'std::vector<WORD,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=WORD
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(26): note: vea la declaración de 'std::vector<WORD,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=WORD
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(27): warning C4251: 'Mesh::positions': class 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(27): note: vea la declaración de 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(28): warning C4251: 'Mesh::normals': class 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(27): note: vea la declaración de 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(29): warning C4251: 'Mesh::uvs': class 'std::vector<D3DXVECTOR2,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=D3DXVECTOR2
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(29): note: vea la declaración de 'std::vector<D3DXVECTOR2,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR2
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.cpp(199): warning C4267: 'argumento': conversión de 'size_t' a 'unsigned short'; posible pérdida de datos
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.cpp(211): warning C4267: 'argumento': conversión de 'size_t' a 'unsigned short'; posible pérdida de datos
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.cpp(223): warning C4267: 'argumento': conversión de 'size_t' a 'unsigned short'; posible pérdida de datos
+  Input.cpp
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\boundingbox.h(7): warning C4251: 'BoundingBox::vertexes': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'BoundingBox'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(13): warning C4251: 'Component::matFinal': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(14): warning C4251: 'Component::trasl': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(15): warning C4251: 'Component::scale': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(16): warning C4251: 'Component::rotation': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(17): warning C4251: 'Component::vectorTrans': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\composite.h(12): warning C4251: 'Composite::objectComponents': class 'std::vector<Component *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Composite'
+          with
+          [
+              _Ty=Component *
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\composite.h(12): note: vea la declaración de 'std::vector<Component *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Component *
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(9): warning C4251: 'Camera::_pos': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(10): warning C4251: 'Camera::_rot': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(25): warning C4251: 'Mesh::vertexes': class 'std::vector<Vertex,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=Vertex
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(25): note: vea la declaración de 'std::vector<Vertex,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Vertex
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(26): warning C4251: 'Mesh::indexes': class 'std::vector<WORD,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=WORD
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(26): note: vea la declaración de 'std::vector<WORD,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=WORD
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(27): warning C4251: 'Mesh::positions': class 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(27): note: vea la declaración de 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(28): warning C4251: 'Mesh::normals': class 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(27): note: vea la declaración de 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(29): warning C4251: 'Mesh::uvs': class 'std::vector<D3DXVECTOR2,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=D3DXVECTOR2
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(29): note: vea la declaración de 'std::vector<D3DXVECTOR2,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR2
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\input.cpp(42): warning C4018: '<': no coinciden signed/unsigned
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\input.cpp(57): warning C4018: '<': no coinciden signed/unsigned
+  Game.cpp
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\boundingbox.h(7): warning C4251: 'BoundingBox::vertexes': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'BoundingBox'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(25): warning C4251: 'Mesh::vertexes': class 'std::vector<Vertex,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=Vertex
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(25): note: vea la declaración de 'std::vector<Vertex,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Vertex
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(26): warning C4251: 'Mesh::indexes': class 'std::vector<WORD,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=WORD
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(26): note: vea la declaración de 'std::vector<WORD,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=WORD
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(27): warning C4251: 'Mesh::positions': class 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(27): note: vea la declaración de 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(28): warning C4251: 'Mesh::normals': class 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(27): note: vea la declaración de 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(29): warning C4251: 'Mesh::uvs': class 'std::vector<D3DXVECTOR2,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=D3DXVECTOR2
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(29): note: vea la declaración de 'std::vector<D3DXVECTOR2,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR2
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(13): warning C4251: 'Component::matFinal': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(14): warning C4251: 'Component::trasl': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(15): warning C4251: 'Component::scale': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(16): warning C4251: 'Component::rotation': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(17): warning C4251: 'Component::vectorTrans': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\composite.h(12): warning C4251: 'Composite::objectComponents': class 'std::vector<Component *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Composite'
+          with
+          [
+              _Ty=Component *
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\composite.h(12): note: vea la declaración de 'std::vector<Component *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Component *
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(9): warning C4251: 'Camera::_pos': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(10): warning C4251: 'Camera::_rot': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  Camera.cpp
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\boundingbox.h(7): warning C4251: 'BoundingBox::vertexes': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'BoundingBox'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(25): warning C4251: 'Mesh::vertexes': class 'std::vector<Vertex,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=Vertex
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(25): note: vea la declaración de 'std::vector<Vertex,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Vertex
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(26): warning C4251: 'Mesh::indexes': class 'std::vector<WORD,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=WORD
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(26): note: vea la declaración de 'std::vector<WORD,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=WORD
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(27): warning C4251: 'Mesh::positions': class 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(27): note: vea la declaración de 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(28): warning C4251: 'Mesh::normals': class 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(27): note: vea la declaración de 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(29): warning C4251: 'Mesh::uvs': class 'std::vector<D3DXVECTOR2,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=D3DXVECTOR2
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(29): note: vea la declaración de 'std::vector<D3DXVECTOR2,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR2
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(13): warning C4251: 'Component::matFinal': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(14): warning C4251: 'Component::trasl': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(15): warning C4251: 'Component::scale': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(16): warning C4251: 'Component::rotation': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(17): warning C4251: 'Component::vectorTrans': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\composite.h(12): warning C4251: 'Composite::objectComponents': class 'std::vector<Component *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Composite'
+          with
+          [
+              _Ty=Component *
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\composite.h(12): note: vea la declaración de 'std::vector<Component *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Component *
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(9): warning C4251: 'Camera::_pos': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(10): warning C4251: 'Camera::_rot': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+  Animacion.cpp
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\boundingbox.h(7): warning C4251: 'BoundingBox::vertexes': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'BoundingBox'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(13): warning C4251: 'Component::matFinal': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(14): warning C4251: 'Component::trasl': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(15): warning C4251: 'Component::scale': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(16): warning C4251: 'Component::rotation': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(17): warning C4251: 'Component::vectorTrans': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\composite.h(12): warning C4251: 'Composite::objectComponents': class 'std::vector<Component *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Composite'
+          with
+          [
+              _Ty=Component *
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\composite.h(12): note: vea la declaración de 'std::vector<Component *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Component *
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(25): warning C4251: 'Mesh::vertexes': class 'std::vector<Vertex,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=Vertex
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(25): note: vea la declaración de 'std::vector<Vertex,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Vertex
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(26): warning C4251: 'Mesh::indexes': class 'std::vector<WORD,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=WORD
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(26): note: vea la declaración de 'std::vector<WORD,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=WORD
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(27): warning C4251: 'Mesh::positions': class 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(27): note: vea la declaración de 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(28): warning C4251: 'Mesh::normals': class 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(27): note: vea la declaración de 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(29): warning C4251: 'Mesh::uvs': class 'std::vector<D3DXVECTOR2,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+          with
+          [
+              _Ty=D3DXVECTOR2
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(29): note: vea la declaración de 'std::vector<D3DXVECTOR2,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR2
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(9): warning C4251: 'Camera::_pos': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(10): warning C4251: 'Camera::_rot': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\animacion.h(27): warning C4251: 'Animacion::_vertex': class 'std::vector<Vertex,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Animacion'
+          with
+          [
+              _Ty=Vertex
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(25): note: vea la declaración de 'std::vector<Vertex,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Vertex
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\animacion.h(29): warning C4251: 'Animacion::spritesheet': class 'std::vector<Mesh *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Animacion'
+          with
+          [
+              _Ty=Mesh *
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\animacion.h(29): note: vea la declaración de 'std::vector<Mesh *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Mesh *
+          ]
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\animacion.cpp(21): warning C4244: 'return': conversión de '__int64' a 'int'; posible pérdida de datos
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\animacion.cpp(27): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\animacion.cpp(29): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\animacion.cpp(37): warning C4018: '<': no coinciden signed/unsigned
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\animacion.cpp(49): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
   Generando código...
      Creando biblioteca C:\Users\def\Desktop\Trabajos\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\EngineMM.lib y objeto C:\Users\def\Desktop\Trabajos\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\EngineMM.exp
   EngineMM.vcxproj -> C:\Users\def\Desktop\Trabajos\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\EngineMM.dll
