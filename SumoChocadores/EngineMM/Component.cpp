@@ -6,7 +6,7 @@
 #include "Mesh.h"
 #include "FVF.h"
 #include "Textura.h"
-
+#include "MeshRender.h"
 
 Component::Component() :vectorTrans(0, 0, 0)
 {
@@ -25,36 +25,40 @@ Component::~Component()
 void Component::setModelScale(float scaleX, float scaleY, float scaleZ)
 {
 	D3DXMatrixScaling(&scale, scaleX, scaleY, scaleZ); 
+	scaleV.x = scaleX;
+	scaleV.y = scaleY;
+	scaleV.z = scaleZ;
 }
 
 void Component::defTransMat()
 {
 	matFinal = scale * rotation * trasl;
-	transBB.Transform(matFinal);
+	transBB.Transform(vectorTrans,rotationV,scaleV);
 	if (parent != NULL)
 	{
 		matFinal = (parent->getTransMat() * matFinal);
-		//BoundingBox * parentBB = GetParent()->GetComponent<BoundingBox>();
 	}
 	if (GetParent())
 	{
-		BoundingBox *parentBB = GetParent()->GetComponent<BoundingBox>();
+		BoundingBox* parentBB = GetParent()->GetBoundingBox();
 		parentBB->Combine(transBB);
 	}
 	transBB.Refresh();
-
 }
 void Component::setModelRotZ(float rotZ)
 {
 	D3DXMatrixRotationZ(&rotation, rotZ);
+	rotationV.z = rotZ;
 }
 void Component::setModelRotY(float rotY)
 {
 	D3DXMatrixRotationY(&rotation, rotY);
+	rotationV.y = rotY;
 }
 void Component::setModelRotX(float rotX)
 {
 	D3DXMatrixRotationX(&rotation, rotX);
+	rotationV.x = rotX;
 }
 void Component::setModelPos(float transX, float transY, float transZ)
 {
@@ -93,9 +97,9 @@ void Component::SetBoundingBox(BoundingBox _transBB)
 	transBB = _transBB;
 }
 
-BoundingBox Component::GetBoundingBox()
+BoundingBox* Component::GetBoundingBox()
 {
-	return transBB;
+	return &transBB;
 }
 
 void Component::SetParent(Composite* parent)

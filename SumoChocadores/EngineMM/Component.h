@@ -4,6 +4,7 @@
 #include "EngineMMAPI.h"
 #include "BoundingBox.h" 
 
+
 class Composite;
 
 class IMPORTEXPORT Component
@@ -14,6 +15,8 @@ private:
 	D3DXMATRIX trasl;
 	D3DXMATRIX scale;
 	D3DXMATRIX rotation;
+	D3DXVECTOR3 scaleV;
+	D3DXVECTOR3 rotationV;
 	D3DXVECTOR3 vectorTrans;
 	BoundingBox transBB;
 protected:
@@ -34,7 +37,7 @@ public:
 	void setVector(D3DXVECTOR3 _vector);
 	Composite* GetParent();
 	void SetBoundingBox(BoundingBox _transBB);
-	BoundingBox GetBoundingBox();
+	BoundingBox* GetBoundingBox();
 	virtual void Render();
 	virtual void Update();
 };
