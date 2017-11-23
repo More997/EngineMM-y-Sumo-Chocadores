@@ -11,12 +11,12 @@ private:
 	void GetComponentsInParent(vector<T*>*);
 	vector<Component*>objectComponents;
 protected:
-	virtual void UpdateComposite(); // Y esto que hace? Preguntar.
+	virtual void UpdateComposite(); 
 public:
 	Composite();
 	~Composite();
 	void Add(Component* comp);
-	void Remove(Component * component); //Porque pide un componente como parametro si lo que hace es remover? Preguntar.
+	void Remove(Component * component); 
 	void Update();
 	void Render() override final;
 	virtual void RenderingComposite();
@@ -32,9 +32,9 @@ public:
 template<class T>
 inline T* Composite::GetComponent()
 {
-	for (size_t i = 0; i < components.size(); i++)
+	for (size_t i = 0; i < objectComponents.size(); i++)
 	{
-		T* comp = dynamic_cast<T*>(components[i]);
+		T* comp = dynamic_cast<T*>(objectComponents[i]);
 		if (comp != nullptr) return comp;
 	}
 

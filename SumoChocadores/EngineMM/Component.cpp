@@ -36,6 +36,11 @@ void Component::defTransMat()
 		matFinal = (parent->getTransMat() * matFinal);
 		//BoundingBox * parentBB = GetParent()->GetComponent<BoundingBox>();
 	}
+	if (GetParent())
+	{
+		BoundingBox *parentBB = GetParent()->GetComponent<BoundingBox>();
+		parentBB->Combine(transBB);
+	}
 	transBB.Refresh();
 
 }

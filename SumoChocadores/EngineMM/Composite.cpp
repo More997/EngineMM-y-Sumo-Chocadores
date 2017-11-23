@@ -35,9 +35,7 @@ void Composite::Render()
 }
 void Composite::RenderingComposite()
 {
-	//Es virtual!
 }
 void Composite::UpdateComposite()
 {
-	// Y esto que hace? Preguntar.
 }

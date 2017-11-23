@@ -16,7 +16,6 @@ float xMin, xMax,
 	void Refresh();
 	BoundingBox Transform(D3DXVECTOR3 pos, D3DXVECTOR3 rot, D3DXVECTOR3 sca);
 	BoundingBox Transform(D3DXMATRIX mat);
-
 	void Combine(BoundingBox otherBb);
 };
 #endif
