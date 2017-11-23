@@ -33,17 +33,12 @@ void Component::setModelScale(float scaleX, float scaleY, float scaleZ)
 void Component::defTransMat()
 {
 	matFinal = scale * rotation * trasl;
-	transBB.Transform(vectorTrans,rotationV,scaleV);
+	
 	if (parent != NULL)
 	{
 		matFinal = (parent->getTransMat() * matFinal);
 	}
-	if (GetParent())
-	{
-		BoundingBox* parentBB = GetParent()->GetBoundingBox();
-		parentBB->Combine(transBB);
-	}
-	transBB.Refresh();
+	
 }
 void Component::setModelRotZ(float rotZ)
 {
@@ -66,6 +61,18 @@ void Component::setModelPos(float transX, float transY, float transZ)
 	vectorTrans.y = transY;
 	vectorTrans.z = transZ;
 	D3DXMatrixTranslation(&trasl, transX, transY, transZ);
+}
+D3DXVECTOR3 Component::getScaleV()
+{
+	return scaleV;
+}
+D3DXVECTOR3 Component::getRotationV()
+{
+	return rotationV;
+}
+D3DXVECTOR3 Component::getVectorTrans()
+{
+	return vectorTrans;
 }
 D3DXMATRIX Component::getTransMat()
 {

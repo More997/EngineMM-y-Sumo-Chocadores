@@ -39,6 +39,12 @@ MeshRender::~MeshRender()
 {
 }
 
+void MeshRender::defTransMat()
+{
+	Composite::defTransMat();
+
+}
+
 void MeshRender::RenderingComposite()
 {
 	Game* game = Game::getInstance();

@@ -16,6 +16,7 @@ public:
 	void SetMesh(Mesh* mesh);
 	Mesh* GetMesh();
 	~MeshRender();
+	void defTransMat();
 	void RenderingComposite() override;
 	void Blending(int numBlend); //numero del 0 al 2
 	void Warping(int numWarp);//numero del 1 al 6

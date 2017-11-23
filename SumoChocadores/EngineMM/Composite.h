@@ -19,6 +19,7 @@ public:
 	void Remove(Component * component); 
 	void Update();
 	void Render() override final;
+	virtual void defTransMat();
 	virtual void RenderingComposite();
 	template<class T> 
 	T* GetComponent();

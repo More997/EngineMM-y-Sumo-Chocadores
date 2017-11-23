@@ -33,6 +33,23 @@ void Composite::Render()
 		objectComponents[i]->Render();
 
 }
+void Composite::defTransMat()
+{
+	Component::defTransMat();
+	transBB.Transform(vectorTrans, rotationV, scaleV);
+	/*
+	if (GetParent())
+	{
+		BoundingBox* parentBB = GetParent()->GetBoundingBox();
+		parentBB->Combine(transBB);
+	}
+	*/
+	for (int i = 0; i < objectComponents.size(); i++)
+	{
+		transBB.Combine(objectComponents[i]->GetBoundingBox()->Transform(getVectorTrans(), getRotationV(), getScaleV()));
+	}
+	transBB.Refresh();
+}
 void Composite::RenderingComposite()
 {
 }

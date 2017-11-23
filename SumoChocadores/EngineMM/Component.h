@@ -15,22 +15,25 @@ private:
 	D3DXMATRIX trasl;
 	D3DXMATRIX scale;
 	D3DXMATRIX rotation;
+protected:
+	float x;
+	float y;
 	D3DXVECTOR3 scaleV;
 	D3DXVECTOR3 rotationV;
 	D3DXVECTOR3 vectorTrans;
 	BoundingBox transBB;
-protected:
-	float x;
-	float y;
 public:
 	Component();
 	~Component();
 	void setModelScale(float scaleX, float scaleY, float scaleZ);
-	void defTransMat();
+	virtual void defTransMat();
 	void setModelRotZ(float rotZ);
 	void setModelRotY(float rotY);
 	void setModelRotX(float rotX);
 	void setModelPos(float transx, float transy, float transz);
+	D3DXVECTOR3 getScaleV();
+	D3DXVECTOR3 getRotationV();
+	D3DXVECTOR3 getVectorTrans();
 	D3DXMATRIX getTransMat();
 	void SetParent(Composite* parent);
 	D3DXVECTOR3 getVector();
