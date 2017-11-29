@@ -36,22 +36,24 @@ void Composite::Render()
 void Composite::defTransMat()
 {
 	Component::defTransMat();
-	transBB.Transform(vectorTrans, rotationV, scaleV);
-	/*
-	if (GetParent())
-	{
-		BoundingBox* parentBB = GetParent()->GetBoundingBox();
-		parentBB->Combine(transBB);
-	}
-	*/
-	for (int i = 0; i < objectComponents.size(); i++)
-	{
-		transBB.Combine(objectComponents[i]->GetBoundingBox()->Transform(getVectorTrans(), getRotationV(), getScaleV()));
-	}
-	transBB.Refresh();
+	UpdateBB(vectorTrans, scaleV, rotationV);
+	transBB = GetBoundingBox()->Transform(vectorTrans, scaleV, rotationV);
+
 }
 void Composite::RenderingComposite()
 {
+}
+void Composite::UpdateBB(D3DXVECTOR3 trans, D3DXVECTOR3 scal, D3DXVECTOR3 rot)
+{
+	for (int i = 0; i < objectComponents.size(); i++)
+	{
+		transBB.Combine(objectComponents[i]->GetBoundingBox()->Transform(trans, scal, rot));
+	}
+	if (GetParent())
+	{
+		GetParent()->UpdateBB(trans, scal, rot);
+	}
+	transBB.Refresh();
 }
 void Composite::UpdateComposite()
 {

@@ -29,6 +29,7 @@ public:
 	T* GetComponentInChildren();
 	template<class T> 
 	vector<T*>* GetComponentsInParent();
+	void UpdateBB(D3DXVECTOR3 trans, D3DXVECTOR3 scal, D3DXVECTOR3 rot);
 };
 template<class T>
 inline T* Composite::GetComponent()

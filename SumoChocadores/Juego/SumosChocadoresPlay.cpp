@@ -28,6 +28,7 @@ SumosChocadoresPlay::~SumosChocadoresPlay()
 
 void SumosChocadoresPlay::Create()
 {
+	bbtest = new BoundingBox();
 	camara = new Camera();
 	coso = new Composite();
 	cosoMesh = new Mesh();
@@ -75,6 +76,7 @@ void SumosChocadoresPlay::Create()
 void SumosChocadoresPlay::Update()
 { 
 	camara->update();
+	bbtest = coso->GetBoundingBox();
 	coso->setModelRotY(num2);
 	coso->setModelScale(num, num, num);
 	coso->setVector(coso->getVector());
