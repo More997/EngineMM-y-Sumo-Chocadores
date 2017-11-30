@@ -11,13 +11,13 @@ class IMPORTEXPORT Component
 {
 private: 
 	Composite* parent;
-	D3DXMATRIX matFinal;
 	D3DXMATRIX trasl;
 	D3DXMATRIX scale;
 	D3DXMATRIX rotation;
 protected:
 	float x;
 	float y;
+	D3DXMATRIX matFinal;
 	D3DXVECTOR3 scaleV;
 	D3DXVECTOR3 rotationV;
 	D3DXVECTOR3 vectorTrans;
@@ -40,7 +40,7 @@ public:
 	void setVector(D3DXVECTOR3 _vector);
 	Composite* GetParent();
 	void SetBoundingBox(BoundingBox _transBB);
-	BoundingBox* GetBoundingBox();
+	BoundingBox GetBoundingBox();
 	virtual void Render();
 	virtual void Update();
 };

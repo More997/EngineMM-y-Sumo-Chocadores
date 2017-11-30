@@ -17,7 +17,7 @@ private:
 	Textura* cosoTex;
 	MeshRender* cosoRender;
 	Composite*coso;
-	BoundingBox* bbtest;
+	BoundingBox bbtest;
 /*
 	Animacion * sumoAnima;
 	Composite* sumo;

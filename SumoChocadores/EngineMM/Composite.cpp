@@ -37,28 +37,30 @@ void Composite::defTransMat()
 {
 	Component::defTransMat();
 	transBB = GetMeshBB();
+	transBB = transBB.Transform(matFinal);
 	UpdateBB(vectorTrans, scaleV, rotationV);
-	transBB = GetBoundingBox()->Transform(vectorTrans, scaleV, rotationV);
-
 }
 void Composite::RenderingComposite()
 {
 }
 BoundingBox Composite::GetMeshBB()
 {
-	return transBB;
+	BoundingBox _transBB;
+	_transBB.xMin = _transBB.xMax = _transBB.yMin = _transBB.yMax = _transBB.zMin = _transBB.zMax = 0;
+	_transBB.Refresh();
+	return _transBB;
 }
 void Composite::UpdateBB(D3DXVECTOR3 trans, D3DXVECTOR3 scal, D3DXVECTOR3 rot)
 {
 	for (int i = 0; i < objectComponents.size(); i++)
 	{
-		transBB.Combine(objectComponents[i]->GetBoundingBox()->Transform(trans, scal, rot));
+		transBB.Combine(objectComponents[i]->GetBoundingBox());
 	}
+	transBB.Refresh();
 	if (GetParent())
 	{
 		GetParent()->UpdateBB(trans, scal, rot);
 	}
-	transBB.Refresh();
 }
 void Composite::UpdateComposite()
 {

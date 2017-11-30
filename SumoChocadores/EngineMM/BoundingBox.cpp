@@ -54,6 +54,8 @@ BoundingBox BoundingBox::Transform(D3DXMATRIX mat)
 		bb.zMax = max(transVertex.z, bb.zMax);
 	}
 
+	bb.Refresh();
+
 	return bb;
 }
 

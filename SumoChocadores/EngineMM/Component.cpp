@@ -8,7 +8,7 @@
 #include "Textura.h"
 #include "MeshRender.h"
 
-Component::Component() :vectorTrans(0, 0, 0)
+Component::Component() :vectorTrans(0, 0, 0), scaleV(1,1,1)
 {
 	D3DXMatrixIdentity(&scale);
 	D3DXMatrixIdentity(&trasl);
@@ -104,9 +104,9 @@ void Component::SetBoundingBox(BoundingBox _transBB)
 	transBB = _transBB;
 }
 
-BoundingBox* Component::GetBoundingBox()
+BoundingBox Component::GetBoundingBox()
 {
-	return &transBB;
+	return transBB;
 }
 
 void Component::SetParent(Composite* parent)

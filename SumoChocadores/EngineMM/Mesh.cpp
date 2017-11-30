@@ -224,7 +224,7 @@ void Mesh::Load3D(const char* newModel)
 			vertexes.push_back(vertex);
 		}
 	}
-	
+	bb.Refresh();
 
 	game->getDev()->CreateVertexBuffer(vertexes.size() * sizeof(Vertex), 0, CUSTOMFVF, D3DPOOL_MANAGED, &vb, NULL);
 	game->getDev()->CreateIndexBuffer(indexes.size() * sizeof(WORD), 0, D3DFMT_INDEX16, D3DPOOL_MANAGED, &ind, NULL);

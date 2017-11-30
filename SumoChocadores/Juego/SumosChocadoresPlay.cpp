@@ -28,18 +28,17 @@ SumosChocadoresPlay::~SumosChocadoresPlay()
 
 void SumosChocadoresPlay::Create()
 {
-	bbtest = new BoundingBox();
 	camara = new Camera();
+
 	coso = new Composite();
 	cosoMesh = new Mesh();
-	cosoMesh->Load3D("model.obj");
+	cosoMesh->Load3D("TestCube.obj");
 	cosoTex = new Textura(L"verde.jpg");
 	cosoRender = new MeshRender(cosoTex);
 	cosoRender->SetMesh(cosoMesh);
 	coso->Add(cosoRender);
-	coso->SetBoundingBox(cosoMesh->GetBB());
-	//coso->setModelScale(5, 5,5);
-//	coso->setVector(D3DXVECTOR3(0, 1, 0));
+	coso->setModelScale(1, 1,1);
+	coso->setVector(D3DXVECTOR3(0.5,0.5, 0.5));
 	
 	
 	/*
@@ -75,14 +74,14 @@ void SumosChocadoresPlay::Create()
 
 void SumosChocadoresPlay::Update()
 { 
-	camara->update();
-	bbtest = coso->GetBoundingBox();
-	coso->setModelRotY(num2);
+	//camara->update();
+	//coso->setModelRotY(num2);
 	//coso->setModelScale(num, num, num);
-	coso->setVector(coso->getVector());
+	//coso->setVector(coso->getVector());
 	//cosoRender->Blending(1);
+	bbtest = coso->GetBoundingBox();
 	coso->Render();
-	if (num > 9.5f)
+	/*if (num > 6.5f)
 	{
 		achicar = true;
 	}
@@ -99,7 +98,7 @@ void SumosChocadoresPlay::Update()
 	{
 		num += 0.05;
 		num2 -= 0.30;
-	}
+	}*/
 	
 	
 
