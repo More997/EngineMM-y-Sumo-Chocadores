@@ -21,6 +21,7 @@ public:
 	void Render() override final;
 	virtual void defTransMat();
 	virtual void RenderingComposite();
+	virtual BoundingBox GetMeshBB();
 	template<class T> 
 	T* GetComponent();
 	template<class T>

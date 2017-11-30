@@ -38,8 +38,8 @@ void SumosChocadoresPlay::Create()
 	cosoRender->SetMesh(cosoMesh);
 	coso->Add(cosoRender);
 	coso->SetBoundingBox(cosoMesh->GetBB());
-	coso->setModelScale(0, 0,0);
-	coso->setVector(D3DXVECTOR3(0, -19, 30));
+	//coso->setModelScale(5, 5,5);
+//	coso->setVector(D3DXVECTOR3(0, 1, 0));
 	
 	
 	/*
@@ -78,7 +78,7 @@ void SumosChocadoresPlay::Update()
 	camara->update();
 	bbtest = coso->GetBoundingBox();
 	coso->setModelRotY(num2);
-	coso->setModelScale(num, num, num);
+	//coso->setModelScale(num, num, num);
 	coso->setVector(coso->getVector());
 	//cosoRender->Blending(1);
 	coso->Render();

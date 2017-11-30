@@ -21,6 +21,8 @@ public:
 	void Blending(int numBlend); //numero del 0 al 2
 	void Warping(int numWarp);//numero del 1 al 6
 	void Filtro(int numfiltro);//numero del 1 al 7
+	BoundingBox GetMeshBB() override;
+
 };
 #endif
 

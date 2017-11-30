@@ -36,12 +36,17 @@ void Composite::Render()
 void Composite::defTransMat()
 {
 	Component::defTransMat();
+	transBB = GetMeshBB();
 	UpdateBB(vectorTrans, scaleV, rotationV);
 	transBB = GetBoundingBox()->Transform(vectorTrans, scaleV, rotationV);
 
 }
 void Composite::RenderingComposite()
 {
+}
+BoundingBox Composite::GetMeshBB()
+{
+	return transBB;
 }
 void Composite::UpdateBB(D3DXVECTOR3 trans, D3DXVECTOR3 scal, D3DXVECTOR3 rot)
 {

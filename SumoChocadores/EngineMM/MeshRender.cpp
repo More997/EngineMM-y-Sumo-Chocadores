@@ -184,3 +184,8 @@ void MeshRender::Filtro(int numfiltro)
 		}
 }
 
+BoundingBox MeshRender::GetMeshBB()
+{
+	return mesh2->GetBB();
+}
+
