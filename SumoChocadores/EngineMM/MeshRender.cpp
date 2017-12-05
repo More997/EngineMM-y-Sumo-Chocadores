@@ -51,15 +51,10 @@ void MeshRender::RenderingComposite()
 		game->getDev()->SetTexture(0, texture->GetText());
 	else
 		game->getDev()->SetTexture(0, NULL);
-	//Blending(typeblend, dev);
-//	defTransMat();
 	game->getDev()->SetFVF(CUSTOMFVF);
-	//Multiplicación de Matrices
-	//Le digo a la placa que la matriz de mundo es "mat"
 	game->getDev()->SetTransform(D3DTS_WORLD, &getTransMat());
-	//game->getDev()->SetFVF(CUSTOMFVF);
-	game->getDev()->SetIndices(mesh2->GetInd());
 	game->getDev()->SetStreamSource(0, mesh2->GetVb(), 0, sizeof(Vertex));
+	game->getDev()->SetIndices(mesh2->GetInd());
 	game->getDev()->DrawIndexedPrimitive(D3DPT_TRIANGLELIST, 0, 0, mesh2->vertexes.size(), 0, mesh2->indexes.size() / 3); //3D
 	//game->getDev()->DrawIndexedPrimitive(D3DPT_TRIANGLELIST, 0, 0, 4, 0, 2); //2D
 

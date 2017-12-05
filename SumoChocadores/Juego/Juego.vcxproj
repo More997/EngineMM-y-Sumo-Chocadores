@@ -148,9 +148,9 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Items.h" />
     <ClInclude Include="Juego.h" />
-    <ClInclude Include="Personaje.h" />
+    <ClInclude Include="Jugador.h" />
+    <ClInclude Include="Perseguidor.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Ring.h" />
     <ClInclude Include="stdafx.h" />
@@ -158,9 +158,9 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Items.cpp" />
     <ClCompile Include="Juego.cpp" />
-    <ClCompile Include="Personaje.cpp" />
+    <ClCompile Include="Jugador.cpp" />
+    <ClCompile Include="Perseguidor.cpp" />
     <ClCompile Include="Ring.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

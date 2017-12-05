@@ -18,11 +18,11 @@ private:
 	MeshRender* cosoRender;
 	Composite*coso;
 	BoundingBox bbtest;
-/*
+
 	Animacion * sumoAnima;
 	Composite* sumo;
 	Mesh* sumoMesh;
-//	MeshRender* sumoRender;
+	//MeshRender* sumoRender;
 	Textura* sumoTex;
 	Composite* tiles;
 	Tilemap*  tilesMap;
@@ -33,7 +33,7 @@ private:
 	Mesh* tileMesh2;
 	MeshRender* tileRender2;
 	vector<Tilemap*> tilesVector;
-	*/
+	
 public:
 	SumosChocadoresPlay();
 	~SumosChocadoresPlay();

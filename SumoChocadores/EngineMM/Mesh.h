@@ -1,4 +1,5 @@
-#pragma once
+#ifndef MESH_H
+#define MESH_H
 #include "Vertex.h"
 #include <vector>
 #include <d3dx9.h>
@@ -28,4 +29,5 @@ public:
 	vector<D3DXVECTOR3> normals;
 	vector<D3DXVECTOR2> uvs;
 };
+#endif
 

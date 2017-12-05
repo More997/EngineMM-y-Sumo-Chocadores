@@ -15,10 +15,12 @@
 #include <d3dx9.h>
 #pragma comment (lib, "d3dx9.lib")
 // Archivos de encabezado en tiempo de ejecución de C
+/*
 #include <stdlib.h>
 #include <malloc.h>
 #include <memory.h>
 #include <tchar.h>
+*/
 #include "EngineMMAPI.h"
 
 

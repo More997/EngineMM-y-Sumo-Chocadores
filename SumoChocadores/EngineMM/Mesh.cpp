@@ -6,10 +6,10 @@ Mesh::Mesh()
 {
 	Game* game = Game::getInstance();
 	Vertex vertexes[] = {
-		{ -0.5f,0.5f,0.0f, 0.0f, 0.0f },
-		{ 0.5f,0.5f,0.0f, 1.0f, 0.0f },
-		{ -0.5f,-0.5f,0.0f,0.0f, 1.0f },
-		{ 0.5f,-0.5f,0.0f,1.0f,1.0f }
+		{ -0.5f, 0.5f,  0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f },
+		{  0.5f, 0.5f,  0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f },
+		{ -0.5f,-0.5f,	0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f },
+		{  0.5f,-0.5f,	0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f },
 	};
 	WORD indexes[] = { 0,3,2,0,1,3 };
 	//dev->DrawIndexedPrimitive(D3DPT_TRIANGLELIST, 0, 0, 4, 0, 2);
@@ -63,6 +63,17 @@ Mesh::Mesh(Vertex _Vertexes[], WORD _WORD[])
 	ind->Lock(0, 0, &data, 0);
 	memcpy(data, _WORD, 6*sizeof(WORD));
 	ind->Unlock();
+	//esto es nuevo (/o3o)/
+	
+	for (int i = 0; i < 4; i++)
+	{
+		vertexes.push_back(_Vertexes[i]);
+	}
+	for (int i = 0; i < 6; i++)
+	{
+		indexes.push_back(vertexes.size());
+	}
+	
 }
 
 /*Mesh::Mesh(vector<Vertex> _Vertex, vector<WORD> _Word)
@@ -81,63 +92,16 @@ Mesh::~Mesh()
 void Mesh::editVertex()
 {
 	Vertex vertexes[] = {
-		{ -0.5f,0.5f,0.0f, 0.0f, 0.0f },
-		{ 0.5f,0.5f,0.0f, 1.0f, 0.0f },
-		{ -0.5f,-0.5f,0.0f,0.0f, 1.0f },
-		{ 0.5f,-0.5f,0.0f,1.0f,1.0f }
+		{ -0.5f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f },
+		{  0.5f, 0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f },
+		{ -0.5f,-0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f },
+		{  0.5f,-0.5f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f }
 	};
 }
 
 void Mesh::Load3D(const char* newModel)
 {
 	Game *game = Game::getInstance();
-	/*
-	FILE* file;
-	fopen_s(&file, "TracerGun.obj", "r");
-
-	//feof nos indica si estamos en el fin del archivo
-	while (!feof(file))
-	{
-		//Obtengo la primer palabra despues de donde estoy parado
-		//y la guardo en el array de chars
-		char lineHeader[128];
-		fscanf(file, "%s", lineHeader);
-
-		//Si la primer palabra es V nos encontramos con una posicion
-		//del vertice y la guardamos
-		if (strcmp(lineHeader, "v") == 0)
-		{
-			D3DXVECTOR3 position;
-			fscanf(file, "%f %f %f\n", &position.x, &position.y, &position.z);
-			positions.push_back(position);
-		}
-		else if (strcmp(lineHeader, "f") == 0)
-		{
-			Vertex vertex;
-			int posIndex, uvIndex, normalIndex;
-
-			fscanf(file, "%d/%d/%d ", &posIndex, &uvIndex, &normalIndex);
-			vertex.x = positions[posIndex - 1].x;
-			vertex.y = positions[posIndex - 1].y;
-			vertex.z = positions[posIndex - 1].z;
-			indexes.push_back(vertexes.size());
-			vertexes.push_back(vertex);
-
-			fscanf(file, "%d/%d/%d ", &posIndex, &uvIndex, &normalIndex);
-			vertex.x = positions[posIndex - 1].x;
-			vertex.y = positions[posIndex - 1].y;
-			vertex.z = positions[posIndex - 1].z;
-			indexes.push_back(vertexes.size());
-			vertexes.push_back(vertex);
-
-			fscanf(file, "%d/%d/%d\n", &posIndex, &uvIndex, &normalIndex);
-			vertex.x = positions[posIndex - 1].x;
-			vertex.y = positions[posIndex - 1].y;
-			vertex.z = positions[posIndex - 1].z;
-			indexes.push_back(vertexes.size());
-			vertexes.push_back(vertex);
-		}
-	}*/
 	FILE* file;
 	fopen_s(&file, newModel, "r");
 

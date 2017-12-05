@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "Game.h"
-#include "Actor.h"
 #include "Textura.h"
 
 #include <d3d9.h> //Busca el header de directx en los path

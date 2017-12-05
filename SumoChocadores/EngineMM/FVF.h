@@ -1,2 +1,4 @@
-#pragma once
+#ifndef FVF_H
+#define FVF_H
 #define CUSTOMFVF (D3DFVF_XYZ |D3DFVF_NORMAL| D3DFVF_TEX1)
+#endif
