@@ -53,7 +53,7 @@ void Game::Run(_In_     HINSTANCE hInstance,
 	//Creo la ventana, recibiendo el numero de ventana
 	HWND hWnd = CreateWindowEx(0, //Flags extra de estilo
 		L"GameWindowClass", //Nombre del tipo de ventana a crear
-		L"Sumos Chocadores", //Titulo de la barra
+		L"Final de Programacion de Graficos 1", //Titulo de la barra
 		WS_OVERLAPPEDWINDOW, //Flags de estilos
 		0, //X
 		0, //Y

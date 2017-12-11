@@ -80,6 +80,7 @@ c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(3
           [
               _Ty=D3DXVECTOR2
           ]
+c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.cpp(74): warning C4267: 'argumento': conversión de 'size_t' a 'unsigned short'; posible pérdida de datos
 c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.cpp(163): warning C4267: 'argumento': conversión de 'size_t' a 'unsigned short'; posible pérdida de datos
 c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.cpp(175): warning C4267: 'argumento': conversión de 'size_t' a 'unsigned short'; posible pérdida de datos
 c:\users\822\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.cpp(187): warning C4267: 'argumento': conversión de 'size_t' a 'unsigned short'; posible pérdida de datos

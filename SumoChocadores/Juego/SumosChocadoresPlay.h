@@ -22,7 +22,7 @@ private:
 	Animacion * sumoAnima;
 	Composite* sumo;
 	Mesh* sumoMesh;
-	//MeshRender* sumoRender;
+	MeshRender* sumoRender;
 	Textura* sumoTex;
 	Composite* tiles;
 	Tilemap*  tilesMap;

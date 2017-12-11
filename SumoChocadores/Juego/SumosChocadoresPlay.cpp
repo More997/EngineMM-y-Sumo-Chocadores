@@ -33,7 +33,7 @@ void SumosChocadoresPlay::Create()
 	coso = new Composite();
 	cosoMesh = new Mesh();
 	cosoMesh->Load3D("TestCube.obj");
-	cosoTex = new Textura(L"verde.jpg");
+	cosoTex = new Textura(L"Verde.jpg");
 	cosoRender = new MeshRender(cosoTex);
 	cosoRender->SetMesh(cosoMesh);
 	coso->Add(cosoRender);
@@ -41,16 +41,18 @@ void SumosChocadoresPlay::Create()
 	coso->setVector(D3DXVECTOR3(0.5,0.5, 0.5));
 	
 	
-	
-	sumoMesh = new Mesh();
-	sumoTex = new Textura(L"walk.png");
-	sumoAnima = new Animacion(sumoTex);
 	sumo = new Composite();
+	sumoMesh = new Mesh();
+	sumoTex = new Textura(L"PJ.png");
+	sumoAnima = new Animacion(sumoTex);
+	//sumoRender = new MeshRender(sumoTex);
 	sumoAnima->SetMesh(sumoMesh);
-	sumo->setModelScale(1, 1, 1);
-	sumo->setVector(D3DXVECTOR3(1, 1, 10));
+	sumoAnima->addFrames(2, 2);
+	//sumoRender->SetMesh(sumoMesh);
 	sumo->Add(sumoAnima);
-	sumoAnima->addFrames(6, 5);
+	//sumo->Add(sumoRender)
+	sumo->setModelScale(1, 1, 1);
+	sumo->setVector(D3DXVECTOR3(1, 1, 5));
 	
 	tiles = new Composite();
 	tileMesh = new Mesh();
@@ -79,7 +81,7 @@ void SumosChocadoresPlay::Update()
 	//coso->setVector(coso->getVector());
 	//cosoRender->Blending(1);
 	//bbtest = coso->GetBoundingBox();
-//	coso->Render();
+	//coso->Render();
 	if (num > 6.5f)
 	{
 		achicar = true;
@@ -107,7 +109,8 @@ void SumosChocadoresPlay::Update()
 	sumoAnima->UpdateAn(2);
 	sumo->Render();
 	
-	/*for (int i = 0; i < tilesVector.size(); i++) 
+	/*
+	for (int i = 0; i < tilesVector.size(); i++) 
 	{
 		tilesVector[i]->setVector(tilesVector[i]->getVector());
 		tilesVector[i]->Render();
