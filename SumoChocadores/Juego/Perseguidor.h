@@ -18,6 +18,7 @@ private:
 	Composite* perse;
 	Mesh* mesh;
 	Textura* tex;
+	bool mov;
 public:
 	Perseguidor();
 	~Perseguidor();
@@ -29,6 +30,7 @@ public:
 	float getY();
 	void masVel();
 	void movimiento(float xPJ, float yPJ);
+	void derrota();
 	
 };
 #endif

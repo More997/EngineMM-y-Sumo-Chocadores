@@ -18,6 +18,7 @@ Perseguidor::Perseguidor()
 	perse->setVector(D3DXVECTOR3(x, y, 2));
 	perse->Add(animacion);
 	animacion->addFrames(2, 2);
+	mov = true;
 }
 
 
@@ -63,21 +64,29 @@ void Perseguidor::masVel()
 
 void Perseguidor::movimiento(float xPJ, float yPJ)
 {
-	if (xPJ >= x)
+	if (mov == true)
 	{
-		x += vel;
-	}
-	else if (xPJ < x)
-	{
-		x -= vel;
-	}
-	if (yPJ >= y)
-	{
-		y += vel;
-	}
-	else if (yPJ < y)
-	{
-		y -= vel;
+		if (xPJ >= x)
+		{
+			x += vel;
+		}
+		else if (xPJ < x)
+		{
+			x -= vel;
+		}
+		if (yPJ >= y)
+		{
+			y += vel;
+		}
+		else if (yPJ < y)
+		{
+			y -= vel;
+		}
 	}
 	
+}
+
+void Perseguidor::derrota()
+{
+	mov = false;
 }
