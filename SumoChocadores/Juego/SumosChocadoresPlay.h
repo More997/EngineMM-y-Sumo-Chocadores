@@ -5,12 +5,12 @@
 #include "../EngineMM/Camera.h"
 #include "../EngineMM/Tilemap.h"
 #include "../EngineMM/MeshRender.h"
+#include "Perseguidor.h"
 class SumosChocadoresPlay :
 	 public ConectorDeEngine
 {
 private:
 	Camera* camara;
-	bool achicar = false;
 	float num = 0;
 	float num2 = 0;
 	Mesh* cosoMesh;
@@ -18,21 +18,7 @@ private:
 	MeshRender* cosoRender;
 	Composite*coso;
 	BoundingBox bbtest;
-
-	Animacion * sumoAnima;
-	Composite* sumo;
-	Mesh* sumoMesh;
-	MeshRender* sumoRender;
-	Textura* sumoTex;
-	Composite* tiles;
-	Tilemap*  tilesMap;
-	Mesh* tileMesh;
-	MeshRender* tileRender;
-	Composite* tiles2;
-	Tilemap* tilesMap2;
-	Mesh* tileMesh2;
-	MeshRender* tileRender2;
-	vector<Tilemap*> tilesVector;
+	Perseguidor* enemigo;
 	
 public:
 	SumosChocadoresPlay();

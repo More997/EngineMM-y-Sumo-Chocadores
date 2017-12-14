@@ -28,7 +28,6 @@ public:
 	float getX();
 	void setY(float _Y);
 	float getY();
-	void masVel();
 	void movimiento(float xPJ, float yPJ);
 	void derrota();
 	

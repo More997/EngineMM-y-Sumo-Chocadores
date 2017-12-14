@@ -39,6 +39,7 @@ float Perseguidor::getVel()
 void Perseguidor::setX(float _X)
 {
 	x = _X;
+	perse->setModelPos(x, y, 1);
 }
 
 float Perseguidor::getX()
@@ -49,6 +50,7 @@ float Perseguidor::getX()
 void Perseguidor::setY(float _Y)
 {
 	y = _Y;
+	perse->setModelPos(x, y, 1);
 }
 
 float Perseguidor::getY()
@@ -56,11 +58,6 @@ float Perseguidor::getY()
 	return y;
 }
 
-void Perseguidor::masVel()
-{
-	if (vel < velMax)
-		vel += sumavel;
-}
 
 void Perseguidor::movimiento(float xPJ, float yPJ)
 {
@@ -83,7 +80,12 @@ void Perseguidor::movimiento(float xPJ, float yPJ)
 			y -= vel;
 		}
 	}
-	
+	perse->setModelPos(x, y, 1);
+	if (vel != velMax)
+	{
+		vel += sumavel;
+	}
+	perse->Render();	
 }
 
 void Perseguidor::derrota()
