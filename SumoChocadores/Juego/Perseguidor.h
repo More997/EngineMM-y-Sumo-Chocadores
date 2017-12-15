@@ -5,32 +5,21 @@
 #include "../EngineMM/Camera.h"
 #include "../EngineMM/Tilemap.h"
 #include "../EngineMM/MeshRender.h"
-class Perseguidor
+class Perseguidor :
+	public Composite
 {
 private:
-	float velMax;
-	float vel;
-	float velMin;
-	float sumavel;
 	float x;
 	float y;
-	Animacion * animacion;
-	Composite* perse;
-	Mesh* mesh;
-	Textura* tex;
 	bool mov;
 public:
 	Perseguidor();
 	~Perseguidor();
-	void setVel(float _vel);
-	float getVel();
 	void setX(float _X);
 	float getX();
 	void setY(float _Y);
 	float getY();
-	void movimiento(float xPJ, float yPJ);
 	void derrota();
-	
 };
 #endif
 

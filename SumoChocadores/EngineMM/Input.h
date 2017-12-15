@@ -11,7 +11,7 @@
 #include <vector>
 #include "Composite.h"
 using namespace std;
-class Input :
+class IMPORTEXPORT Input :
 	public Composite
 {
 private:
@@ -21,7 +21,7 @@ private:
 	byte keys[256];
 	byte prevkeys[256];
 public:
-	Input(HINSTANCE &hInstance, HWND hWnd);
+	Input(/*HINSTANCE &hInstance, HWND hWnd*/);
 	~Input();
 	map<string, vector<int>>& GetMap();
 	bool GetKeyDown(vector<int>*myVectorInt);

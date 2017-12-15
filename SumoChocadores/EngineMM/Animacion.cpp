@@ -69,10 +69,10 @@ void Animacion::addFrames(int spriteWidth, int spriteHeight)
 		{
 			Vertex vertexes2[4] =
 			{
-				{ 0.00f, 0.0f, 0.0f,0.0f,0.0f,1.0f, tileWidth * tileCol     , tileHeight * (tileFila + 1) },
-				{ -width, 0.0f, 0.0f,0.0f,0.0f,1.0f, tileWidth * (tileCol - 1) , tileHeight * (tileFila + 1) },
-				{ -width, 1.0f, 0.0f,0.0f,0.0f,1.0f, tileWidth * (tileCol - 1) , tileHeight * tileFila },
-				{ 0.00f, 1.0f, 0.0f,0.0f,0.0f,1.0f, tileWidth * tileCol     , tileHeight * tileFila }
+				{ 0.00f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, tileWidth * tileCol     , tileHeight * (tileFila + 1) },
+				{ -width, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, tileWidth * (tileCol - 1) , tileHeight * (tileFila + 1) },
+				{ -width, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f, tileWidth * (tileCol - 1) , tileHeight * tileFila },
+				{ 0.00f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f, tileWidth * tileCol , tileHeight * tileFila }
 			};
 			spritesheet.push_back(new Mesh(vertexes2, indexes));
 			tileCol++;

@@ -15,6 +15,8 @@ private:
 	 Game();
 	static Game* Instance;
 	LPDIRECT3DDEVICE9 dev;
+	HINSTANCE _hInstance;
+	HWND hWnd;
 public:
 	LPDIRECT3DDEVICE9 getDev();
 	 ~Game();
@@ -23,5 +25,7 @@ public:
 		_In_ LPTSTR lpCmdLine, _In_     int       nCmdShow,
 		ConectorDeEngine* conector);
 	 static Game* getInstance();
+	 HINSTANCE gethInstance();
+	 HWND getHWND();
 	//virtual void setMeshes() = 0;
 };

@@ -28,6 +28,12 @@ SumosChocadoresPlay::~SumosChocadoresPlay()
 
 void SumosChocadoresPlay::Create()
 {
+	gameInput = new Input();
+	reciverMap = gameInput->GetMap();
+	intVectorInputUp = &reciverMap["Up"];
+	intVectorInputLeft = &reciverMap["Left"];
+	intVectorInputRight = &reciverMap["Right"];
+	intVectorInputDown = &reciverMap["Down"];
 	camara = new Camera();
 
 	coso = new Composite();
@@ -37,13 +43,28 @@ void SumosChocadoresPlay::Create()
 	cosoRender = new MeshRender(cosoTex);
 	cosoRender->SetMesh(cosoMesh);
 	coso->Add(cosoRender);
-	coso->setModelScale(2, 2,2);
-	coso->setVector(D3DXVECTOR3(0,0, 1.5f));
+	coso->setModelScale(2, 2, 2);
+	coso->setVector(D3DXVECTOR3(0, 0,1.5f));
 	enemigo = new Perseguidor();
+	texEnemigo = new Textura(L"Perseguidor.png");
+	animacionEnemigo = new Animacion(texEnemigo);
+	meshEnemigo = new Mesh();
+	animacionEnemigo->SetMesh(meshEnemigo);
+	animacionEnemigo->addFrames(2, 2);
+	enemigo->Add(animacionEnemigo);
 	enemigo->setX(0);
-	enemigo->setY(0);
-	enemigo->setVel(0.02f);
-
+	enemigo->setY(1);
+	enemigo->setModelScale(0.1f, 0.1f, 0.1f);
+	pj = new Jugador();
+	texPj = new Textura(L"PJ.png");
+	animacionPj = new Animacion(texPj);
+	meshPj = new Mesh();
+	animacionPj->SetMesh(meshPj);
+	animacionPj->addFrames(2, 2);
+	pj->Add(animacionPj);
+	pj->setModelScale(0.1f, 0.1f, 0.1f);
+	gameover = false;
+	vel = 0.0001;
 	/*
 	sumo = new Composite();
 	sumoMesh = new Mesh();
@@ -79,18 +100,111 @@ void SumosChocadoresPlay::Create()
 }
 
 void SumosChocadoresPlay::Update()
-{ 
+{
 	camara->update();
 	coso->setModelRotY(num);
 	coso->setVector(coso->getVector());
 	//cosoRender->Blending(1);
 	bbtest = coso->GetBoundingBox();
-	//coso->Render();
-	num += 0.005;
-	enemigo->movimiento(1, 3);
+	coso->Render();
+	if (gameover != true)
+	{
+		if (pj->getX() >= enemigo->getX())
+		{
+			enemigo->setX(enemigo->getX() + vel);
+			enemigo->setVector(D3DXVECTOR3(enemigo->getX(), enemigo->getY(), 1));
+		}
+		else if (pj->getX() < enemigo->getX())
+		{
+			enemigo->setX(enemigo->getX() - vel);
+			enemigo->setVector(D3DXVECTOR3(enemigo->getX(), enemigo->getY(), 1));
+		}
+		if (pj->getY() >= enemigo->getY())
+		{
+			enemigo->setY(enemigo->getY() + vel);
+			enemigo->setVector(D3DXVECTOR3(enemigo->getX(), enemigo->getY(), 1));
+		}
+		else if (pj->getY() < enemigo->getY())
+		{
+			enemigo->setY(enemigo->getY() - vel);
+			enemigo->setVector(D3DXVECTOR3(enemigo->getX(), enemigo->getY(), 1));
+		}
+		
+	}
 	
-	
+	animacionEnemigo->Blending(2);
+	animacionEnemigo->UpdateAn(5);
+	enemigo->Render();
+	animacionPj->Blending(2);
+	animacionPj->UpdateAn(5);
+	if (gameover != true)
+	{
+		if (gameInput->GetKeyDown(intVectorInputUp))
+		{
+			num += 0.005;
+			coso->setModelRotZ(num);
+		}
+		else if (gameInput->GetKeyDown(intVectorInputDown))
+		{
+			num -= 0.005;
+			coso->setModelRotZ(num);
 
+		}
+		if (gameInput->GetKeyDown(intVectorInputLeft))
+		{
+			num += 0.005;
+			coso->setModelRotY(num);
+		}
+		else if (gameInput->GetKeyDown(intVectorInputRight))
+		{
+			num -= 0.005;
+			coso->setModelRotY(num);
+		}
+		if (gameInput->GetKeyDown(intVectorInputUp))
+		{
+			pj->setY(pj->getY() + vel*2);
+			pj->setVector(D3DXVECTOR3(pj->getX(), pj->getY(), 1));
+		}
+		else if (gameInput->GetKeyDown(intVectorInputDown))
+		{
+			pj->setY(pj->getY() - vel*2);
+			pj->setVector(D3DXVECTOR3(pj->getX(), pj->getY(), 1));
+		}
+		if (gameInput->GetKeyDown(intVectorInputLeft))
+		{
+			pj->setX(pj->getX() - vel*2);
+			pj->setVector(D3DXVECTOR3(pj->getX(), pj->getY(), 1));
+		}
+		else if (gameInput->GetKeyDown(intVectorInputRight))
+		{
+			pj->setX(pj->getX() + vel*2);
+			pj->setVector(D3DXVECTOR3(pj->getX(), pj->getY(), 1));
+		}
+	}
+	vel += 0.00001;
+	pj->Render();
+	
+	if (enemigo->getVector().x < pj->getVector().x + (pj->getScaleV().x / 1) && enemigo->getVector().x >(pj->getVector().x))
+	{
+		if (enemigo->getVector().y <= pj->getVector().y + (pj->getScaleV().y / 1.2) && enemigo->getVector().y >= (pj->getVector().y))
+			gameover = true; 
+		else if (enemigo->getVector().y < (pj->getVector().y) && (enemigo->getVector().y + enemigo->getScaleV().y / 1.13) >= pj->getVector().y)
+			gameover = true;  
+	}
+
+	else if (enemigo->getVector().x <= (pj->getVector().x) && (enemigo->getVector().x + (enemigo->getVector().x / 7)) >= pj->getVector().x)
+	{
+		if (enemigo->getVector().y <= pj->getVector().y + (pj->getScaleV().y / 1.2) && enemigo->getVector().y >= (pj->getVector().y))
+			gameover = true;		
+		else if (enemigo->getVector().y <= (pj->getVector().y) && (enemigo->getVector().y + enemigo->getScaleV().y / 1.13) >= pj->getVector().y)
+			gameover = true;
+	}
+	if (gameover)
+	{
+		pj->setVector(D3DXVECTOR3(-1000, -1000, 0));
+		enemigo->setVector(D3DXVECTOR3(1, -1, 1));
+		enemigo->setModelScale(2, 2, 2);
+	}
 	
 	/*sumo->setVector(sumo->getVector());
 	sumoAnima->Blending(2);

@@ -5,13 +5,14 @@
 
 
 
-Input::Input(HINSTANCE & hInstance, HWND hWnd)
+Input::Input(/*HINSTANCE & hInstance, HWND hWnd*/)
 {
-	DirectInput8Create(hInstance, DIRECTINPUT_VERSION, IID_IDirectInput8, (void**)&dip, NULL);
-
+	Game*s = Game::getInstance();
+	DirectInput8Create(s->gethInstance(), DIRECTINPUT_VERSION, IID_IDirectInput8, (void**)&dip, NULL);
+	
 	dip->CreateDevice(GUID_SysKeyboard, &keyDev, NULL);
 	keyDev->SetDataFormat(&c_dfDIKeyboard);
-	keyDev->SetCooperativeLevel(hWnd, DISCL_FOREGROUND | DISCL_NONEXCLUSIVE);
+	keyDev->SetCooperativeLevel(s->getHWND(), DISCL_FOREGROUND | DISCL_NONEXCLUSIVE);
 	keyDev->Acquire();
 
 	inputMap["Up"].push_back(DIK_W);

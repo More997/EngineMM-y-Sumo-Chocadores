@@ -80,6 +80,18 @@ c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm
 c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(10): warning C4251: 'Camera::_rot': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
   c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
   c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\dx\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\input.h(20): warning C4251: 'Input::inputMap': class 'std::map<std::string,std::vector<int,std::allocator<_Ty>>,std::less<_Kty>,std::allocator<std::pair<const _Kty,std::vector<_Ty,std::allocator<_Ty>>>>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Input'
+          with
+          [
+              _Ty=int,
+              _Kty=std::string
+          ]
+  c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\input.h(20): note: vea la declaración de 'std::map<std::string,std::vector<int,std::allocator<_Ty>>,std::less<_Kty>,std::allocator<std::pair<const _Kty,std::vector<_Ty,std::allocator<_Ty>>>>>'
+          with
+          [
+              _Ty=int,
+              _Kty=std::string
+          ]
 c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm\animacion.h(27): warning C4251: 'Animacion::_vertex': class 'std::vector<Vertex,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Animacion'
           with
           [
@@ -122,6 +134,11 @@ c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\enginemm
           [
               _Ty=int
           ]
-c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(89): warning C4305: '+=': truncamiento de 'double' a 'float'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(67): warning C4305: '=': truncamiento de 'double' a 'float'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(144): warning C4305: '+=': truncamiento de 'double' a 'float'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(149): warning C4305: '-=': truncamiento de 'double' a 'float'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(155): warning C4305: '+=': truncamiento de 'double' a 'float'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(160): warning C4305: '-=': truncamiento de 'double' a 'float'
+c:\users\def\desktop\trabajos\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(184): warning C4305: '+=': truncamiento de 'double' a 'float'
   Juego.vcxproj -> C:\Users\def\Desktop\Trabajos\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.exe
   Juego.vcxproj -> C:\Users\def\Desktop\Trabajos\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.pdb (Full PDB)

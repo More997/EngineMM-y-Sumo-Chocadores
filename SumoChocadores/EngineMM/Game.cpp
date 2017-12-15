@@ -31,7 +31,7 @@ void Game::Run(_In_     HINSTANCE hInstance,
 	_In_ LPTSTR lpCmdLine,
 	_In_     int       nCmdShow, 
 	ConectorDeEngine* conector) {
-
+	_hInstance = hInstance;
 	//Creamos la clase de la ventana
 	WNDCLASSEX wcex;
 
@@ -203,6 +203,16 @@ Game * Game::getInstance()
 		Instance = new Game();
 	}
 	return Instance;
+}
+
+HINSTANCE Game::gethInstance()
+{
+	return _hInstance;
+}
+
+HWND Game::getHWND()
+{
+	return hWnd;
 }
 
 
