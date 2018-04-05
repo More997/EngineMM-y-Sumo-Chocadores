@@ -52,7 +52,13 @@ D3DXMATRIX Camera::GetViewMatrix()
 
 	return transMat * rotZMat;
 }
-
+/*
+Mover el D3DXMATRIX projection en el .h.
+Mover al D3DXMATRIX view al .h. view = GetViewMatrix() asi el BuildViewFrustum
+Mover el D3DXMatrixPespectiveFovLH(...) al constructor.
+Crear una funcion que modifique al D  3DXMatrixPespectiveFovLH(...) cuando el usuario quiera.
+Crear el BuildViewFrustum en la camera, asi tiene acceso al D3DXMATRIX projection.
+*/
 void Camera::update()
 {
 	Game* g = Game::getInstance();
