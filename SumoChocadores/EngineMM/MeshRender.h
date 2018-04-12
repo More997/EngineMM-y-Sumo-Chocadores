@@ -22,7 +22,7 @@ public:
 	void Warping(int numWarp);//numero del 1 al 6
 	void Filtro(int numfiltro);//numero del 1 al 7
 	BoundingBox GetMeshBB() override;
-
+	void BuildViewFrustum(D3DMATRIX _projection, D3DMATRIX _view); //Tiene que tener acceso al Projection.
 };
 #endif
 

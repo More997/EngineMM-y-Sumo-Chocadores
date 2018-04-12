@@ -1,9 +1,16 @@
 #include "stdafx.h"
 #include "Camera.h"
-Camera::Camera()
+Camera::Camera():radian(60),ancho (640), alto (480), dismin (0.0f), dismax(50)
 {
 	_pos = D3DXVECTOR3(0, 0, 0);
 	_rot = D3DXVECTOR3(0, 0, 0);
+	view = GetViewMatrix();
+	D3DXMatrixPerspectiveFovLH(
+		&projection,
+		D3DXToRadian(radian),
+		(float)ancho / alto, //ancho der la pantalla dividido por el alto
+		dismin, //Distancia minima de vision
+		dismax); //Distancia maxima de vision
 }
 
 Camera::Camera(D3DXVECTOR3 pos, D3DXVECTOR3 rot)
@@ -53,24 +60,37 @@ D3DXMATRIX Camera::GetViewMatrix()
 	return transMat * rotZMat;
 }
 /*
-Mover el D3DXMATRIX projection en el .h.
-Mover al D3DXMATRIX view al .h. view = GetViewMatrix() asi el BuildViewFrustum
-Mover el D3DXMatrixPespectiveFovLH(...) al constructor.
-Crear una funcion que modifique al D  3DXMatrixPespectiveFovLH(...) cuando el usuario quiera.
-Crear el BuildViewFrustum en la camera, asi tiene acceso al D3DXMATRIX projection.
+Mover el D3DXMATRIX projection en el .h. --Listo
+Mover al D3DXMATRIX view al .h. view = GetViewMatrix() asi el BuildViewFrustum tiene acceso. --Listo.
+Mover el D3DXMatrixPespectiveFovLH(...) al constructor. --Listo
+Crear una funcion que modifique al D 3DXMatrixPespectiveFovLH(...) cuando el usuario quiera. --Listo
+Crear el BuildViewFrustum en la camera, asi tiene acceso al D3DXMATRIX projection. --Listo
 */
 void Camera::update()
 {
 	Game* g = Game::getInstance();
-	D3DXMATRIX view = GetViewMatrix();
-	D3DXMATRIX projection;
-	D3DXMatrixPerspectiveFovLH(
-		&projection,
-		D3DXToRadian(60),
-		(float)640 / 480, //ancho der la pantalla dividido por el alto
-		0.0f, //Distancia minima de vision
-		50); //Distancia maxima de vision
-
+	view = GetViewMatrix();	
 	g->getDev()->SetTransform(D3DTS_VIEW, &view);
 	g->getDev()->SetTransform(D3DTS_PROJECTION, &projection);
 }
+
+void Camera::setSize(int _radian, int _ancho, int _alto, float _dismin, float _dismax)
+{
+	radian = _radian;
+	ancho = _ancho;
+	alto = _alto;
+	dismin = _dismin;
+	dismax = _dismax;
+	D3DXMatrixPerspectiveFovLH(
+		&projection,
+		D3DXToRadian(radian),
+		(float)ancho / alto, //ancho der la pantalla dividido por el alto
+		dismin, //Distancia minima de vision
+		dismax); //Distancia maxima de vision
+}
+
+D3DMATRIX Camera::getProjection()
+{
+	return projection;
+}
+

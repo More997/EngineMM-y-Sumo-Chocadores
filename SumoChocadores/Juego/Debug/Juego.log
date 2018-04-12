@@ -79,6 +79,10 @@ c:\users\administrador\desktop\engine\enginemm-y-sumo-chocadores\sumochocadores\
   c:\users\administrador\desktop\engine\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
 c:\users\administrador\desktop\engine\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(10): warning C4251: 'Camera::_rot': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
   c:\users\administrador\desktop\engine\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\administrador\desktop\engine\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(11): warning C4251: 'Camera::projection': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\administrador\desktop\engine\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\administrador\desktop\engine\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(12): warning C4251: 'Camera::view': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\administrador\desktop\engine\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
   c:\users\administrador\desktop\engine\enginemm-y-sumo-chocadores\sumochocadores\dx\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
 c:\users\administrador\desktop\engine\enginemm-y-sumo-chocadores\sumochocadores\enginemm\input.h(20): warning C4251: 'Input::inputMap': class 'std::map<std::string,std::vector<int,std::allocator<_Ty>>,std::less<_Kty>,std::allocator<std::pair<const _Kty,std::vector<_Ty,std::allocator<_Ty>>>>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Input'
           with
