@@ -184,3 +184,15 @@ BoundingBox MeshRender::GetMeshBB()
 	return mesh2->GetBB();
 }
 
+void MeshRender::BuildViewFrustum(D3DXMATRIX _projection, D3DXMATRIX _view)
+{
+	int result = 0; //0 = adentro, 1 == Afuera, 2== entro.
+	BoundingBox _bb = GetMeshBB();
+	D3DXMATRIX _projection_view;
+	D3DXMatrixMultiply(&_projection_view, &_view, &_projection);
+	for (int i = 0; i < 6; i++)
+	{
+		
+	}
+}
+
