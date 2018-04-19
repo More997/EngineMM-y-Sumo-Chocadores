@@ -8,6 +8,8 @@ class IMPORTEXPORT MeshRender :
 private:
 	Mesh* mesh2;
 	Textura* texture;
+	bool draw;
+	Camera * cam;
 public:
 	MeshRender();
 	MeshRender(Textura* tex);
@@ -22,7 +24,8 @@ public:
 	void Warping(int numWarp);//numero del 1 al 6
 	void Filtro(int numfiltro);//numero del 1 al 7
 	BoundingBox GetMeshBB() override;
-	void BuildViewFrustum(D3DXMATRIX _projection, D3DXMATRIX _view); //Tiene que tener acceso al Projection.
+	void setCamera(Camera* _cam);
+	void inFrustum();
 };
 #endif
 

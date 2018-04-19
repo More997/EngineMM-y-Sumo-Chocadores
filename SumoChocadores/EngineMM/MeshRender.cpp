@@ -6,11 +6,11 @@
 #include <d3dx9.h>
 #pragma comment (lib, "d3dx9.lib")
 
-MeshRender::MeshRender()
+MeshRender::MeshRender(): draw(false)
 {
 }
 
-MeshRender::MeshRender(Textura * tex)
+MeshRender::MeshRender(Textura * tex) : draw(false)
 {
 	texture = tex;
 }
@@ -184,15 +184,16 @@ BoundingBox MeshRender::GetMeshBB()
 	return mesh2->GetBB();
 }
 
-void MeshRender::BuildViewFrustum(D3DXMATRIX _projection, D3DXMATRIX _view)
+void MeshRender::setCamera(Camera * _cam)
 {
-	int result = 0; //0 = adentro, 1 == Afuera, 2== entro.
-	BoundingBox _bb = GetMeshBB();
-	D3DXMATRIX _projection_view;
-	D3DXMatrixMultiply(&_projection_view, &_view, &_projection);
-	for (int i = 0; i < 6; i++)
-	{
-		
-	}
+	cam = _cam;
 }
+
+void MeshRender::inFrustum()
+{
+	int coor = 0; //0 = adentro 1 = afuera 2= entra;
+	
+}
+
+
 

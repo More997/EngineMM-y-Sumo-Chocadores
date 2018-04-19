@@ -15,6 +15,8 @@ private:
 	int alto;
 	float dismin;
 	float dismax;
+	D3DXPLANE m_Frustum[6];
+	D3DXMATRIX _projection_view;
 public:
 	Camera();
 	Camera(D3DXVECTOR3 pos, D3DXVECTOR3 rot);
@@ -27,5 +29,6 @@ public:
 	void update();
 	void setSize(int _radian, int _ancho, int _alto, float _dismin, float _dismax);
 	D3DMATRIX getProjection();
+	void BuildViewFrustum(); //Tiene que tener acceso al Projection. Pide Projection y View.
 };
 #endif 

@@ -93,4 +93,48 @@ D3DMATRIX Camera::getProjection()
 {
 	return projection;
 }
+void Camera::BuildViewFrustum()
+{
+	D3DXMatrixMultiply(&_projection_view, &view, &projection);
+	//LeftPlane
+	m_Frustum[0].a = _projection_view._14 + _projection_view._11;
+	m_Frustum[0].b = _projection_view._24 + _projection_view._21;
+	m_Frustum[0].c = _projection_view._34 + _projection_view._31;
+	m_Frustum[0].d = _projection_view._44 + _projection_view._41;
+
+	//RightPlane
+	m_Frustum[1].a = _projection_view._14 - _projection_view._11;
+	m_Frustum[1].b = _projection_view._24 - _projection_view._21;
+	m_Frustum[1].c = _projection_view._34 - _projection_view._31;
+	m_Frustum[1].d = _projection_view._44 - _projection_view._41;
+
+	// TopPlane
+	m_Frustum[2].a = _projection_view._14 - _projection_view._12;
+	m_Frustum[2].b = _projection_view._24 - _projection_view._22;
+	m_Frustum[2].c = _projection_view._34 - _projection_view._32;
+	m_Frustum[2].d = _projection_view._44 - _projection_view._42;
+
+	// BottomPlane
+	m_Frustum[3].a = _projection_view._14 + _projection_view._12;
+	m_Frustum[3].b = _projection_view._24 + _projection_view._22;
+	m_Frustum[3].c = _projection_view._34 + _projection_view._32;
+	m_Frustum[3].d = _projection_view._44 + _projection_view._42;
+
+	// NearPlane
+	m_Frustum[4].a = _projection_view._13;
+	m_Frustum[4].b = _projection_view._23;
+	m_Frustum[4].c = _projection_view._33;
+	m_Frustum[4].d = _projection_view._43;
+
+	// FarPlane
+	m_Frustum[5].a = _projection_view._14 - _projection_view._13;
+	m_Frustum[5].b = _projection_view._24 - _projection_view._23;
+	m_Frustum[5].c = _projection_view._34 - _projection_view._33;
+	m_Frustum[5].d = _projection_view._44 - _projection_view._43;
+
+	for (int i = 0; i < 6; i++)
+	{
+		D3DXPlaneNormalize(&m_Frustum[i], &m_Frustum[i]);
+	}
+}
 
