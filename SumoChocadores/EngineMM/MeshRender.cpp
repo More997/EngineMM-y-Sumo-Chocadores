@@ -192,6 +192,9 @@ void MeshRender::setCamera(Camera * _cam)
 void MeshRender::inFrustum()
 {
 	int coor = 0; //0 = adentro 1 = afuera 2= entra;
+	for (int i = 0; i < 6; i++) 
+	{
+	}
 	
 }
 
