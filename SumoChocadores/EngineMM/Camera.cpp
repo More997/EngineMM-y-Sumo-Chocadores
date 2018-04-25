@@ -93,7 +93,7 @@ D3DMATRIX Camera::getProjection()
 {
 	return projection;
 }
-void Camera::BuildViewFrustum()
+vector<D3DXPLANE> Camera::BuildViewFrustum()
 {
 	D3DXMatrixMultiply(&_projection_view, &view, &projection);
 	//LeftPlane
@@ -136,5 +136,6 @@ void Camera::BuildViewFrustum()
 	{
 		D3DXPlaneNormalize(&m_Frustum[i], &m_Frustum[i]);
 	}
+	return m_Frustum;
 }
 

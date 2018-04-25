@@ -28,6 +28,7 @@ SumosChocadoresPlay::~SumosChocadoresPlay()
 
 void SumosChocadoresPlay::Create()
 {
+	comCam = new Composite();
 	gameInput = new Input();
 	reciverMap = gameInput->GetMap();
 	intVectorInputUp = &reciverMap["Up"];
@@ -35,6 +36,8 @@ void SumosChocadoresPlay::Create()
 	intVectorInputRight = &reciverMap["Right"];
 	intVectorInputDown = &reciverMap["Down"];
 	camara = new Camera();
+	comCam->Add(camara);
+	camara->update();
 
 	coso = new Composite();
 	cosoMesh = new Mesh();
@@ -43,8 +46,12 @@ void SumosChocadoresPlay::Create()
 	cosoRender = new MeshRender(cosoTex);
 	cosoRender->SetMesh(cosoMesh);
 	coso->Add(cosoRender);
-	coso->setModelScale(2, 2, 2);
-	coso->setVector(D3DXVECTOR3(0, 0,1.5f));
+	coso->setModelScale(0.5, 0.5, 0.5);
+	coso->setVector(D3DXVECTOR3(numx, numy,1.5f));
+	cosoRender->setCamera(camara);
+
+
+	/*
 	enemigo = new Perseguidor();
 	texEnemigo = new Textura(L"Perseguidor.png");
 	animacionEnemigo = new Animacion(texEnemigo);
@@ -102,11 +109,11 @@ void SumosChocadoresPlay::Create()
 void SumosChocadoresPlay::Update()
 {
 	camara->update();
-	coso->setModelRotY(num);
+	//coso->setModelRotY(num);
 	coso->setVector(coso->getVector());
 	//cosoRender->Blending(1);
-	bbtest = coso->GetBoundingBox();
 	coso->Render();
+	/*
 	if (gameover != true)
 	{
 		if (pj->getX() >= enemigo->getX())
@@ -139,27 +146,29 @@ void SumosChocadoresPlay::Update()
 	animacionPj->UpdateAn(5);
 	if (gameover != true)
 	{
+	*/
 		if (gameInput->GetKeyDown(intVectorInputUp))
 		{
-			num += 0.005;
-			coso->setModelRotZ(num);
+			numy += 0.01;
 		}
 		else if (gameInput->GetKeyDown(intVectorInputDown))
 		{
-			num -= 0.005;
-			coso->setModelRotZ(num);
+			numy -= 0.01;
 
 		}
-		if (gameInput->GetKeyDown(intVectorInputLeft))
+	/*	if (gameInput->GetKeyDown(intVectorInputLeft))
 		{
-			num += 0.005;
-			coso->setModelRotY(num);
+			numx -= 0.01;
 		}
 		else if (gameInput->GetKeyDown(intVectorInputRight))
 		{
-			num -= 0.005;
-			coso->setModelRotY(num);
+			numx += 0.01;
 		}
+		*/
+		numx += 0.0025;
+		coso->setModelPos(numx, numy, 1.5f);
+	
+		/*
 		if (gameInput->GetKeyDown(intVectorInputUp))
 		{
 			pj->setY(pj->getY() + vel*2);
@@ -181,9 +190,11 @@ void SumosChocadoresPlay::Update()
 			pj->setVector(D3DXVECTOR3(pj->getX(), pj->getY(), 1));
 		}
 	}
-	vel += 0.00001;
-	pj->Render();
+	*/
+	//vel += 0.00001;
+	//pj->Render();
 	
+	/*
 	if (enemigo->getVector().x < pj->getVector().x + (pj->getScaleV().x / 1) && enemigo->getVector().x >(pj->getVector().x))
 	{
 		if (enemigo->getVector().y <= pj->getVector().y + (pj->getScaleV().y / 1.2) && enemigo->getVector().y >= (pj->getVector().y))
@@ -205,7 +216,7 @@ void SumosChocadoresPlay::Update()
 		enemigo->setVector(D3DXVECTOR3(1, -1, 1));
 		enemigo->setModelScale(2, 2, 2);
 	}
-	
+	*/
 	/*sumo->setVector(sumo->getVector());
 	sumoAnima->Blending(2);
 	sumoAnima->UpdateAn(2);
@@ -220,6 +231,7 @@ void SumosChocadoresPlay::Update()
 	*/
 //	tiles->setVector(tiles->getVector());
 	//tileRender->Blending(2);
+
 	
 }
 

@@ -46,28 +46,32 @@ void MeshRender::defTransMat()
 
 void MeshRender::RenderingComposite()
 {
-	Game* game = Game::getInstance();
-	if (texture != NULL)
-		game->getDev()->SetTexture(0, texture->GetText());
-	else
-		game->getDev()->SetTexture(0, NULL);
-	game->getDev()->SetFVF(CUSTOMFVF);
-	game->getDev()->SetTransform(D3DTS_WORLD, &getTransMat());
-	game->getDev()->SetStreamSource(0, mesh2->GetVb(), 0, sizeof(Vertex));
-	game->getDev()->SetIndices(mesh2->GetInd());
-	game->getDev()->DrawIndexedPrimitive(D3DPT_TRIANGLELIST, 0, 0, mesh2->vertexes.size(), 0, mesh2->indexes.size() / 3); //3D
-	//game->getDev()->DrawIndexedPrimitive(D3DPT_TRIANGLELIST, 0, 0, 4, 0, 2); //2D
+	inFrustum();
+	if (draw)
+	{
+		Game* game = Game::getInstance();
+		if (texture != NULL)
+			game->getDev()->SetTexture(0, texture->GetText());
+		else
+			game->getDev()->SetTexture(0, NULL);
+		game->getDev()->SetFVF(CUSTOMFVF);
+		game->getDev()->SetTransform(D3DTS_WORLD, &getTransMat());
+		game->getDev()->SetStreamSource(0, mesh2->GetVb(), 0, sizeof(Vertex));
+		game->getDev()->SetIndices(mesh2->GetInd());
+		game->getDev()->DrawIndexedPrimitive(D3DPT_TRIANGLELIST, 0, 0, mesh2->vertexes.size(), 0, mesh2->indexes.size() / 3); //3D
+		//game->getDev()->DrawIndexedPrimitive(D3DPT_TRIANGLELIST, 0, 0, 4, 0, 2); //2D
 
 
-	//Especificamos cual VB vamos a usar
-/*	game->getDev()->SetStreamSource(0, mesh2->GetVb(), 0, sizeof(Vertex));
+		//Especificamos cual VB vamos a usar
+	/*	game->getDev()->SetStreamSource(0, mesh2->GetVb(), 0, sizeof(Vertex));
 
-	//Especificamos indices
-	game->getDev()->SetIndices(mesh2->GetInd());
+		//Especificamos indices
+		game->getDev()->SetIndices(mesh2->GetInd());
 
-	//dibujamos
-	game->getDev()->DrawIndexedPrimitive(D3DPT_TRIANGLELIST, 0, 0, 4, 0, 2);
-	*/
+		//dibujamos
+		game->getDev()->DrawIndexedPrimitive(D3DPT_TRIANGLELIST, 0, 0, 4, 0, 2);
+		*/
+	}
 }
 
 void MeshRender::Blending(int numBlend)
@@ -191,9 +195,23 @@ void MeshRender::setCamera(Camera * _cam)
 
 void MeshRender::inFrustum()
 {
-	int coor = 0; //0 = adentro 1 = afuera 2= entra;
+
+	vector<D3DXPLANE> m_Frustrum = cam->BuildViewFrustum();
+	BoundingBox bb = GetMeshBB();
 	for (int i = 0; i < 6; i++) 
 	{
+		if (((m_Frustrum[i].a * bb.xMin) + (m_Frustrum[i].b * bb.yMin) + (m_Frustrum[i].c * bb.zMin) + (m_Frustrum[i].d) >= 0) &&
+			((m_Frustrum[i].a * bb.xMax) + (m_Frustrum[i].b * bb.yMin) + (m_Frustrum[i].c * bb.zMin) + (m_Frustrum[i].d) >= 0) &&
+			((m_Frustrum[i].a * bb.xMax) + (m_Frustrum[i].b * bb.yMax) + (m_Frustrum[i].c * bb.zMin) + (m_Frustrum[i].d) >= 0) &&
+			((m_Frustrum[i].a * bb.xMin) + (m_Frustrum[i].b * bb.yMax) + (m_Frustrum[i].c * bb.zMin) + (m_Frustrum[i].d) >= 0) &&
+			((m_Frustrum[i].a * bb.xMin) + (m_Frustrum[i].b * bb.yMin) + (m_Frustrum[i].c * bb.zMax) + (m_Frustrum[i].d) >= 0) &&
+			((m_Frustrum[i].a * bb.xMax) + (m_Frustrum[i].b * bb.yMin) + (m_Frustrum[i].c * bb.zMax) + (m_Frustrum[i].d) >= 0))
+		{
+			draw = true;
+		}
+		else
+			draw = false;
+
 	}
 	
 }

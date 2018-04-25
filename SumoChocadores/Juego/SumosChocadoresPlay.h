@@ -11,9 +11,10 @@ class SumosChocadoresPlay :
 	public ConectorDeEngine
 {
 private:
+	Composite* comCam;
 	Camera* camara;
-	float num = 0;
-	float num2 = 0;
+	float numx = 0;
+	float numy = 0;
 	Mesh* cosoMesh;
 	Textura* cosoTex;
 	MeshRender* cosoRender;

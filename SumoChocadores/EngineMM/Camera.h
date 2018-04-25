@@ -2,6 +2,7 @@
 #define CAMERA_H
 #include "Game.h"
 #include "Composite.h"
+#include <vector>
 class IMPORTEXPORT Camera:
 	public Composite
 {
@@ -15,7 +16,7 @@ private:
 	int alto;
 	float dismin;
 	float dismax;
-	D3DXPLANE m_Frustum[6];
+	vector<D3DXPLANE> m_Frustum;
 	D3DXMATRIX _projection_view;
 public:
 	Camera();
@@ -29,6 +30,6 @@ public:
 	void update();
 	void setSize(int _radian, int _ancho, int _alto, float _dismin, float _dismax);
 	D3DMATRIX getProjection();
-	void BuildViewFrustum(); //Tiene que tener acceso al Projection. Pide Projection y View.
+	vector<D3DXPLANE> BuildViewFrustum(); //Tiene que tener acceso al Projection. Pide Projection y View.
 };
 #endif 
