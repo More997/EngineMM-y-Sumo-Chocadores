@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Camera.h"
+#include <vector>
 Camera::Camera():radian(60),ancho (640), alto (480), dismin (0.0f), dismax(50)
 {
 	_pos = D3DXVECTOR3(0, 0, 0);
@@ -8,7 +9,7 @@ Camera::Camera():radian(60),ancho (640), alto (480), dismin (0.0f), dismax(50)
 	D3DXMatrixPerspectiveFovLH(
 		&projection,
 		D3DXToRadian(radian),
-		(float)ancho / alto, //ancho der la pantalla dividido por el alto
+		(float)ancho / alto, //ancho de la pantalla dividido por el alto
 		dismin, //Distancia minima de vision
 		dismax); //Distancia maxima de vision
 }
@@ -33,17 +34,17 @@ void Camera::SetRot(D3DXVECTOR3 rot)
 	_rot = rot;
 }
 
-D3DXVECTOR3 Camera::GetPos()
+D3DXVECTOR3 Camera::GetPos() const
 {
 	return _pos;
 }
 
-D3DXVECTOR3 Camera::GetRot()
+D3DXVECTOR3 Camera::GetRot() const
 {
 	return _rot;
 }
 
-D3DXMATRIX Camera::GetViewMatrix()
+D3DXMATRIX Camera::GetViewMatrix() const
 {
 	D3DXMATRIX transMat;
 	D3DXMatrixIdentity(&transMat);
@@ -84,18 +85,19 @@ void Camera::setSize(int _radian, int _ancho, int _alto, float _dismin, float _d
 	D3DXMatrixPerspectiveFovLH(
 		&projection,
 		D3DXToRadian(radian),
-		(float)ancho / alto, //ancho der la pantalla dividido por el alto
+		(float)ancho / alto, //ancho de la pantalla dividido por el alto
 		dismin, //Distancia minima de vision
 		dismax); //Distancia maxima de vision
 }
 
-D3DMATRIX Camera::getProjection()
+D3DMATRIX Camera::getProjection() const
 {
 	return projection;
 }
-vector<D3DXPLANE> Camera::BuildViewFrustum()
+vector<D3DXPLANE> Camera::BuildViewFrustum() 
 {
 	D3DXMatrixMultiply(&_projection_view, &view, &projection);
+	vector<D3DXPLANE> m_Frustum(6);
 	//LeftPlane
 	m_Frustum[0].a = _projection_view._14 + _projection_view._11;
 	m_Frustum[0].b = _projection_view._24 + _projection_view._21;

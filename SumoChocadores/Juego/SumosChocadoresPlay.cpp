@@ -156,7 +156,7 @@ void SumosChocadoresPlay::Update()
 			numy -= 0.01;
 
 		}
-	/*	if (gameInput->GetKeyDown(intVectorInputLeft))
+			if (gameInput->GetKeyDown(intVectorInputLeft))
 		{
 			numx -= 0.01;
 		}
@@ -164,8 +164,7 @@ void SumosChocadoresPlay::Update()
 		{
 			numx += 0.01;
 		}
-		*/
-		numx += 0.0025;
+		
 		coso->setModelPos(numx, numy, 1.5f);
 	
 		/*

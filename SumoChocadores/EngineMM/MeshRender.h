@@ -25,7 +25,7 @@ public:
 	void Filtro(int numfiltro);//numero del 1 al 7
 	BoundingBox GetMeshBB() override;
 	void setCamera(Camera* _cam);
-	void inFrustum();
+	bool inFrustum();
 };
 #endif
 
