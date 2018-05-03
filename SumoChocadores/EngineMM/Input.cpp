@@ -26,6 +26,9 @@ Input::Input(/*HINSTANCE & hInstance, HWND hWnd*/)
 
 	inputMap["Down"].push_back(DIK_DOWNARROW);
 	inputMap["Down"].push_back(DIK_S);
+
+	inputMap["U"].push_back(DIK_U);
+	inputMap["I"].push_back(DIK_I);
 }
 
 Input::~Input()

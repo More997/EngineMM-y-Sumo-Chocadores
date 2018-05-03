@@ -15,10 +15,15 @@ private:
 	Camera* camara;
 	float numx = 0;
 	float numy = 0;
+	float numz = 1.5f;
 	Mesh* cosoMesh;
 	Textura* cosoTex;
 	MeshRender* cosoRender;
 	Composite*coso;
+	Mesh* cosoMesh2;
+	Textura* cosoTex2;
+	MeshRender* cosoRender2;
+	Composite*coso2;
 	BoundingBox bbtest;
 	Perseguidor* enemigo;
 	Animacion * animacionEnemigo;
@@ -35,7 +40,8 @@ private:
 	vector<int> *intVectorInputLeft;
 	vector<int> *intVectorInputRight;
 	vector<int> *intVectorInputDown;
-	vector<int> *intVectorInputSpace;
+	vector<int> *intVectorInputU;
+	vector<int> *intVectorInputI;
 	float vel;
 	
 public:

@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Camera.h"
 #include <vector>
-Camera::Camera():radian(60),ancho (640), alto (480), dismin (0.0f), dismax(50)
+Camera::Camera():radian(60),ancho (640), alto (480), dismin (0.1f), dismax(50)
 {
 	_pos = D3DXVECTOR3(0, 0, 0);
 	_rot = D3DXVECTOR3(0, 0, 0);

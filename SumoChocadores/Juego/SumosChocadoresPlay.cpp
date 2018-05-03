@@ -35,20 +35,35 @@ void SumosChocadoresPlay::Create()
 	intVectorInputLeft = &reciverMap["Left"];
 	intVectorInputRight = &reciverMap["Right"];
 	intVectorInputDown = &reciverMap["Down"];
+	intVectorInputU = &reciverMap["U"];
+	intVectorInputI = &reciverMap["I"];
 	camara = new Camera();
 	comCam->Add(camara);
 	camara->update();
 
 	coso = new Composite();
 	cosoMesh = new Mesh();
-	cosoMesh->Load3D("TestCube.obj");
-	cosoTex = new Textura(L"fondo.png");
+	cosoMesh->Load3D("Sonic.obj");
+	cosoTex = new Textura(L"Sonic.png");
 	cosoRender = new MeshRender(cosoTex);
 	cosoRender->SetMesh(cosoMesh);
 	coso->Add(cosoRender);
 	coso->setModelScale(0.5, 0.5, 0.5);
-	coso->setVector(D3DXVECTOR3(numx, numy,1.5f));
+	coso->setVector(D3DXVECTOR3(numx, numy,numz));
 	cosoRender->setCamera(camara);
+
+	coso2 = new Composite();
+	cosoMesh2 = new Mesh();
+	cosoMesh2->Load3D("TracerGun.obj");
+	cosoTex2 = new Textura(L"TracerGun.png");
+	cosoRender2 = new MeshRender(cosoTex2);
+	cosoRender2->SetMesh(cosoMesh2);
+	coso2->Add(cosoRender2);
+	coso2->setModelScale(1, 1, 1);
+	coso2->setVector(D3DXVECTOR3(numx+1, numy+1, numz+1));
+	cosoRender2->setCamera(camara);
+
+	//coso->Add(coso2);
 
 
 	/*
@@ -113,6 +128,11 @@ void SumosChocadoresPlay::Update()
 	coso->setVector(coso->getVector());
 	//cosoRender->Blending(1);
 	coso->Render();
+	coso2->setVector(coso->getVector());
+	//cosoRender->Blending(1);
+	coso2->Render();
+
+	
 	/*
 	if (gameover != true)
 	{
@@ -164,8 +184,17 @@ void SumosChocadoresPlay::Update()
 		{
 			numx += 0.01;
 		}
-		
-		coso->setModelPos(numx, numy, 1.5f);
+		if (gameInput->GetKeyDown(intVectorInputU))
+		{
+			numz -= 0.1;
+		}
+		else if (gameInput->GetKeyDown(intVectorInputI))
+		{
+			numz += 0.1;
+		}
+
+		coso->setModelPos(numx, numy, numz);
+		//coso2->setModelPos(numx+1, numy+1, numz+1);
 	
 		/*
 		if (gameInput->GetKeyDown(intVectorInputUp))
