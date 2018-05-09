@@ -24,6 +24,7 @@ private:
 	Textura* cosoTex2;
 	MeshRender* cosoRender2;
 	Composite*coso2;
+	/*
 	BoundingBox bbtest;
 	Perseguidor* enemigo;
 	Animacion * animacionEnemigo;
@@ -34,6 +35,7 @@ private:
 	Mesh* meshPj;
 	Textura* texPj;
 	bool gameover;
+	*/
 	Input *gameInput;
 	map<string, vector<int>> reciverMap;
 	vector<int> *intVectorInputUp;
@@ -42,7 +44,7 @@ private:
 	vector<int> *intVectorInputDown;
 	vector<int> *intVectorInputU;
 	vector<int> *intVectorInputI;
-	float vel;
+	//float vel;
 	
 public:
 	SumosChocadoresPlay();

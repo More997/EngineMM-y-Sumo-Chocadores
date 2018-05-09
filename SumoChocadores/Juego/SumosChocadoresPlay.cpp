@@ -60,7 +60,7 @@ void SumosChocadoresPlay::Create()
 	cosoRender2->SetMesh(cosoMesh2);
 	coso2->Add(cosoRender2);
 	coso2->setModelScale(1, 1, 1);
-	coso2->setVector(D3DXVECTOR3(numx+1, numy+1, numz+1));
+	coso2->setVector(D3DXVECTOR3(numy, numx, numz+1));
 	cosoRender2->setCamera(camara);
 
 	//coso->Add(coso2);
@@ -127,9 +127,9 @@ void SumosChocadoresPlay::Update()
 	//coso->setModelRotY(num);
 	coso->setVector(coso->getVector());
 	//cosoRender->Blending(1);
-	coso->Render();
-	coso2->setVector(coso->getVector());
+	coso2->setVector(coso2->getVector());
 	//cosoRender->Blending(1);
+	coso->Render();
 	coso2->Render();
 
 	
@@ -194,6 +194,8 @@ void SumosChocadoresPlay::Update()
 		}
 
 		coso->setModelPos(numx, numy, numz);
+		coso2->setModelPos(numy, numx, numz);
+
 		//coso2->setModelPos(numx+1, numy+1, numz+1);
 	
 		/*
