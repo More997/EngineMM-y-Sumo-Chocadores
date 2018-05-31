@@ -21,5 +21,7 @@ void ImporterAssimp::usingImporter(const string& pFile)
 		aiProcess_SortByPType);
 	if (!scene)
 		cout << "Cant use the scene" << endl;
+	else
+		cout << "Using the scene" << endl;
 
 }

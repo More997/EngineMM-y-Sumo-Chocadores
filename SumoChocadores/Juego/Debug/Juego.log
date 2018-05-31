@@ -1,4 +1,4 @@
-﻿  Juego.cpp
+﻿  SumosChocadoresPlay.cpp
 c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\boundingbox.h(7): warning C4251: 'BoundingBox::vertexes': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'BoundingBox'
   c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
 c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(26): warning C4251: 'Mesh::vertexes': class 'std::vector<Vertex,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
@@ -140,5 +140,12 @@ c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginem
           [
               _Ty=int
           ]
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(177): warning C4305: '+=': truncamiento de 'double' a 'float'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(181): warning C4305: '-=': truncamiento de 'double' a 'float'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(186): warning C4305: '-=': truncamiento de 'double' a 'float'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(190): warning C4305: '+=': truncamiento de 'double' a 'float'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(194): warning C4305: '-=': truncamiento de 'double' a 'float'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(198): warning C4305: '+=': truncamiento de 'double' a 'float'
+     Creando biblioteca C:\Users\Administrador\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.lib y objeto C:\Users\Administrador\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.exp
   Juego.vcxproj -> C:\Users\Administrador\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.exe
   Juego.vcxproj -> C:\Users\Administrador\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.pdb (Full PDB)

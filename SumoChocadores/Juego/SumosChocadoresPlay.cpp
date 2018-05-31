@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "../EngineMM/Textura.h"
 #include "SumosChocadoresPlay.h"
+#include "../EngineMM/ImporterAssimp.h"
 
 
 SumosChocadoresPlay::SumosChocadoresPlay()
@@ -131,6 +132,10 @@ void SumosChocadoresPlay::Update()
 	//cosoRender->Blending(1);
 	coso->Render();
 	coso2->Render();
+	//ImporterAssimp * ImpAss = new ImporterAssimp();
+	//ImpAss->usingImporter("TracerGun.obj");
+	//ImpAss->usingImporter();
+
 
 	
 	/*

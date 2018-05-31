@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Game.h"
 #include "Textura.h"
-
+#include "ImporterAssimp.h"
 #include <d3d9.h> //Busca el header de directx en los path
 #include "FVF.h"
 #pragma comment (lib, "d3d9.lib") //Incluyo la lib a mi proyecto
@@ -38,7 +38,9 @@ void Game::Run(_In_     HINSTANCE hInstance,
 	//Iniciamos sus valores en 0
 	ZeroMemory(&wcex, sizeof(WNDCLASSEX));
 
-
+	ImporterAssimp * ImpAss = new ImporterAssimp();
+	ImpAss->usingImporter("TracerGun.obj");
+	//ImpAss->usingImporter();
 	wcex.cbSize = sizeof(WNDCLASSEX); //Tamaño en bytes
 	wcex.style = CS_HREDRAW | CS_VREDRAW; //Estilo de la ventana
 	wcex.lpfnWndProc = WndProc; //Funcion de manejo de mensajes de ventana
