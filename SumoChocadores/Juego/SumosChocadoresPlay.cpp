@@ -126,9 +126,9 @@ void SumosChocadoresPlay::Update()
 {
 	camara->update();
 	//coso->setModelRotY(num);
-	coso->setVector(coso->getVector());
+	//coso->setVector(coso->getVector());
 	//cosoRender->Blending(1);
-	coso2->setVector(coso2->getVector());
+	//coso2->setVector(coso2->getVector());
 	//cosoRender->Blending(1);
 	coso->Render();
 	coso2->Render();
@@ -136,7 +136,9 @@ void SumosChocadoresPlay::Update()
 	//ImpAss->usingImporter("TracerGun.obj");
 	//ImpAss->usingImporter();
 
-
+	ImporterAssimp * ImpAss = new ImporterAssimp();
+	ImpAss->usingImporter("TracerGun.obj");
+	delete ImpAss;
 	
 	/*
 	if (gameover != true)
@@ -199,7 +201,7 @@ void SumosChocadoresPlay::Update()
 		}
 
 		coso->setModelPos(numx, numy, numz);
-		coso2->setModelPos(numy, numx, numz);
+		coso2->setModelPos(numx, numy, numz);
 
 		//coso2->setModelPos(numx+1, numy+1, numz+1);
 	

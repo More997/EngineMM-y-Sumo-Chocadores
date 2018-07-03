@@ -25,3 +25,8 @@ void ImporterAssimp::usingImporter(const string& pFile)
 		cout << "Using the scene" << endl;
 
 }
+
+Mesh * ImporterAssimp::getModel3D() const
+{
+	return model3D;
+}

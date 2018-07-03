@@ -38,8 +38,7 @@ void Game::Run(_In_     HINSTANCE hInstance,
 	//Iniciamos sus valores en 0
 	ZeroMemory(&wcex, sizeof(WNDCLASSEX));
 
-	ImporterAssimp * ImpAss = new ImporterAssimp();
-	ImpAss->usingImporter("TracerGun.obj");
+	
 	//ImpAss->usingImporter();
 	wcex.cbSize = sizeof(WNDCLASSEX); //Tamaño en bytes
 	wcex.style = CS_HREDRAW | CS_VREDRAW; //Estilo de la ventana
