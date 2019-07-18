@@ -2,6 +2,9 @@
 #define MESHRENDER_H
 #include "Composite.h"
 #include "Textura.h"
+/*#include "FVF.h"
+#include "Camera.h"
+#include "Vertex.h"*/
 class IMPORTEXPORT MeshRender :
 	public Composite
 {
@@ -10,9 +13,14 @@ private:
 	Textura* texture;
 	bool draw;
 	Camera * cam;
+	Mesh* model;
 public:
 	MeshRender();
 	MeshRender(Textura* tex);
+	MeshRender(Camera* _cam);
+	MeshRender(Mesh* comingMesh, Camera* _cam);
+	MeshRender(Textura* tex, Camera* _cam);
+	MeshRender(Mesh* _mesh, Textura* tex, Camera* _cam);
 	void SetTexture(Textura* tex);
 	Textura* GetTexture();
 	void SetMesh(Mesh* mesh);

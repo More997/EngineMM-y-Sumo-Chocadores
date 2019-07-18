@@ -23,6 +23,8 @@ public:
 	BoundingBox GetBB();
 	LPDIRECT3DVERTEXBUFFER9 GetVb();
 	LPDIRECT3DINDEXBUFFER9 GetInd();
+	void setVB(LPDIRECT3DVERTEXBUFFER9 _vb);
+	void setInd(LPDIRECT3DINDEXBUFFER9 _ind);
 	vector<Vertex> vertexes;
 	vector<WORD> indexes;
 	vector<D3DXVECTOR3> positions;

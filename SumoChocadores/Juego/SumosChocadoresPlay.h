@@ -2,11 +2,13 @@
 #define SUMOSCHOCADORESPLAY_H
 #include "../EngineMM/ConectorDeEngine.h"
 #include "../EngineMM/Animacion.h"
-#include "../EngineMM/Camera.h"
-#include "../EngineMM/Tilemap.h"
-#include "../EngineMM/MeshRender.h"
-#include "Perseguidor.h"
-#include "Jugador.h"
+//#include "../EngineMM/Camera.h"
+//#include "../EngineMM/Tilemap.h"
+//#include "../EngineMM/MeshRender.h"
+#include "../EngineMM/SceneImporter.h"
+//#include "../EngineMM/Textura.h"
+/*#include "Perseguidor.h"
+#include "Jugador.h"*/
 class SumosChocadoresPlay :
 	public ConectorDeEngine
 {
@@ -16,14 +18,12 @@ private:
 	float numx = 0;
 	float numy = 0;
 	float numz = 1.5f;
-	Mesh* cosoMesh;
-	Textura* cosoTex;
-	MeshRender* cosoRender;
-	Composite*coso;
 	Mesh* cosoMesh2;
 	Textura* cosoTex2;
 	MeshRender* cosoRender2;
 	Composite*coso2;
+	Composite* root;
+	SceneImporter* sceneImp;
 	/*
 	BoundingBox bbtest;
 	Perseguidor* enemigo;

@@ -227,3 +227,13 @@ LPDIRECT3DINDEXBUFFER9 Mesh::GetInd()
 {
 	return ind;
 }
+
+void Mesh::setVB(LPDIRECT3DVERTEXBUFFER9 _vb)
+{
+	vb = _vb;
+}
+
+void Mesh::setInd(LPDIRECT3DINDEXBUFFER9 _ind)
+{
+	ind = _ind;
+}

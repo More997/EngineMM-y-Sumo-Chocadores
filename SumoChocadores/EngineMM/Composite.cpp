@@ -2,6 +2,16 @@
 #include "Composite.h"
 
 
+void Composite::SetName(string _name)
+{
+	name = _name;
+}
+
+string Composite::GetName()
+{
+	return name;
+}
+
 Composite::Composite()
 {
 }

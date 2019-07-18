@@ -7,12 +7,15 @@ class IMPORTEXPORT Composite :
 	public Component
 {
 private:
+	string name;
 	template<class T>
 	void GetComponentsInParent(vector<T*>*);
 	vector<Component*>objectComponents;
 protected:
 	virtual void UpdateComposite(); 
 public:
+	void SetName(string _name);
+	string GetName();
 	Composite();
 	~Composite();
 	void Add(Component* comp);

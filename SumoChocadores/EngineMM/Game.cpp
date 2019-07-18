@@ -1,9 +1,12 @@
 #include "stdafx.h"
 #include "Game.h"
 #include "Textura.h"
-#include "ImporterAssimp.h"
+//#include "ImporterAssimp.h"
 #include <d3d9.h> //Busca el header de directx en los path
 #include "FVF.h"
+//#include "SceneImporter.h"
+//#include <assimp/Importer.hpp>
+
 #pragma comment (lib, "d3d9.lib") //Incluyo la lib a mi proyecto
 
 Game* Game::Instance = nullptr;

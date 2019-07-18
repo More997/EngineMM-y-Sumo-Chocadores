@@ -14,6 +14,29 @@ MeshRender::MeshRender(Textura * tex) : draw(false)
 {
 	texture = tex;
 }
+MeshRender::MeshRender(Camera * _cam)
+{
+	cam = _cam;
+	model = 0;
+}
+MeshRender::MeshRender(Mesh * comingMesh, Camera * _cam)
+{
+	cam = _cam;
+	model = 0;
+	mesh2 = comingMesh;
+}
+MeshRender::MeshRender(Textura * tex, Camera * _cam)
+{
+	texture = tex;
+	cam = _cam;
+}
+MeshRender::MeshRender(Mesh* _mesh, Textura * tex, Camera * _cam)
+{
+	cam = _cam;
+	model = 0;
+	mesh2 = _mesh;
+	texture = tex;
+}
 void MeshRender::SetTexture(Textura * tex)
 {
 	texture = tex;

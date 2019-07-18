@@ -1,7 +1,6 @@
 #include "stdafx.h"
-#include "../EngineMM/Textura.h"
 #include "SumosChocadoresPlay.h"
-#include "../EngineMM/ImporterAssimp.h"
+
 
 
 SumosChocadoresPlay::SumosChocadoresPlay()
@@ -42,16 +41,6 @@ void SumosChocadoresPlay::Create()
 	comCam->Add(camara);
 	camara->update();
 
-	coso = new Composite();
-	cosoMesh = new Mesh();
-	cosoMesh->Load3D("Sonic.obj");
-	cosoTex = new Textura(L"Sonic.png");
-	cosoRender = new MeshRender(cosoTex);
-	cosoRender->SetMesh(cosoMesh);
-	coso->Add(cosoRender);
-	coso->setModelScale(0.5, 0.5, 0.5);
-	coso->setVector(D3DXVECTOR3(numx, numy,numz));
-	cosoRender->setCamera(camara);
 
 	coso2 = new Composite();
 	cosoMesh2 = new Mesh();
@@ -64,6 +53,11 @@ void SumosChocadoresPlay::Create()
 	coso2->setVector(D3DXVECTOR3(numy, numx, numz+1));
 	cosoRender2->setCamera(camara);
 
+	root = new Composite();
+	root->setModelPos(-2, 0, 35);
+	sceneImp = new SceneImporter();
+	sceneImp->ImportScene("bspTest4.dae", root, camara);
+	
 	//coso->Add(coso2);
 
 
@@ -130,15 +124,9 @@ void SumosChocadoresPlay::Update()
 	//cosoRender->Blending(1);
 	//coso2->setVector(coso2->getVector());
 	//cosoRender->Blending(1);
-	coso->Render();
-	coso2->Render();
-	//ImporterAssimp * ImpAss = new ImporterAssimp();
-	//ImpAss->usingImporter("TracerGun.obj");
-	//ImpAss->usingImporter();
-
-	ImporterAssimp * ImpAss = new ImporterAssimp();
-	ImpAss->usingImporter("TracerGun.obj");
-	delete ImpAss;
+	//coso2->Render();
+	root->Render();
+	
 	
 	/*
 	if (gameover != true)
@@ -199,9 +187,8 @@ void SumosChocadoresPlay::Update()
 		{
 			numz += 0.1;
 		}
-
-		coso->setModelPos(numx, numy, numz);
-		coso2->setModelPos(numx, numy, numz);
+		
+		//root->setModelPos(numx, numy, numz);
 
 		//coso2->setModelPos(numx+1, numy+1, numz+1);
 	
