@@ -144,6 +144,7 @@ void SceneImporter::ImportChildren(aiNode * child, Composite * parent, const aiS
 		newMesh->setInd(ib);
 		newMesh->setVB(vb);
 	}
+	
 		if (child->mNumChildren > 0)
 		{
 			for (unsigned int i = 0; i < child->mNumChildren; i++)
@@ -151,5 +152,6 @@ void SceneImporter::ImportChildren(aiNode * child, Composite * parent, const aiS
 				ImportChildren(child->mChildren[i], newComp, scene, objectCamera);
 			}
 		}
+		
 	}
 

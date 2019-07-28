@@ -25,6 +25,9 @@ public:
 	D3DXVECTOR3 GetPos() const;
 	D3DXVECTOR3 GetRot() const;
 	D3DXMATRIX GetViewMatrix() const;
+	D3DXMATRIX GetProjection();
+	void Move(D3DXVECTOR3 trasl, D3DXVECTOR3 scale, D3DXVECTOR3 rot);
+	void CreateViewMatrix(D3DXVECTOR3 position, D3DXVECTOR3 rotation);
 	void update();
 	void setSize(int _radian, int _ancho, int _alto, float _dismin, float _dismax);
 	D3DMATRIX getProjection() const;

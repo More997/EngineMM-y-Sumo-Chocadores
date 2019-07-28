@@ -52,10 +52,11 @@ void SumosChocadoresPlay::Create()
 	coso2->setModelScale(1, 1, 1);
 	coso2->setVector(D3DXVECTOR3(numy, numx, numz+1));
 	cosoRender2->setCamera(camara);
-
-	root = new Composite();
-	root->setModelPos(-2, 0, 35);
+	
 	sceneImp = new SceneImporter();
+	root = new Composite();
+	//root->setModelPos(-2, 0, 35);
+	
 	sceneImp->ImportScene("bspTest4.dae", root, camara);
 	
 	//coso->Add(coso2);
@@ -124,8 +125,13 @@ void SumosChocadoresPlay::Update()
 	//cosoRender->Blending(1);
 	//coso2->setVector(coso2->getVector());
 	//cosoRender->Blending(1);
-	//coso2->Render();
+	root->setModelPos(-5, 0, 20);
 	root->Render();
+	camara->update();
+	coso2->setModelPos(-5 , 0, 20);
+	coso2->Render();
+
+
 	
 	
 	/*

@@ -13,6 +13,7 @@ private:
 	vector<Component*>objectComponents;
 protected:
 	virtual void UpdateComposite(); 
+	virtual void defTransMat(BoundingBox _bb);
 public:
 	void SetName(string _name);
 	string GetName();

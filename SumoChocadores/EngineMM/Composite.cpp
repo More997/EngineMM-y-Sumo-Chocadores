@@ -75,3 +75,8 @@ void Composite::UpdateBB(D3DXVECTOR3 trans, D3DXVECTOR3 scal, D3DXVECTOR3 rot)
 void Composite::UpdateComposite()
 {
 }
+
+void Composite::defTransMat(BoundingBox _bb)
+{
+	defTransMat();
+}

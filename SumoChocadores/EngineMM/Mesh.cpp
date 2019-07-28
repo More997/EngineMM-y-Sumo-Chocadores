@@ -23,7 +23,7 @@ Mesh::Mesh()
 		6 * sizeof(WORD),
 		D3DUSAGE_WRITEONLY,
 		D3DFMT_INDEX16,
-		D3DPOOL_DEFAULT,
+		D3DPOOL_MANAGED,
 		&ind,
 		NULL);
 
@@ -52,7 +52,7 @@ Mesh::Mesh(Vertex _Vertexes[], WORD _WORD[])
 		6 * sizeof(WORD),
 		D3DUSAGE_WRITEONLY,
 		D3DFMT_INDEX16,
-		D3DPOOL_DEFAULT,
+		D3DPOOL_MANAGED,
 		&ind,
 		NULL);
 	VOID *data;

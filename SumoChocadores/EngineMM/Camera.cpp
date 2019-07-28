@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Camera.h"
 #include <vector>
-Camera::Camera():radian(60),ancho (640), alto (480), dismin (0.1f), dismax(50)
+Camera::Camera():radian(60),ancho (640), alto (480), dismin (0.1f), dismax(500)
 {
 	_pos = D3DXVECTOR3(0, 0, 0);
 	_rot = D3DXVECTOR3(0, 0, 0);
@@ -14,6 +14,12 @@ Camera::Camera():radian(60),ancho (640), alto (480), dismin (0.1f), dismax(50)
 		dismax); //Distancia maxima de vision
 }
 
+void Camera::CreateViewMatrix(D3DXVECTOR3 position, D3DXVECTOR3 rotation)
+{
+	D3DXQUATERNION rotationQuaternion;
+	D3DXMatrixTransformation(&view, NULL, NULL, NULL, NULL, D3DXQuaternionRotationYawPitchRoll(&rotationQuaternion, D3DXToRadian(getRotationV().x), D3DXToRadian(getRotationV().y), D3DXToRadian(getRotationV().z)), &GetPos());
+	D3DXMatrixInverse(&view, NULL, &view);
+}
 Camera::Camera(D3DXVECTOR3 pos, D3DXVECTOR3 rot)
 {
 	_pos = pos;
@@ -46,7 +52,7 @@ D3DXVECTOR3 Camera::GetRot() const
 
 D3DXMATRIX Camera::GetViewMatrix() const
 {
-	D3DXMATRIX transMat;
+	/*D3DXMATRIX transMat;
 	D3DXMatrixIdentity(&transMat);
 	transMat._41 = -_pos.x;
 	transMat._42 = -_pos.y;
@@ -59,6 +65,22 @@ D3DXMATRIX Camera::GetViewMatrix() const
 	rotZMat._22 = cos(-_rot.z);
 
 	return transMat * rotZMat;
+	*/
+	return view;
+}
+D3DXMATRIX Camera::GetProjection()
+{
+	return projection;
+}
+void Camera::Move(D3DXVECTOR3 trasl, D3DXVECTOR3 scale, D3DXVECTOR3 rot)
+{
+	Component::setModelPos(trasl.x, trasl.y, trasl.z);
+	Component::setModelRotX(rot.x);
+	Component::setModelRotY(rot.y);
+	Component::setModelRotZ(rot.z);
+	Component::setModelScale(scale.x, scale.y, scale.z);
+	D3DXQUATERNION rotationQuaternion;
+	D3DXMatrixTransformation(&matFinal, NULL, NULL, &scale, NULL, D3DXQuaternionRotationYawPitchRoll(&rotationQuaternion, D3DXToRadian(rot.x), D3DXToRadian(rot.y), D3DXToRadian(rot.z)), &trasl);
 }
 /*
 Mover el D3DXMATRIX projection en el .h. --Listo
@@ -69,10 +91,19 @@ Crear el BuildViewFrustum en la camera, asi tiene acceso al D3DXMATRIX projectio
 */
 void Camera::update()
 {
-	Game* g = Game::getInstance();
-	view = GetViewMatrix();	
-	g->getDev()->SetTransform(D3DTS_VIEW, &view);
-	g->getDev()->SetTransform(D3DTS_PROJECTION, &projection);
+	Game* s = Game::getInstance();
+	CreateViewMatrix(
+		getVector(),
+		getRotationV());
+	D3DXMatrixPerspectiveFovLH(
+		&projection,
+		D3DXToRadian(60),
+		(float)640 / 480, //ancho de la pantalla dividido por el alto
+		0.1f, //Distancia minima de vision
+		1000); //Distancia maxima de vision
+	view = GetViewMatrix();
+	s->getDev()->SetTransform(D3DTS_VIEW, &view);
+	s->getDev()->SetTransform(D3DTS_PROJECTION, &projection);
 }
 
 void Camera::setSize(int _radian, int _ancho, int _alto, float _dismin, float _dismax)

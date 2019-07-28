@@ -13,7 +13,7 @@ Component::Component() :vectorTrans(0, 0, 0), scaleV(1,1,1)
 	D3DXMatrixIdentity(&scale);
 	D3DXMatrixIdentity(&trasl);
 	D3DXMatrixIdentity(&rotation);
-	defTransMat();
+	//defTransMat();
 }
 
 

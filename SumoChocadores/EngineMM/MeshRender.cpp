@@ -222,7 +222,7 @@ bool MeshRender::inFrustum()
 	Game *game = Game::getInstance();
 	vector<D3DXPLANE> m_Frustrum = cam->BuildViewFrustum();
 	BoundingBox bb = GetBoundingBox();
-	for (int i = 0; i < 6; i++) 
+	/*for (int i = 0; i < 6; i++) 
 	{
 		
 		if (((m_Frustrum[i].a * bb.xMin) + (m_Frustrum[i].b * bb.yMin) + (m_Frustrum[i].c * bb.zMin) + (m_Frustrum[i].d) < 0) &&
@@ -270,7 +270,7 @@ bool MeshRender::inFrustum()
 			return true;
 		}
 		*/
-	}
+	//}
 	game->getDev()->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_ARGB(0, 0, 102, 0), 1.0f, 0);
 	return true;
 	
