@@ -17,7 +17,7 @@ Camera::Camera():radian(60),ancho (640), alto (480), dismin (0.1f), dismax(500)
 void Camera::CreateViewMatrix(D3DXVECTOR3 position, D3DXVECTOR3 rotation)
 {
 	D3DXQUATERNION rotationQuaternion;
-	D3DXMatrixTransformation(&view, NULL, NULL, NULL, NULL, D3DXQuaternionRotationYawPitchRoll(&rotationQuaternion, D3DXToRadian(getRotationV().x), D3DXToRadian(getRotationV().y), D3DXToRadian(getRotationV().z)), &GetPos());
+	D3DXMatrixTransformation(&view, NULL, NULL, NULL, NULL, D3DXQuaternionRotationYawPitchRoll(&rotationQuaternion, D3DXToRadian(getRotationV().x), D3DXToRadian(getRotationV().y), D3DXToRadian(getRotationV().z)), &getVectorTrans());
 	D3DXMatrixInverse(&view, NULL, &view);
 }
 Camera::Camera(D3DXVECTOR3 pos, D3DXVECTOR3 rot)
@@ -72,15 +72,15 @@ D3DXMATRIX Camera::GetProjection()
 {
 	return projection;
 }
-void Camera::Move(D3DXVECTOR3 trasl, D3DXVECTOR3 scale, D3DXVECTOR3 rot)
+void Camera::Move(D3DXVECTOR3 traslv, D3DXVECTOR3 scalev, D3DXVECTOR3 rotv)
 {
-	Component::setModelPos(trasl.x, trasl.y, trasl.z);
-	Component::setModelRotX(rot.x);
-	Component::setModelRotY(rot.y);
-	Component::setModelRotZ(rot.z);
-	Component::setModelScale(scale.x, scale.y, scale.z);
+	Component::setModelPos(traslv.x, traslv.y, traslv.z);
+	Component::setModelRotX(rotv.x);
+	Component::setModelRotY(rotv.y);
+	Component::setModelRotZ(rotv.z);
+	Component::setModelScale(scalev.x, scalev.y, scalev.z);
 	D3DXQUATERNION rotationQuaternion;
-	D3DXMatrixTransformation(&matFinal, NULL, NULL, &scale, NULL, D3DXQuaternionRotationYawPitchRoll(&rotationQuaternion, D3DXToRadian(rot.x), D3DXToRadian(rot.y), D3DXToRadian(rot.z)), &trasl);
+	D3DXMatrixTransformation(&matFinal, NULL, NULL, &scalev, NULL, D3DXQuaternionRotationYawPitchRoll(&rotationQuaternion, D3DXToRadian(rotv.x), D3DXToRadian(rotv.y), D3DXToRadian(rotv.z)), &traslv);
 }
 /*
 Mover el D3DXMATRIX projection en el .h. --Listo

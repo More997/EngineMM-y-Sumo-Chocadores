@@ -6,6 +6,8 @@
 //#include "../EngineMM/Tilemap.h"
 //#include "../EngineMM/MeshRender.h"
 #include "../EngineMM/SceneImporter.h"
+#include "../EngineMM/TileRenderer.h"
+#include "../EngineMM/Tileset.h"
 //#include "../EngineMM/Textura.h"
 /*#include "Perseguidor.h"
 #include "Jugador.h"*/
@@ -24,6 +26,9 @@ private:
 	Composite*coso2;
 	Composite* root;
 	SceneImporter* sceneImp;
+	Tileset* tileSet;
+	TileRenderer* tileRender;
+	BoundingBox* bbTiles;
 	/*
 	BoundingBox bbtest;
 	Perseguidor* enemigo;

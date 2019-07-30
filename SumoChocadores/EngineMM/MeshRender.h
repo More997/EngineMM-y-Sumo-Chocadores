@@ -12,8 +12,9 @@ private:
 	Mesh* mesh2;
 	Textura* texture;
 	bool draw;
-	Camera * cam;
 	Mesh* model;
+protected:
+	Camera * cam;
 public:
 	MeshRender();
 	MeshRender(Textura* tex);

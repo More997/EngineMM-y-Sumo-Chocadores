@@ -14,6 +14,7 @@ private:
 protected:
 	virtual void UpdateComposite(); 
 	virtual void defTransMat(BoundingBox _bb);
+	bool hasMesh;
 public:
 	void SetName(string _name);
 	string GetName();
@@ -34,6 +35,7 @@ public:
 	T* GetComponentInChildren();
 	template<class T> 
 	vector<T*>* GetComponentsInParent();
+	void SetHasMesh(bool _hasMesh);
 	void UpdateBB(D3DXVECTOR3 trans, D3DXVECTOR3 scal, D3DXVECTOR3 rot);
 };
 template<class T>

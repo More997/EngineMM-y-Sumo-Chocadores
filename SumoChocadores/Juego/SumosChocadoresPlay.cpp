@@ -38,10 +38,11 @@ void SumosChocadoresPlay::Create()
 	intVectorInputU = &reciverMap["U"];
 	intVectorInputI = &reciverMap["I"];
 	camara = new Camera();
+	
 	comCam->Add(camara);
+	
+	camara->Move(D3DXVECTOR3(8.7, 5.7, -10), D3DXVECTOR3(0, 0, 0), D3DXVECTOR3(0, 0, 0));
 	camara->update();
-
-
 	coso2 = new Composite();
 	cosoMesh2 = new Mesh();
 	cosoMesh2->Load3D("TracerGun.obj");
@@ -58,6 +59,25 @@ void SumosChocadoresPlay::Create()
 	//root->setModelPos(-2, 0, 35);
 	
 	sceneImp->ImportScene("bspTest4.dae", root, camara);
+
+	Vertex tileSetVertexes[] =
+	{
+		{ -0.6f,  0.6f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f },
+		{ 0.6f,  0.6f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f },
+		{ 0.6f, -0.6f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f },
+		{ -0.6f, -0.6f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f }
+	};
+	WORD tileSetIndexes[] = { 0, 1, 2, 2, 3, 0 };
+	tileSet = new Tileset(tileSetVertexes, tileSetIndexes, 2, 2);
+	tileSet->AddPalette(L"tundra.png");
+	tileSet->AddPalette(L"tundraCenter.png");
+	bbTiles = new BoundingBox();
+	tileSet->SetBoundingBox(*bbTiles);
+	tileRender = new TileRenderer(camara);
+	tileRender->SetTiler(*tileSet);
+	tileRender->SetBoundingBox(*tileSet->GetBoundingBox());
+	tileRender->SetHasMesh(false);
+	
 	
 	//coso->Add(coso2);
 
@@ -127,10 +147,9 @@ void SumosChocadoresPlay::Update()
 	//cosoRender->Blending(1);
 	root->setModelPos(-5, 0, 20);
 	root->Render();
-	camara->update();
-	coso2->setModelPos(-5 , 0, 20);
+	coso2->setModelPos(-5 , 0, 10);
 	coso2->Render();
-
+	tileRender->Render();
 
 	
 	

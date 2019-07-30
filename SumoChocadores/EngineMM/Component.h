@@ -11,9 +11,7 @@ class IMPORTEXPORT Component
 {
 private: 
 	Composite* parent;
-	D3DXMATRIX trasl;
-	D3DXMATRIX scale;
-	D3DXMATRIX rotation;
+	
 protected:
 	float x;
 	float y;
@@ -22,6 +20,9 @@ protected:
 	D3DXVECTOR3 rotationV;
 	D3DXVECTOR3 vectorTrans;
 	BoundingBox transBB;
+	D3DXMATRIX trasl;
+	D3DXMATRIX scale;
+	D3DXMATRIX rotation;
 public:
 	Component();
 	~Component();

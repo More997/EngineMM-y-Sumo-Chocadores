@@ -14,6 +14,7 @@ string Composite::GetName()
 
 Composite::Composite()
 {
+	hasMesh = true;
 }
 Composite::~Composite()
 {
@@ -45,10 +46,13 @@ void Composite::Render()
 }
 void Composite::defTransMat()
 {
-	Component::defTransMat();
-	transBB = GetMeshBB();
-	transBB = transBB.Transform(matFinal);
-	UpdateBB(vectorTrans, scaleV, rotationV);
+	if (hasMesh)
+	{
+		Component::defTransMat();
+		transBB = GetMeshBB();
+		transBB = transBB.Transform(matFinal);
+		UpdateBB(vectorTrans, scaleV, rotationV);
+	}
 }
 void Composite::RenderingComposite()
 {
@@ -59,6 +63,10 @@ BoundingBox Composite::GetMeshBB()
 	_transBB.xMin = _transBB.xMax = _transBB.yMin = _transBB.yMax = _transBB.zMin = _transBB.zMax = 0;
 	_transBB.Refresh();
 	return _transBB;
+}
+void Composite::SetHasMesh(bool _hasMesh)
+{
+	hasMesh = _hasMesh;
 }
 void Composite::UpdateBB(D3DXVECTOR3 trans, D3DXVECTOR3 scal, D3DXVECTOR3 rot)
 {

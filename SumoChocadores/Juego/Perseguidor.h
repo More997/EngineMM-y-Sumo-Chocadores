@@ -3,7 +3,6 @@
 #include "../EngineMM/ConectorDeEngine.h"
 #include "../EngineMM/Animacion.h"
 #include "../EngineMM/Camera.h"
-#include "../EngineMM/Tilemap.h"
 #include "../EngineMM/MeshRender.h"
 class Perseguidor :
 	public Composite
