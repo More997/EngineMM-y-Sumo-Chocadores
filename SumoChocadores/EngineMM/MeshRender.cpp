@@ -108,7 +108,6 @@ void MeshRender::Blending(int numBlend)
 		break;
 	default:
 		game->getDev()->SetRenderState(D3DRS_ALPHABLENDENABLE, false);
-		break;
 	}
 }
 

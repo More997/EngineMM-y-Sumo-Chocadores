@@ -93,7 +93,8 @@ void SumosChocadoresPlay::Create()
 	//coso->Add(coso2);
 
 
-	
+	cosoRender2->Blending(3);
+
 	enemigo = new Composite();
 	texEnemigo = new Textura(L"Sprite.png");
 	animacionEnemigo = new Animacion(texEnemigo,camara);
@@ -156,10 +157,10 @@ void SumosChocadoresPlay::Update()
 	//coso->setVector(coso->getVector());
 	//cosoRender->Blending(1);
 	//coso2->setVector(coso2->getVector());
-	//cosoRender->Blending(1);
+	//cosoRender2->Blending(1);
 
 	//Iluminado
-
+	coso2->setModelPos(numx, numy, numz);
 	D3DXHANDLE handling = shaderEffect->GetTechniqueByName("RedColor");
 	shaderEffect->SetTechnique(handling);
 	int passNum = 2;
@@ -178,7 +179,6 @@ void SumosChocadoresPlay::Update()
 		game->getDev()->DrawIndexedPrimitive(D3DPT_TRIANGLELIST, 0, 0, 4, 0, 2);
 		shaderEffect->EndPass();
 	}
-	coso2->setModelPos(numx, numy, numz);
 	coso2->Render();
 	shaderEffect->End();
 	//El resto
