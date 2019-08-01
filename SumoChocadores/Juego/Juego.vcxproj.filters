@@ -77,6 +77,6 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="Z:\EngineMM-y-Sumo-Chocadores\SumoChocadores\Juego\EffectDamage.fx" />
+    <FxCompile Include="EffectDamage.fx" />
   </ItemGroup>
 </Project>
