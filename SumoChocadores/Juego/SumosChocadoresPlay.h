@@ -4,7 +4,7 @@
 #include "../EngineMM/Animacion.h"
 //#include "../EngineMM/Camera.h"
 //#include "../EngineMM/Tilemap.h"
-//#include "../EngineMM/MeshRender.h"
+#include "../EngineMM/MeshRender.h"
 #include "../EngineMM/SceneImporter.h"
 #include "../EngineMM/TileRenderer.h"
 #include "../EngineMM/Tileset.h"
@@ -17,6 +17,8 @@ class SumosChocadoresPlay :
 private:
 	Composite* comCam;
 	Camera* camara;
+	LPD3DXEFFECT shaderEffect;
+	Game* game;
 	float numx = 0;
 	float numy = 0;
 	float numz = 1.5f;
@@ -29,13 +31,13 @@ private:
 	Tileset* tileSet;
 	TileRenderer* tileRender;
 	BoundingBox* bbTiles;
-	/*
+	
 	BoundingBox bbtest;
-	Perseguidor* enemigo;
+	Composite* enemigo;
 	Animacion * animacionEnemigo;
 	Mesh* meshEnemigo;
 	Textura* texEnemigo;
-	Jugador* pj;
+	/*Jugador* pj;
 	Animacion * animacionPj;
 	Mesh* meshPj;
 	Textura* texPj;

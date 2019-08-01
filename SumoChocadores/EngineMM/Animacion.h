@@ -31,7 +31,7 @@ private:
 	float deltaTime;
 	float spriteTime = 0;
 public:
-	Animacion(Textura* tex);
+	Animacion(Textura* tex, Camera* cam);
 	~Animacion();
 	int getMS();
 	void UpdateAn(float num);

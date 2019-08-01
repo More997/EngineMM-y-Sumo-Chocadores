@@ -4,7 +4,7 @@
 
 
 
-Animacion::Animacion(Textura * tex) : MeshRender (tex)
+Animacion::Animacion(Textura * tex, Camera*cam) : MeshRender (tex,cam)
 {
 	animationPositionX = 0;
 }

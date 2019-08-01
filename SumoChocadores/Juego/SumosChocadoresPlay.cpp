@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include "../EngineMM/Game.h"
 #include "SumosChocadoresPlay.h"
 
 
@@ -28,6 +29,12 @@ SumosChocadoresPlay::~SumosChocadoresPlay()
 
 void SumosChocadoresPlay::Create()
 {
+	game = Game::getInstance();
+	D3DXCreateEffectFromFile(
+		game->getDev(), L"EffectDamage.fx", NULL, NULL,
+		D3DXSHADER_ENABLE_BACKWARDS_COMPATIBILITY,
+		NULL, &shaderEffect, NULL);
+
 	comCam = new Composite();
 	gameInput = new Input();
 	reciverMap = gameInput->GetMap();
@@ -41,6 +48,8 @@ void SumosChocadoresPlay::Create()
 	
 	comCam->Add(camara);
 	
+
+
 	camara->Move(D3DXVECTOR3(8.7, 5.7, -10), D3DXVECTOR3(0, 0, 0), D3DXVECTOR3(0, 0, 0));
 	camara->update();
 	coso2 = new Composite();
@@ -59,6 +68,8 @@ void SumosChocadoresPlay::Create()
 	//root->setModelPos(-2, 0, 35);
 	
 	sceneImp->ImportScene("bspTest4.dae", root, camara);
+
+	
 
 	Vertex tileSetVertexes[] =
 	{
@@ -82,18 +93,19 @@ void SumosChocadoresPlay::Create()
 	//coso->Add(coso2);
 
 
-	/*
-	enemigo = new Perseguidor();
-	texEnemigo = new Textura(L"Perseguidor.png");
-	animacionEnemigo = new Animacion(texEnemigo);
+	
+	enemigo = new Composite();
+	texEnemigo = new Textura(L"Sprite.png");
+	animacionEnemigo = new Animacion(texEnemigo,camara);
 	meshEnemigo = new Mesh();
+	meshEnemigo->Load3D("TestCube.obj");
 	animacionEnemigo->SetMesh(meshEnemigo);
-	animacionEnemigo->addFrames(2, 2);
+	animacionEnemigo->addFrames(8, 2);
 	enemigo->Add(animacionEnemigo);
-	enemigo->setX(0);
-	enemigo->setY(1);
-	enemigo->setModelScale(0.1f, 0.1f, 0.1f);
-	pj = new Jugador();
+	//enemigo->setX(0);
+	//enemigo->setY(1);
+	enemigo->setModelScale(10, 5, 1);
+	/*pj = new Jugador();
 	texPj = new Textura(L"PJ.png");
 	animacionPj = new Animacion(texPj);
 	meshPj = new Mesh();
@@ -145,11 +157,38 @@ void SumosChocadoresPlay::Update()
 	//cosoRender->Blending(1);
 	//coso2->setVector(coso2->getVector());
 	//cosoRender->Blending(1);
-	root->setModelPos(-5, 0, 20);
-	root->Render();
-	coso2->setModelPos(-5 , 0, 10);
+
+	//Iluminado
+
+	D3DXHANDLE handling = shaderEffect->GetTechniqueByName("RedColor");
+	shaderEffect->SetTechnique(handling);
+	int passNum = 2;
+	UINT passes = passNum;
+	D3DXMATRIX MVP = coso2->getTransMat()* camara->GetViewMatrix() * camara->getProjection();
+	D3DXMATRIX rotationMatrix = coso2->getRotationV(); //si tengo un error checkear aca
+	shaderEffect->SetMatrix("MVPMatrix", &MVP);
+	shaderEffect->SetMatrix("rotMatrix", &rotationMatrix);
+	shaderEffect->SetVector("lightDirection", &D3DXVECTOR4(1, 1, 1, 0));
+	shaderEffect->SetVector("lightColor", &D3DXVECTOR4(4, 1, 5, 0));
+	shaderEffect->SetVector("ambientColor", &D3DXVECTOR4(0.3f, 0, 0, 0));
+	shaderEffect->Begin(&passes, 0);
+	for (UINT pass = 0; pass < passes; pass++)
+	{
+		shaderEffect->BeginPass(pass);
+		game->getDev()->DrawIndexedPrimitive(D3DPT_TRIANGLELIST, 0, 0, 4, 0, 2);
+		shaderEffect->EndPass();
+	}
+	coso2->setModelPos(numx, numy, numz);
 	coso2->Render();
+	shaderEffect->End();
+	//El resto
+	/*enemigo->setModelPos(0, 0, 10);
+	animacionEnemigo->Blending(2);
+	animacionEnemigo->UpdateAn(5);
+	enemigo->Render();
+	
 	tileRender->Render();
+	*/
 
 	
 	
