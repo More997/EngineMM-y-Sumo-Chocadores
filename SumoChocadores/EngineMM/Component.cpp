@@ -32,7 +32,7 @@ void Component::setModelScale(float scaleX, float scaleY, float scaleZ)
 
 void Component::defTransMat()
 {
-	matFinal = scale * rotation * trasl;
+	matFinal = trasl * rotation * scale;
 	
 	if (parent != NULL)
 	{
@@ -44,16 +44,22 @@ void Component::setModelRotZ(float rotZ)
 {
 	D3DXMatrixRotationZ(&rotation, rotZ);
 	rotationV.z = rotZ;
+	D3DXMATRIX testRotZ;
+	D3DXMatrixRotationZ(&testRotZ, D3DXToRadian(rotationV.z));
 }
 void Component::setModelRotY(float rotY)
 {
 	D3DXMatrixRotationY(&rotation, rotY);
 	rotationV.y = rotY;
+	D3DXMATRIX testRotY;
+	D3DXMatrixRotationZ(&testRotY, D3DXToRadian(rotationV.y));
 }
 void Component::setModelRotX(float rotX)
 {
 	D3DXMatrixRotationX(&rotation, rotX);
 	rotationV.x = rotX;
+	D3DXMATRIX testRotX;
+	D3DXMatrixRotationZ(&testRotX, D3DXToRadian(rotationV.x));
 }
 void Component::setModelPos(float transX, float transY, float transZ)
 {
@@ -76,7 +82,7 @@ D3DXVECTOR3 Component::getVectorTrans()
 }
 D3DXMATRIX Component::getTransMat()
 {
-	return matFinal;
+ 	return matFinal;
 }
 void Component::Render()
 {

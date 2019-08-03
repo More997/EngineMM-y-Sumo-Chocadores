@@ -1,4 +1,4 @@
-﻿  MeshRender.cpp
+﻿  Component.cpp
 c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\boundingbox.h(7): warning C4251: 'BoundingBox::vertexes': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'BoundingBox'
   c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
 c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(18): warning C4251: 'Component::matFinal': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'

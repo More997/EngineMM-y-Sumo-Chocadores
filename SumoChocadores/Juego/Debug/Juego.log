@@ -251,11 +251,11 @@ c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.
               _Ty=D3DXVECTOR2
           ]
 c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(53): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(231): warning C4305: '+=': truncamiento de 'double' a 'float'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(235): warning C4305: '-=': truncamiento de 'double' a 'float'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(240): warning C4305: '-=': truncamiento de 'double' a 'float'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(244): warning C4305: '+=': truncamiento de 'double' a 'float'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(248): warning C4305: '-=': truncamiento de 'double' a 'float'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(252): warning C4305: '+=': truncamiento de 'double' a 'float'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(232): warning C4305: '+=': truncamiento de 'double' a 'float'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(236): warning C4305: '-=': truncamiento de 'double' a 'float'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(241): warning C4305: '-=': truncamiento de 'double' a 'float'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(245): warning C4305: '+=': truncamiento de 'double' a 'float'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(249): warning C4305: '-=': truncamiento de 'double' a 'float'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(253): warning C4305: '+=': truncamiento de 'double' a 'float'
   Juego.vcxproj -> C:\Users\def\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.exe
   Juego.vcxproj -> C:\Users\def\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.pdb (Full PDB)

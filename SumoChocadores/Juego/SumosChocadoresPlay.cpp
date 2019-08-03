@@ -177,9 +177,10 @@ void SumosChocadoresPlay::Update()
 	{
 		shaderEffect->BeginPass(pass);
 		game->getDev()->DrawIndexedPrimitive(D3DPT_TRIANGLELIST, 0, 0, 4, 0, 2);
+		coso2->Render();
 		shaderEffect->EndPass();
+
 	}
-	coso2->Render();
 	shaderEffect->End();
 	//El resto
 	/*enemigo->setModelPos(0, 0, 10);
