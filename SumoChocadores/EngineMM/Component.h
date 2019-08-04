@@ -20,6 +20,9 @@ protected:
 	D3DXVECTOR3 rotationV;
 	D3DXVECTOR3 vectorTrans;
 	BoundingBox transBB;
+	D3DXMATRIX testRotZ;
+	D3DXMATRIX testRotX;
+	D3DXMATRIX testRotY;
 	D3DXMATRIX trasl;
 	D3DXMATRIX scale;
 	D3DXMATRIX rotation;
@@ -36,6 +39,8 @@ public:
 	D3DXVECTOR3 getRotationV();
 	D3DXVECTOR3 getVectorTrans();
 	D3DXMATRIX getTransMat();
+	D3DXMATRIX getRotMat();
+
 	void SetParent(Composite* parent);
 	D3DXVECTOR3 getVector();
 	void setVector(D3DXVECTOR3 _vector);

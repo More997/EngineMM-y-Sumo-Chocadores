@@ -59,11 +59,17 @@ c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\componen
   c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
 c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(21): warning C4251: 'Component::vectorTrans': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
   c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(23): warning C4251: 'Component::trasl': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(23): warning C4251: 'Component::testRotZ': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
   c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(24): warning C4251: 'Component::scale': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(24): warning C4251: 'Component::testRotX': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
   c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(25): warning C4251: 'Component::rotation': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(25): warning C4251: 'Component::testRotY': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(26): warning C4251: 'Component::trasl': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(27): warning C4251: 'Component::scale': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(28): warning C4251: 'Component::rotation': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
   c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
 c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\composite.h(10): warning C4251: 'Composite::name': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Composite'
   e:\visual studio 2015\vc\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
@@ -251,11 +257,17 @@ c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.
               _Ty=D3DXVECTOR2
           ]
 c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(53): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(232): warning C4305: '+=': truncamiento de 'double' a 'float'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(236): warning C4305: '-=': truncamiento de 'double' a 'float'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(237): warning C4305: '+=': truncamiento de 'double' a 'float'
 c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(241): warning C4305: '-=': truncamiento de 'double' a 'float'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(245): warning C4305: '+=': truncamiento de 'double' a 'float'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(249): warning C4305: '-=': truncamiento de 'double' a 'float'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(253): warning C4305: '+=': truncamiento de 'double' a 'float'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(246): warning C4305: '-=': truncamiento de 'double' a 'float'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(250): warning C4305: '+=': truncamiento de 'double' a 'float'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(254): warning C4305: '-=': truncamiento de 'double' a 'float'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(258): warning C4305: '+=': truncamiento de 'double' a 'float'
+  Generando código...
+  Omitiendo... (no se detectaron cambios relevantes)
+  Perseguidor.cpp
+  Jugador.cpp
+  Juego.cpp
+     Creando biblioteca C:\Users\def\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.lib y objeto C:\Users\def\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.exp
   Juego.vcxproj -> C:\Users\def\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.exe
   Juego.vcxproj -> C:\Users\def\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.pdb (Full PDB)

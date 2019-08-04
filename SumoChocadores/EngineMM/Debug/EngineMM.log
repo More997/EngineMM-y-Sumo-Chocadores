@@ -9,11 +9,17 @@ c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\componen
   c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
 c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(21): warning C4251: 'Component::vectorTrans': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
   c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(23): warning C4251: 'Component::trasl': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(23): warning C4251: 'Component::testRotZ': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
   c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(24): warning C4251: 'Component::scale': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(24): warning C4251: 'Component::testRotX': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
   c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(25): warning C4251: 'Component::rotation': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(25): warning C4251: 'Component::testRotY': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(26): warning C4251: 'Component::trasl': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(27): warning C4251: 'Component::scale': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(28): warning C4251: 'Component::rotation': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
   c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
 c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\composite.h(10): warning C4251: 'Composite::name': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Composite'
   e:\visual studio 2015\vc\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
@@ -100,6 +106,22 @@ c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\input.h(
               _Ty=int,
               _Kty=std::string
           ]
+  Generando código...
+  Omitiendo... (no se detectaron cambios relevantes)
+  Transform.cpp
+  Tileset.cpp
+  TileRenderer.cpp
+  Textura.cpp
+  SceneImporter.cpp
+  MeshRender.cpp
+  Mesh.cpp
+  Input.cpp
+  ImporterAssimp.cpp
+  Game.cpp
+  Composite.cpp
+  Camera.cpp
+  Animacion.cpp
+     Creando biblioteca C:\Users\def\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\EngineMM.lib y objeto C:\Users\def\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\EngineMM.exp
   EngineMM.vcxproj -> C:\Users\def\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\EngineMM.dll
   EngineMM.vcxproj -> C:\Users\def\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\EngineMM.pdb (Full PDB)
   C:\Users\def\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Assimp\bin\x86\assimp.exe

@@ -152,6 +152,7 @@ void SumosChocadoresPlay::Create()
 
 void SumosChocadoresPlay::Update()
 {
+
 	camara->update();
 	//coso->setModelRotY(num);
 	//coso->setVector(coso->getVector());
@@ -160,13 +161,17 @@ void SumosChocadoresPlay::Update()
 	//cosoRender2->Blending(1);
 
 	//Iluminado
+	coso2->setModelRotX(0);
+	coso2->setModelRotY(0);
+	coso2->setModelRotZ(0);
+	coso2->setModelScale(1, 1, 1);
 	coso2->setModelPos(numx, numy, numz);
 	D3DXHANDLE handling = shaderEffect->GetTechniqueByName("RedColor");
 	shaderEffect->SetTechnique(handling);
 	int passNum = 2;
 	UINT passes = passNum;
 	D3DXMATRIX MVP = coso2->getTransMat()* camara->GetViewMatrix() * camara->getProjection();
-	D3DXMATRIX rotationMatrix = coso2->getRotationV(); //si tengo un error checkear aca
+	D3DXMATRIX rotationMatrix = coso2->getRotMat(); //si tengo un error checkear aca
 	shaderEffect->SetMatrix("MVPMatrix", &MVP);
 	shaderEffect->SetMatrix("rotMatrix", &rotationMatrix);
 	shaderEffect->SetVector("lightDirection", &D3DXVECTOR4(1, 1, 1, 0));

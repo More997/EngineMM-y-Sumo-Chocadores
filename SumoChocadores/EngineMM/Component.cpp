@@ -13,7 +13,7 @@ Component::Component() :vectorTrans(0, 0, 0), scaleV(1,1,1)
 	D3DXMatrixIdentity(&scale);
 	D3DXMatrixIdentity(&trasl);
 	D3DXMatrixIdentity(&rotation);
-	//defTransMat();
+	
 }
 
 
@@ -28,12 +28,17 @@ void Component::setModelScale(float scaleX, float scaleY, float scaleZ)
 	scaleV.x = scaleX;
 	scaleV.y = scaleY;
 	scaleV.z = scaleZ;
+	defTransMat();
 }
 
 void Component::defTransMat()
 {
 	matFinal = trasl * rotation * scale;
-	
+	/*D3DXQUATERNION rotQuaternion;
+	D3DXMatrixTransformation(&matFinal, NULL, NULL, &scaleV, NULL,
+		D3DXQuaternionRotationYawPitchRoll(&rotQuaternion, D3DXToRadian(rotationV.x), 
+		D3DXToRadian(rotationV.y), D3DXToRadian(rotationV.z)), &vectorTrans);
+	*/
 	if (parent != NULL)
 	{
 		matFinal = (parent->getTransMat() * matFinal);
@@ -44,22 +49,22 @@ void Component::setModelRotZ(float rotZ)
 {
 	D3DXMatrixRotationZ(&rotation, rotZ);
 	rotationV.z = rotZ;
-	D3DXMATRIX testRotZ;
 	D3DXMatrixRotationZ(&testRotZ, D3DXToRadian(rotationV.z));
+	rotation = testRotX*testRotY*testRotZ;
 }
 void Component::setModelRotY(float rotY)
 {
 	D3DXMatrixRotationY(&rotation, rotY);
 	rotationV.y = rotY;
-	D3DXMATRIX testRotY;
 	D3DXMatrixRotationZ(&testRotY, D3DXToRadian(rotationV.y));
+	rotation = testRotX*testRotY*testRotZ;
 }
 void Component::setModelRotX(float rotX)
 {
 	D3DXMatrixRotationX(&rotation, rotX);
 	rotationV.x = rotX;
-	D3DXMATRIX testRotX;
 	D3DXMatrixRotationZ(&testRotX, D3DXToRadian(rotationV.x));
+	rotation = testRotX*testRotY*testRotZ;
 }
 void Component::setModelPos(float transX, float transY, float transZ)
 {
@@ -83,6 +88,10 @@ D3DXVECTOR3 Component::getVectorTrans()
 D3DXMATRIX Component::getTransMat()
 {
  	return matFinal;
+}
+D3DXMATRIX Component::getRotMat()
+{
+	return rotation;
 }
 void Component::Render()
 {
