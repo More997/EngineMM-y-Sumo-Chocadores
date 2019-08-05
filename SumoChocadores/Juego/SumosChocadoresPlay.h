@@ -31,7 +31,8 @@ private:
 	Tileset* tileSet;
 	TileRenderer* tileRender;
 	BoundingBox* bbTiles;
-	
+	int canttiles;
+	int canttiles2;
 	BoundingBox bbtest;
 	Composite* enemigo;
 	Animacion * animacionEnemigo;

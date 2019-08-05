@@ -79,9 +79,13 @@ void SumosChocadoresPlay::Create()
 		{ -0.6f, -0.6f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f }
 	};
 	WORD tileSetIndexes[] = { 0, 1, 2, 2, 3, 0 };
-	tileSet = new Tileset(tileSetVertexes, tileSetIndexes, 2, 2);
-	tileSet->AddPalette(L"tundra.png");
-	tileSet->AddPalette(L"tundraCenter.png");
+	canttiles = 15;
+	canttiles2 = canttiles;
+	tileSet = new Tileset(tileSetVertexes, tileSetIndexes, 2, canttiles);
+	for (int i =0; i < canttiles2; i++)
+		tileSet->AddPalette(L"tundraCenter.png");
+	for (int i = 0; i < canttiles; i++)
+		tileSet->AddPalette(L"tundra.png");
 	bbTiles = new BoundingBox();
 	tileSet->SetBoundingBox(*bbTiles);
 	tileRender = new TileRenderer(camara);
@@ -161,6 +165,7 @@ void SumosChocadoresPlay::Update()
 	//cosoRender2->Blending(1);
 
 	//Iluminado
+	/*
 	coso2->setModelRotX(0);
 	coso2->setModelRotY(0);
 	coso2->setModelRotZ(0);
@@ -187,14 +192,17 @@ void SumosChocadoresPlay::Update()
 
 	}
 	shaderEffect->End();
+	*/
+
 	//El resto
-	/*enemigo->setModelPos(0, 0, 10);
+
+	enemigo->setModelPos(numx, numy, 10);
 	animacionEnemigo->Blending(2);
 	animacionEnemigo->UpdateAn(5);
 	enemigo->Render();
 	
 	tileRender->Render();
-	*/
+	
 
 	
 	

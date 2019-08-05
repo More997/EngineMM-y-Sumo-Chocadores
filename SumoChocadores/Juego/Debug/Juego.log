@@ -1,273 +1,266 @@
 ﻿  SumosChocadoresPlay.cpp
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\boundingbox.h(7): warning C4251: 'BoundingBox::vertexes': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'BoundingBox'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(28): warning C4251: 'Mesh::vertexes': class 'std::vector<Vertex,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\boundingbox.h(7): warning C4251: 'BoundingBox::vertexes': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'BoundingBox'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(28): warning C4251: 'Mesh::vertexes': class 'std::vector<Vertex,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
           with
           [
               _Ty=Vertex
           ]
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(28): note: vea la declaración de 'std::vector<Vertex,std::allocator<_Ty>>'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(28): note: vea la declaración de 'std::vector<Vertex,std::allocator<_Ty>>'
           with
           [
               _Ty=Vertex
           ]
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(29): warning C4251: 'Mesh::indexes': class 'std::vector<WORD,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(29): warning C4251: 'Mesh::indexes': class 'std::vector<WORD,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
           with
           [
               _Ty=WORD
           ]
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(29): note: vea la declaración de 'std::vector<WORD,std::allocator<_Ty>>'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(29): note: vea la declaración de 'std::vector<WORD,std::allocator<_Ty>>'
           with
           [
               _Ty=WORD
           ]
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(30): warning C4251: 'Mesh::positions': class 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(30): warning C4251: 'Mesh::positions': class 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
           with
           [
               _Ty=D3DXVECTOR3
           ]
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(30): note: vea la declaración de 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(30): note: vea la declaración de 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>'
           with
           [
               _Ty=D3DXVECTOR3
           ]
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(31): warning C4251: 'Mesh::normals': class 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(31): warning C4251: 'Mesh::normals': class 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
           with
           [
               _Ty=D3DXVECTOR3
           ]
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(30): note: vea la declaración de 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(30): note: vea la declaración de 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>'
           with
           [
               _Ty=D3DXVECTOR3
           ]
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(32): warning C4251: 'Mesh::uvs': class 'std::vector<D3DXVECTOR2,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(32): warning C4251: 'Mesh::uvs': class 'std::vector<D3DXVECTOR2,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesh'
           with
           [
               _Ty=D3DXVECTOR2
           ]
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(32): note: vea la declaración de 'std::vector<D3DXVECTOR2,std::allocator<_Ty>>'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(32): note: vea la declaración de 'std::vector<D3DXVECTOR2,std::allocator<_Ty>>'
           with
           [
               _Ty=D3DXVECTOR2
           ]
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(18): warning C4251: 'Component::matFinal': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(19): warning C4251: 'Component::scaleV': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(20): warning C4251: 'Component::rotationV': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(21): warning C4251: 'Component::vectorTrans': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(23): warning C4251: 'Component::testRotZ': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(24): warning C4251: 'Component::testRotX': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(25): warning C4251: 'Component::testRotY': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(26): warning C4251: 'Component::trasl': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(27): warning C4251: 'Component::scale': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(28): warning C4251: 'Component::rotation': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\composite.h(10): warning C4251: 'Composite::name': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Composite'
-  e:\visual studio 2015\vc\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\composite.h(13): warning C4251: 'Composite::objectComponents': class 'std::vector<Component *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Composite'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(18): warning C4251: 'Component::matFinal': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(19): warning C4251: 'Component::scaleV': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(20): warning C4251: 'Component::rotationV': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(21): warning C4251: 'Component::vectorTrans': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(23): warning C4251: 'Component::testRotZ': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(24): warning C4251: 'Component::testRotX': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(25): warning C4251: 'Component::testRotY': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(26): warning C4251: 'Component::trasl': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(27): warning C4251: 'Component::scale': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\component.h(28): warning C4251: 'Component::rotation': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\composite.h(10): warning C4251: 'Composite::name': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Composite'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xstring(4373): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\composite.h(13): warning C4251: 'Composite::objectComponents': class 'std::vector<Component *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Composite'
           with
           [
               _Ty=Component *
           ]
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\composite.h(13): note: vea la declaración de 'std::vector<Component *,std::allocator<_Ty>>'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\composite.h(13): note: vea la declaración de 'std::vector<Component *,std::allocator<_Ty>>'
           with
           [
               _Ty=Component *
           ]
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(9): warning C4251: 'Camera::_pos': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(10): warning C4251: 'Camera::_rot': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(11): warning C4251: 'Camera::projection': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(12): warning C4251: 'Camera::view': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(18): warning C4251: 'Camera::_projection_view': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\input.h(20): warning C4251: 'Input::inputMap': class 'std::map<std::string,std::vector<int,std::allocator<_Ty>>,std::less<_Kty>,std::allocator<std::pair<const _Kty,std::vector<_Ty,std::allocator<_Ty>>>>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Input'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(9): warning C4251: 'Camera::_pos': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(10): warning C4251: 'Camera::_rot': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(11): warning C4251: 'Camera::projection': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(12): warning C4251: 'Camera::view': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\camera.h(18): warning C4251: 'Camera::_projection_view': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\input.h(20): warning C4251: 'Input::inputMap': class 'std::map<std::string,std::vector<int,std::allocator<_Ty>>,std::less<_Kty>,std::allocator<std::pair<const _Kty,std::vector<_Ty,std::allocator<_Ty>>>>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Input'
           with
           [
               _Ty=int,
               _Kty=std::string
           ]
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\input.h(20): note: vea la declaración de 'std::map<std::string,std::vector<int,std::allocator<_Ty>>,std::less<_Kty>,std::allocator<std::pair<const _Kty,std::vector<_Ty,std::allocator<_Ty>>>>>'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\input.h(20): note: vea la declaración de 'std::map<std::string,std::vector<int,std::allocator<_Ty>>,std::less<_Kty>,std::allocator<std::pair<const _Kty,std::vector<_Ty,std::allocator<_Ty>>>>>'
           with
           [
               _Ty=int,
               _Kty=std::string
           ]
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\animacion.h(27): warning C4251: 'Animacion::_vertex': class 'std::vector<Vertex,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Animacion'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\animacion.h(27): warning C4251: 'Animacion::_vertex': class 'std::vector<Vertex,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Animacion'
           with
           [
               _Ty=Vertex
           ]
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(28): note: vea la declaración de 'std::vector<Vertex,std::allocator<_Ty>>'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(28): note: vea la declaración de 'std::vector<Vertex,std::allocator<_Ty>>'
           with
           [
               _Ty=Vertex
           ]
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\animacion.h(29): warning C4251: 'Animacion::spritesheet': class 'std::vector<Mesh *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Animacion'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\animacion.h(29): warning C4251: 'Animacion::spritesheet': class 'std::vector<Mesh *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Animacion'
           with
           [
               _Ty=Mesh *
           ]
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\animacion.h(29): note: vea la declaración de 'std::vector<Mesh *,std::allocator<_Ty>>'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\animacion.h(29): note: vea la declaración de 'std::vector<Mesh *,std::allocator<_Ty>>'
           with
           [
               _Ty=Mesh *
           ]
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\sceneimporter.h(16): warning C4251: 'SceneImporter::importedObjectsToDraw': class 'std::list<Composite *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'SceneImporter'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\sceneimporter.h(16): warning C4251: 'SceneImporter::importedObjectsToDraw': class 'std::list<Composite *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'SceneImporter'
           with
           [
               _Ty=Composite *
           ]
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\sceneimporter.h(16): note: vea la declaración de 'std::list<Composite *,std::allocator<_Ty>>'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\sceneimporter.h(16): note: vea la declaración de 'std::list<Composite *,std::allocator<_Ty>>'
           with
           [
               _Ty=Composite *
           ]
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(18): warning C4251: 'Tileset::a': class 'std::vector<std::vector<int,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Tileset'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(18): warning C4251: 'Tileset::a': class 'std::vector<std::vector<int,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Tileset'
           with
           [
               _Ty=int
           ]
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(18): note: vea la declaración de 'std::vector<std::vector<int,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(18): note: vea la declaración de 'std::vector<std::vector<int,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>'
           with
           [
               _Ty=int
           ]
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(19): warning C4251: 'Tileset::seinTextureMap': class 'std::vector<LPDIRECT3DTEXTURE9,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Tileset'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(19): warning C4251: 'Tileset::seinTextureMap': class 'std::vector<LPDIRECT3DTEXTURE9,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Tileset'
           with
           [
               _Ty=LPDIRECT3DTEXTURE9
           ]
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(19): note: vea la declaración de 'std::vector<LPDIRECT3DTEXTURE9,std::allocator<_Ty>>'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(19): note: vea la declaración de 'std::vector<LPDIRECT3DTEXTURE9,std::allocator<_Ty>>'
           with
           [
               _Ty=LPDIRECT3DTEXTURE9
           ]
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(23): warning C4251: 'Tileset::vVb': class 'std::vector<LPDIRECT3DVERTEXBUFFER9,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Tileset'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(23): warning C4251: 'Tileset::vVb': class 'std::vector<LPDIRECT3DVERTEXBUFFER9,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Tileset'
           with
           [
               _Ty=LPDIRECT3DVERTEXBUFFER9
           ]
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(23): note: vea la declaración de 'std::vector<LPDIRECT3DVERTEXBUFFER9,std::allocator<_Ty>>'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(23): note: vea la declaración de 'std::vector<LPDIRECT3DVERTEXBUFFER9,std::allocator<_Ty>>'
           with
           [
               _Ty=LPDIRECT3DVERTEXBUFFER9
           ]
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(24): warning C4251: 'Tileset::vIb': class 'std::vector<LPDIRECT3DINDEXBUFFER9,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Tileset'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(24): warning C4251: 'Tileset::vIb': class 'std::vector<LPDIRECT3DINDEXBUFFER9,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Tileset'
           with
           [
               _Ty=LPDIRECT3DINDEXBUFFER9
           ]
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(24): note: vea la declaración de 'std::vector<LPDIRECT3DINDEXBUFFER9,std::allocator<_Ty>>'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(24): note: vea la declaración de 'std::vector<LPDIRECT3DINDEXBUFFER9,std::allocator<_Ty>>'
           with
           [
               _Ty=LPDIRECT3DINDEXBUFFER9
           ]
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(25): warning C4251: 'Tileset::vertexes': class 'std::vector<Vertex,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Tileset'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(25): warning C4251: 'Tileset::vertexes': class 'std::vector<Vertex,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Tileset'
           with
           [
               _Ty=Vertex
           ]
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(28): note: vea la declaración de 'std::vector<Vertex,std::allocator<_Ty>>'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(28): note: vea la declaración de 'std::vector<Vertex,std::allocator<_Ty>>'
           with
           [
               _Ty=Vertex
           ]
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(26): warning C4251: 'Tileset::indexes': class 'std::vector<WORD,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Tileset'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(26): warning C4251: 'Tileset::indexes': class 'std::vector<WORD,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Tileset'
           with
           [
               _Ty=WORD
           ]
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(29): note: vea la declaración de 'std::vector<WORD,std::allocator<_Ty>>'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\mesh.h(29): note: vea la declaración de 'std::vector<WORD,std::allocator<_Ty>>'
           with
           [
               _Ty=WORD
           ]
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(28): warning C4251: 'Tileset::lasCajitas': class 'std::vector<std::vector<BoundingBox *,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Tileset'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(28): warning C4251: 'Tileset::lasCajitas': class 'std::vector<std::vector<BoundingBox *,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Tileset'
           with
           [
               _Ty=BoundingBox *
           ]
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(28): note: vea la declaración de 'std::vector<std::vector<BoundingBox *,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(28): note: vea la declaración de 'std::vector<std::vector<BoundingBox *,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>'
           with
           [
               _Ty=BoundingBox *
           ]
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(30): warning C4251: 'Tileset::vVertexes': class 'std::vector<std::vector<Vertex,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Tileset'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(30): warning C4251: 'Tileset::vVertexes': class 'std::vector<std::vector<Vertex,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Tileset'
           with
           [
               _Ty=Vertex
           ]
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(30): note: vea la declaración de 'std::vector<std::vector<Vertex,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(30): note: vea la declaración de 'std::vector<std::vector<Vertex,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>'
           with
           [
               _Ty=Vertex
           ]
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(31): warning C4251: 'Tileset::vIndexes': class 'std::vector<std::vector<WORD,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Tileset'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(31): warning C4251: 'Tileset::vIndexes': class 'std::vector<std::vector<WORD,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Tileset'
           with
           [
               _Ty=WORD
           ]
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(31): note: vea la declaración de 'std::vector<std::vector<WORD,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(31): note: vea la declaración de 'std::vector<std::vector<WORD,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>'
           with
           [
               _Ty=WORD
           ]
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(32): warning C4251: 'Tileset::vPositions': class 'std::vector<std::vector<D3DXVECTOR3,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Tileset'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(32): warning C4251: 'Tileset::vPositions': class 'std::vector<std::vector<D3DXVECTOR3,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Tileset'
           with
           [
               _Ty=D3DXVECTOR3
           ]
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(32): note: vea la declaración de 'std::vector<std::vector<D3DXVECTOR3,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(32): note: vea la declaración de 'std::vector<std::vector<D3DXVECTOR3,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>'
           with
           [
               _Ty=D3DXVECTOR3
           ]
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(33): warning C4251: 'Tileset::vNormals': class 'std::vector<std::vector<D3DXVECTOR3,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Tileset'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(33): warning C4251: 'Tileset::vNormals': class 'std::vector<std::vector<D3DXVECTOR3,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Tileset'
           with
           [
               _Ty=D3DXVECTOR3
           ]
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(32): note: vea la declaración de 'std::vector<std::vector<D3DXVECTOR3,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(32): note: vea la declaración de 'std::vector<std::vector<D3DXVECTOR3,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>'
           with
           [
               _Ty=D3DXVECTOR3
           ]
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(34): warning C4251: 'Tileset::vUvs': class 'std::vector<std::vector<D3DXVECTOR2,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Tileset'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(34): warning C4251: 'Tileset::vUvs': class 'std::vector<std::vector<D3DXVECTOR2,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Tileset'
           with
           [
               _Ty=D3DXVECTOR2
           ]
-  c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(34): note: vea la declaración de 'std::vector<std::vector<D3DXVECTOR2,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>'
+  c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\enginemm\tileset.h(34): note: vea la declaración de 'std::vector<std::vector<D3DXVECTOR2,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>'
           with
           [
               _Ty=D3DXVECTOR2
           ]
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(53): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(237): warning C4305: '+=': truncamiento de 'double' a 'float'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(241): warning C4305: '-=': truncamiento de 'double' a 'float'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(246): warning C4305: '-=': truncamiento de 'double' a 'float'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(250): warning C4305: '+=': truncamiento de 'double' a 'float'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(254): warning C4305: '-=': truncamiento de 'double' a 'float'
-c:\users\def\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(258): warning C4305: '+=': truncamiento de 'double' a 'float'
-  Generando código...
-  Omitiendo... (no se detectaron cambios relevantes)
-  Perseguidor.cpp
-  Jugador.cpp
-  Juego.cpp
-     Creando biblioteca C:\Users\def\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.lib y objeto C:\Users\def\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.exp
-  Juego.vcxproj -> C:\Users\def\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.exe
-  Juego.vcxproj -> C:\Users\def\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.pdb (Full PDB)
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(53): warning C4305: 'argumento': truncamiento de 'double' a 'FLOAT'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(245): warning C4305: '+=': truncamiento de 'double' a 'float'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(249): warning C4305: '-=': truncamiento de 'double' a 'float'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(254): warning C4305: '-=': truncamiento de 'double' a 'float'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(258): warning C4305: '+=': truncamiento de 'double' a 'float'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(262): warning C4305: '-=': truncamiento de 'double' a 'float'
+c:\users\administrador\desktop\enginemm-y-sumo-chocadores\sumochocadores\juego\sumoschocadoresplay.cpp(266): warning C4305: '+=': truncamiento de 'double' a 'float'
+  Juego.vcxproj -> C:\Users\Administrador\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Juego.exe
