@@ -26,6 +26,10 @@ private:
 	Textura* cosoTex2;
 	MeshRender* cosoRender2;
 	Composite*coso2;
+	Mesh* cosoMesh;
+	Textura* cosoTex;
+	MeshRender* cosoRender;
+	Composite*coso;
 	Composite* root;
 	SceneImporter* sceneImp;
 	Tileset* tileSet;

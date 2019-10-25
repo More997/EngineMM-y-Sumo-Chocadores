@@ -62,6 +62,17 @@ void SumosChocadoresPlay::Create()
 	coso2->setModelScale(1, 1, 1);
 	coso2->setVector(D3DXVECTOR3(numy, numx, numz+1));
 	cosoRender2->setCamera(camara);
+
+	coso = new Composite();
+	cosoMesh = new Mesh();
+	cosoMesh->Load3D("Sonic.obj");
+	cosoTex = new Textura(L"Sonic.png");
+	cosoRender = new MeshRender(cosoTex);
+	cosoRender->SetMesh(cosoMesh);
+	coso->Add(cosoRender);
+	coso->setModelScale(1, 1, 1);
+	coso->setVector(D3DXVECTOR3(numy, numx, numz + 1));
+	cosoRender->setCamera(camara);
 	
 	sceneImp = new SceneImporter();
 	root = new Composite();
@@ -158,19 +169,31 @@ void SumosChocadoresPlay::Update()
 {
 
 	camara->update();
-	//coso->setModelRotY(num);
-	//coso->setVector(coso->getVector());
-	//cosoRender->Blending(1);
-	//coso2->setVector(coso2->getVector());
-	//cosoRender2->Blending(1);
+	/*
+	coso->setModelRotY(num);
+	coso->setVector(coso->getVector());
+	cosoRender->Blending(1);
+	coso2->setVector(coso2->getVector());
+	cosoRender2->Blending(1);
+	*/
+
 
 	//Iluminado
-	/*
+	
+	coso->setModelRotX(2);
+	coso->setModelRotY(2);
+	coso->setModelRotZ(2);
+	coso->setModelScale(1, 1, 1);
+	coso->setModelPos(numx, numy, numz);
+	coso->Render();  
+
 	coso2->setModelRotX(0);
 	coso2->setModelRotY(0);
 	coso2->setModelRotZ(0);
 	coso2->setModelScale(1, 1, 1);
 	coso2->setModelPos(numx, numy, numz);
+	coso2->Render();
+	/*
 	D3DXHANDLE handling = shaderEffect->GetTechniqueByName("RedColor");
 	shaderEffect->SetTechnique(handling);
 	int passNum = 2;
@@ -195,7 +218,7 @@ void SumosChocadoresPlay::Update()
 	*/
 
 	//El resto
-
+	/*
 	enemigo->setModelPos(numx, numy, 10);
 	animacionEnemigo->Blending(2);
 	animacionEnemigo->UpdateAn(5);
@@ -203,7 +226,7 @@ void SumosChocadoresPlay::Update()
 	
 	tileRender->Render();
 	
-
+	*/
 	
 	
 	/*

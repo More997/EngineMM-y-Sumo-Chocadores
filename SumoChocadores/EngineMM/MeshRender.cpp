@@ -221,7 +221,7 @@ bool MeshRender::inFrustum()
 			((m_Frustrum[i].a * bb.xMin) + (m_Frustrum[i].b * bb.yMin) + (m_Frustrum[i].c * bb.zMax) + (m_Frustrum[i].d) < 0) &&
 			((m_Frustrum[i].a * bb.xMax) + (m_Frustrum[i].b * bb.yMin) + (m_Frustrum[i].c * bb.zMax) + (m_Frustrum[i].d) < 0))
 		{
-			game->getDev()->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_ARGB(0, 102, 0, 0), 1.0f, 0);
+			//game->getDev()->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_ARGB(0, 102, 0, 0), 1.0f, 0);
 			return false;
 		}
 		/*
@@ -260,7 +260,7 @@ bool MeshRender::inFrustum()
 		*/
 	}
 	
-	game->getDev()->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_ARGB(0, 0, 102, 0), 1.0f, 0);
+	//game->getDev()->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_ARGB(0, 0, 102, 0), 1.0f, 0);
 	return true;
 	}
 
