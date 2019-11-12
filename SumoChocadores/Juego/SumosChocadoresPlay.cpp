@@ -35,7 +35,7 @@ void SumosChocadoresPlay::Create()
 		D3DXSHADER_ENABLE_BACKWARDS_COMPATIBILITY,
 		NULL, &shaderEffect, NULL);
 
-	comCam = new Composite();
+	//comCam = new Composite();
 	gameInput = new Input();
 	reciverMap = gameInput->GetMap();
 	intVectorInputUp = &reciverMap["Up"];
@@ -46,7 +46,7 @@ void SumosChocadoresPlay::Create()
 	intVectorInputI = &reciverMap["I"];
 	camara = new Camera();
 	
-	comCam->Add(camara);
+	//comCam->Add(camara);
 	
 
 
@@ -62,7 +62,9 @@ void SumosChocadoresPlay::Create()
 	coso2->setModelScale(1, 1, 1);
 	coso2->setVector(D3DXVECTOR3(numy, numx, numz+1));
 	cosoRender2->setCamera(camara);
-
+	//cosoRender2->Blending(3);
+	//cosoRender2->Filtro(1);
+	//cosoRender2->Warping(1);
 	coso = new Composite();
 	cosoMesh = new Mesh();
 	cosoMesh->Load3D("Sonic.obj");
@@ -74,13 +76,13 @@ void SumosChocadoresPlay::Create()
 	coso->setVector(D3DXVECTOR3(numy, numx, numz + 1));
 	cosoRender->setCamera(camara);
 	
+	//Scene importer
 	sceneImp = new SceneImporter();
 	root = new Composite();
-	//root->setModelPos(-2, 0, 35);
+	root->setModelPos(-2, 0, 35);
 	
 	sceneImp->ImportScene("bspTest4.dae", root, camara);
 
-	
 
 	Vertex tileSetVertexes[] =
 	{
@@ -108,7 +110,6 @@ void SumosChocadoresPlay::Create()
 	//coso->Add(coso2);
 
 
-	cosoRender2->Blending(3);
 
 	enemigo = new Composite();
 	texEnemigo = new Textura(L"Sprite.png");
@@ -169,31 +170,24 @@ void SumosChocadoresPlay::Update()
 {
 
 	camara->update();
-	/*
-	coso->setModelRotY(num);
-	coso->setVector(coso->getVector());
-	cosoRender->Blending(1);
-	coso2->setVector(coso2->getVector());
-	cosoRender2->Blending(1);
-	*/
-
-
+	
+	//coso->setModelRotY(num);
+	//coso->setVector(coso->getVector());
+	//cosoRender->Blending(1);
+	//coso2->setVector(coso2->getVector());
+	//cosoRender2->Blending(1);
+	
+	//root->Render();
+	
 	//Iluminado
 	
-	coso->setModelRotX(2);
-	coso->setModelRotY(2);
-	coso->setModelRotZ(2);
-	coso->setModelScale(1, 1, 1);
-	coso->setModelPos(numx, numy, numz);
-	coso->Render();  
+	
+	
 
-	coso2->setModelRotX(0);
-	coso2->setModelRotY(0);
-	coso2->setModelRotZ(0);
-	coso2->setModelScale(1, 1, 1);
-	coso2->setModelPos(numx, numy, numz);
-	coso2->Render();
-	/*
+	//cosoRender2->Blending(3);
+	//coso2->Render();
+	
+	
 	D3DXHANDLE handling = shaderEffect->GetTechniqueByName("RedColor");
 	shaderEffect->SetTechnique(handling);
 	int passNum = 2;
@@ -210,12 +204,22 @@ void SumosChocadoresPlay::Update()
 	{
 		shaderEffect->BeginPass(pass);
 		game->getDev()->DrawIndexedPrimitive(D3DPT_TRIANGLELIST, 0, 0, 4, 0, 2);
-		coso2->Render();
 		shaderEffect->EndPass();
 
 	}
+	coso2->Render();
 	shaderEffect->End();
-	*/
+	
+
+
+
+	coso2->setModelRotX(0);
+	coso2->setModelRotY(0);
+	coso2->setModelRotZ(0);
+	coso2->setModelScale(1, 1, 1);
+	coso2->setModelPos(numx, numy, numz);
+
+
 
 	//El resto
 	/*
@@ -225,8 +229,8 @@ void SumosChocadoresPlay::Update()
 	enemigo->Render();
 	
 	tileRender->Render();
-	
 	*/
+	
 	
 	
 	/*
@@ -263,6 +267,7 @@ void SumosChocadoresPlay::Update()
 	if (gameover != true)
 	{
 	*/
+		
 		if (gameInput->GetKeyDown(intVectorInputUp))
 		{
 			numy += 0.01;
