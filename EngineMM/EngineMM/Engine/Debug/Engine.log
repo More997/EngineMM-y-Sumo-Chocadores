@@ -1,0 +1,115 @@
+﻿  Game.cpp
+c:\users\def\desktop\benjaengine - copy\project granada\engine\boundingbox.h(7): warning C4251: 'BoundingBox::vertexes': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'BoundingBox'
+  c:\users\def\desktop\benjaengine - copy\project granada\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\def\desktop\benjaengine - copy\project granada\engine\mesher.h(32): warning C4251: 'Mesher::vertexes': class 'std::vector<Vertex,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesher'
+          with
+          [
+              _Ty=Vertex
+          ]
+  c:\users\def\desktop\benjaengine - copy\project granada\engine\mesher.h(32): note: vea la declaración de 'std::vector<Vertex,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Vertex
+          ]
+c:\users\def\desktop\benjaengine - copy\project granada\engine\mesher.h(33): warning C4251: 'Mesher::indexesVector': class 'std::vector<WORD,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesher'
+          with
+          [
+              _Ty=WORD
+          ]
+  c:\users\def\desktop\benjaengine - copy\project granada\engine\mesher.h(33): note: vea la declaración de 'std::vector<WORD,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=WORD
+          ]
+c:\users\def\desktop\benjaengine - copy\project granada\engine\mesher.h(34): warning C4251: 'Mesher::positions': class 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesher'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+  c:\users\def\desktop\benjaengine - copy\project granada\engine\mesher.h(34): note: vea la declaración de 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+c:\users\def\desktop\benjaengine - copy\project granada\engine\mesher.h(35): warning C4251: 'Mesher::normals': class 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesher'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+  c:\users\def\desktop\benjaengine - copy\project granada\engine\mesher.h(34): note: vea la declaración de 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+c:\users\def\desktop\benjaengine - copy\project granada\engine\mesher.h(36): warning C4251: 'Mesher::uvs': class 'std::vector<D3DXVECTOR2,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Mesher'
+          with
+          [
+              _Ty=D3DXVECTOR2
+          ]
+  c:\users\def\desktop\benjaengine - copy\project granada\engine\mesher.h(36): note: vea la declaración de 'std::vector<D3DXVECTOR2,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR2
+          ]
+  c:\users\def\desktop\benjaengine - copy\project granada\dx\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+c:\users\def\desktop\benjaengine - copy\project granada\engine\input.h(19): warning C4251: 'Input::inputMap': class 'std::map<std::string,std::vector<int,std::allocator<_Ty>>,std::less<_Kty>,std::allocator<std::pair<const _Kty,std::vector<_Ty,std::allocator<_Ty>>>>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Input'
+          with
+          [
+              _Ty=int,
+              _Kty=std::string
+          ]
+  c:\users\def\desktop\benjaengine - copy\project granada\engine\input.h(19): note: vea la declaración de 'std::map<std::string,std::vector<int,std::allocator<_Ty>>,std::less<_Kty>,std::allocator<std::pair<const _Kty,std::vector<_Ty,std::allocator<_Ty>>>>>'
+          with
+          [
+              _Ty=int,
+              _Kty=std::string
+          ]
+c:\users\def\desktop\benjaengine - copy\project granada\engine\component.h(15): warning C4251: 'Component::translationVector': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\benjaengine - copy\project granada\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\def\desktop\benjaengine - copy\project granada\engine\component.h(16): warning C4251: 'Component::scaleVector': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\benjaengine - copy\project granada\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\def\desktop\benjaengine - copy\project granada\engine\component.h(17): warning C4251: 'Component::rotationVector': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\benjaengine - copy\project granada\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\def\desktop\benjaengine - copy\project granada\engine\component.h(18): warning C4251: 'Component::_translation': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\benjaengine - copy\project granada\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\benjaengine - copy\project granada\engine\component.h(19): warning C4251: 'Component::_scale': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\benjaengine - copy\project granada\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\benjaengine - copy\project granada\engine\component.h(20): warning C4251: 'Component::_rotation': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\benjaengine - copy\project granada\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\benjaengine - copy\project granada\engine\component.h(32): warning C4251: 'Component::_transformationMatrix': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Component'
+  c:\users\def\desktop\benjaengine - copy\project granada\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\benjaengine - copy\project granada\engine\composite.h(11): warning C4251: 'Composite::objectComponents': class 'std::vector<Component *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Composite'
+          with
+          [
+              _Ty=Component *
+          ]
+  c:\users\def\desktop\benjaengine - copy\project granada\engine\composite.h(11): note: vea la declaración de 'std::vector<Component *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Component *
+          ]
+c:\users\def\desktop\benjaengine - copy\project granada\engine\composite.h(12): warning C4251: 'Composite::name': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Composite'
+  e:\visual studio 2015\vc\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+c:\users\def\desktop\benjaengine - copy\project granada\engine\camera.h(8): warning C4251: 'Camera::view': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\def\desktop\benjaengine - copy\project granada\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\benjaengine - copy\project granada\engine\camera.h(9): warning C4251: 'Camera::projection': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\def\desktop\benjaengine - copy\project granada\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\def\desktop\benjaengine - copy\project granada\engine\game.cpp(8): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
+c:\users\def\desktop\benjaengine - copy\project granada\engine\sceneimporter.h(17): warning C4251: 'SceneImporter::importedObjectsToDraw': class 'std::list<Composite *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'SceneImporter'
+          with
+          [
+              _Ty=Composite *
+          ]
+  c:\users\def\desktop\benjaengine - copy\project granada\engine\sceneimporter.h(17): note: vea la declaración de 'std::list<Composite *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Composite *
+          ]
+  Engine.vcxproj -> C:\Users\def\Desktop\BenjaEngine - Copy\Project Granada\Debug\Engine.dll
+  Engine.vcxproj -> C:\Users\def\Desktop\BenjaEngine - Copy\Project Granada\Debug\Engine.pdb (Full PDB)
+  C:\Users\def\Desktop\BenjaEngine - Copy\Project Granada\Libraries\Assimp\bin\x86\assimp.exe
+  C:\Users\def\Desktop\BenjaEngine - Copy\Project Granada\Libraries\Assimp\bin\x86\Assimp32.dll
+  C:\Users\def\Desktop\BenjaEngine - Copy\Project Granada\Libraries\Assimp\bin\x86\assimp_view.exe
+  C:\Users\def\Desktop\BenjaEngine - Copy\Project Granada\Libraries\Assimp\bin\x86\D3DCompiler_42.dll
+  C:\Users\def\Desktop\BenjaEngine - Copy\Project Granada\Libraries\Assimp\bin\x86\D3DX9_42.dll
+          5 file(s) copied.
