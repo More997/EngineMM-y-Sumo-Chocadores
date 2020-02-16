@@ -1,0 +1,3 @@
+#pragma once
+//#define MYFVF ( D3DFVF_XYZ | D3DFVF_TEX1) //2D
+#define MYFVF ( D3DFVF_XYZ |D3DFVF_NORMAL| D3DFVF_TEX1) //3D

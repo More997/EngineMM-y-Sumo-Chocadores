@@ -1,0 +1,148 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: El directorio intermedio (Debug\) contiene archivos compartidos de otro proyecto (Granada.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
+  GameTest.cpp
+  c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\input.h(19): warning C4251: 'Input::inputMap': class 'std::map<std::string,std::vector<int,std::allocator<_Ty>> *,std::less<_Kty>,std::allocator<std::pair<const _Kty,std::vector<_Ty,std::allocator<_Ty>>*>>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Input'
+          with
+          [
+              _Ty=int,
+              _Kty=std::string
+          ]
+  c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\input.h(19): note: vea la declaración de 'std::map<std::string,std::vector<int,std::allocator<_Ty>> *,std::less<_Kty>,std::allocator<std::pair<const _Kty,std::vector<_Ty,std::allocator<_Ty>>*>>>'
+          with
+          [
+              _Ty=int,
+              _Kty=std::string
+          ]
+c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\boundingbox.h(9): warning C4251: 'BoundingBox::vertexes': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'BoundingBox'
+  c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\model.h(24): warning C4251: 'Model::positions': class 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Model'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+  c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\model.h(24): note: vea la declaración de 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\model.h(25): warning C4251: 'Model::normals': class 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Model'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+  c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\model.h(24): note: vea la declaración de 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\model.h(26): warning C4251: 'Model::uvs': class 'std::vector<D3DXVECTOR2,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Model'
+          with
+          [
+              _Ty=D3DXVECTOR2
+          ]
+  c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\model.h(26): note: vea la declaración de 'std::vector<D3DXVECTOR2,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR2
+          ]
+c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\model.h(30): warning C4251: 'Model::vertexes': class 'std::vector<Vertex,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Model'
+          with
+          [
+              _Ty=Vertex
+          ]
+  c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\model.h(30): note: vea la declaración de 'std::vector<Vertex,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Vertex
+          ]
+c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\model.h(31): warning C4251: 'Model::indexes': class 'std::vector<WORD,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Model'
+          with
+          [
+              _Ty=WORD
+          ]
+  c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\model.h(31): note: vea la declaración de 'std::vector<WORD,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=WORD
+          ]
+c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\composite.h(14): warning C4251: 'Composite::components': class 'std::vector<Component *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Composite'
+          with
+          [
+              _Ty=Component *
+          ]
+  c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\composite.h(14): note: vea la declaración de 'std::vector<Component *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Component *
+          ]
+c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\composite.h(15): warning C4251: 'Composite::name': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Composite'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xstring(4373): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\composite.h(16): warning C4251: 'Composite::childKeyName': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Composite'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xstring(4373): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\transform.h(8): warning C4251: 'Transform::_pos': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Transform'
+  c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\transform.h(9): warning C4251: 'Transform::_rot': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Transform'
+  c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\transform.h(10): warning C4251: 'Transform::_sca': struct 'D3DXVECTOR3' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Transform'
+  c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(162): note: vea la declaración de 'D3DXVECTOR3'
+c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\transform.h(11): warning C4251: 'Transform::localModelMatrix': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Transform'
+  c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\transform.h(12): warning C4251: 'Transform::worldMatrix': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Transform'
+  c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\camera.h(14): warning C4251: 'Camera::viewMatrix': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\camera.h(15): warning C4251: 'Camera::projMatrix': struct 'D3DXMATRIX' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Camera'
+  c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(312): note: vea la declaración de 'D3DXMATRIX'
+c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\bsp.h(11): warning C4251: 'BSP::allObjects': class 'std::list<Composite *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'BSP'
+          with
+          [
+              _Ty=Composite *
+          ]
+  c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\bsp.h(11): note: vea la declaración de 'std::list<Composite *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Composite *
+          ]
+c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\bsp.h(12): warning C4251: 'BSP::objectsToDraw': class 'std::list<Composite *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'BSP'
+          with
+          [
+              _Ty=Composite *
+          ]
+  c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\bsp.h(11): note: vea la declaración de 'std::list<Composite *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Composite *
+          ]
+c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\bsp.h(13): warning C4251: 'BSP::BSPplanes': class 'std::vector<D3DXPLANE *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'BSP'
+          with
+          [
+              _Ty=D3DXPLANE *
+          ]
+  c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\bsp.h(13): note: vea la declaración de 'std::vector<D3DXPLANE *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXPLANE *
+          ]
+c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\bsp.h(15): warning C4251: 'BSP::planos': class 'std::vector<Composite *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'BSP'
+          with
+          [
+              _Ty=Composite *
+          ]
+  c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\bsp.h(15): note: vea la declaración de 'std::vector<Composite *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Composite *
+          ]
+c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\meshrenderer.h(19): warning C4251: 'MeshRenderer::_posUV': struct 'D3DXVECTOR2' necesita tener una interfaz DLL para que la utilicen los clientes de class 'MeshRenderer'
+  c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\dx\include\d3dx9math.h(87): note: vea la declaración de 'D3DXVECTOR2'
+c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\game.h(31): warning C4251: 'Game::objectsToDraw': class 'std::list<Composite *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Game'
+          with
+          [
+              _Ty=Composite *
+          ]
+  c:\users\benja\desktop\enginemm-y-sumo-chocadores\sumochocadores\engine\bsp.h(11): note: vea la declaración de 'std::list<Composite *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Composite *
+          ]
+  Game.vcxproj -> C:\Users\Benja\Desktop\EngineMM-y-Sumo-Chocadores\SumoChocadores\Debug\Games.exe
