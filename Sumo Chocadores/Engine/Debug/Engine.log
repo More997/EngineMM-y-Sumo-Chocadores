@@ -1,0 +1,277 @@
+﻿  BSP.cpp
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\boundingbox.h(9): warning C4251: 'BoundingBox::vertexes': struct 'D3DXVECTOR3' needs to have dll-interface to be used by clients of class 'BoundingBox'
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\dx\include\d3dx9math.h(162): note: see declaration of 'D3DXVECTOR3'
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\model.h(24): warning C4251: 'Model::positions': class 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Model'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\model.h(24): note: see declaration of 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\model.h(25): warning C4251: 'Model::normals': class 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Model'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\model.h(24): note: see declaration of 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\model.h(26): warning C4251: 'Model::uvs': class 'std::vector<D3DXVECTOR2,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Model'
+          with
+          [
+              _Ty=D3DXVECTOR2
+          ]
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\model.h(26): note: see declaration of 'std::vector<D3DXVECTOR2,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR2
+          ]
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\model.h(30): warning C4251: 'Model::vertexes': class 'std::vector<Vertex,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Model'
+          with
+          [
+              _Ty=Vertex
+          ]
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\model.h(30): note: see declaration of 'std::vector<Vertex,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Vertex
+          ]
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\model.h(31): warning C4251: 'Model::indexes': class 'std::vector<WORD,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Model'
+          with
+          [
+              _Ty=WORD
+          ]
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\model.h(31): note: see declaration of 'std::vector<WORD,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=WORD
+          ]
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\transform.h(8): warning C4251: 'Transform::_pos': struct 'D3DXVECTOR3' needs to have dll-interface to be used by clients of class 'Transform'
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\dx\include\d3dx9math.h(162): note: see declaration of 'D3DXVECTOR3'
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\transform.h(9): warning C4251: 'Transform::_rot': struct 'D3DXVECTOR3' needs to have dll-interface to be used by clients of class 'Transform'
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\dx\include\d3dx9math.h(162): note: see declaration of 'D3DXVECTOR3'
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\transform.h(10): warning C4251: 'Transform::_sca': struct 'D3DXVECTOR3' needs to have dll-interface to be used by clients of class 'Transform'
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\dx\include\d3dx9math.h(162): note: see declaration of 'D3DXVECTOR3'
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\transform.h(11): warning C4251: 'Transform::localModelMatrix': struct 'D3DXMATRIX' needs to have dll-interface to be used by clients of class 'Transform'
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\dx\include\d3dx9math.h(312): note: see declaration of 'D3DXMATRIX'
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\transform.h(12): warning C4251: 'Transform::worldMatrix': struct 'D3DXMATRIX' needs to have dll-interface to be used by clients of class 'Transform'
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\dx\include\d3dx9math.h(312): note: see declaration of 'D3DXMATRIX'
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\composite.h(14): warning C4251: 'Composite::components': class 'std::vector<Component *,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Composite'
+          with
+          [
+              _Ty=Component *
+          ]
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\composite.h(14): note: see declaration of 'std::vector<Component *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Component *
+          ]
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\composite.h(15): warning C4251: 'Composite::name': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Composite'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\xstring(4373): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\composite.h(16): warning C4251: 'Composite::childKeyName': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Composite'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\xstring(4373): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\bsp.h(11): warning C4251: 'BSP::allObjects': class 'std::list<Composite *,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'BSP'
+          with
+          [
+              _Ty=Composite *
+          ]
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\bsp.h(11): note: see declaration of 'std::list<Composite *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Composite *
+          ]
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\bsp.h(12): warning C4251: 'BSP::objectsToDraw': class 'std::list<Composite *,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'BSP'
+          with
+          [
+              _Ty=Composite *
+          ]
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\bsp.h(11): note: see declaration of 'std::list<Composite *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Composite *
+          ]
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\bsp.h(13): warning C4251: 'BSP::BSPplanes': class 'std::vector<D3DXPLANE *,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'BSP'
+          with
+          [
+              _Ty=D3DXPLANE *
+          ]
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\bsp.h(13): note: see declaration of 'std::vector<D3DXPLANE *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXPLANE *
+          ]
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\bsp.h(16): warning C4251: 'BSP::planos': class 'std::vector<Composite *,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'BSP'
+          with
+          [
+              _Ty=Composite *
+          ]
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\bsp.h(16): note: see declaration of 'std::vector<Composite *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Composite *
+          ]
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\meshrenderer.h(19): warning C4251: 'MeshRenderer::_posUV': struct 'D3DXVECTOR2' needs to have dll-interface to be used by clients of class 'MeshRenderer'
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\dx\include\d3dx9math.h(87): note: see declaration of 'D3DXVECTOR2'
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\bsp.cpp(10): warning C4018: '<': signed/unsigned mismatch
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\bsp.cpp(108): warning C4018: '>=': signed/unsigned mismatch
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\bsp.cpp(117): warning C4018: '<': signed/unsigned mismatch
+  GameTest.cpp
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\dx\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\input.h(19): warning C4251: 'Input::inputMap': class 'std::map<std::string,std::vector<int,std::allocator<_Ty>> *,std::less<_Kty>,std::allocator<std::pair<const _Kty,std::vector<_Ty,std::allocator<_Ty>>*>>>' needs to have dll-interface to be used by clients of class 'Input'
+          with
+          [
+              _Ty=int,
+              _Kty=std::string
+          ]
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\input.h(19): note: see declaration of 'std::map<std::string,std::vector<int,std::allocator<_Ty>> *,std::less<_Kty>,std::allocator<std::pair<const _Kty,std::vector<_Ty,std::allocator<_Ty>>*>>>'
+          with
+          [
+              _Ty=int,
+              _Kty=std::string
+          ]
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\boundingbox.h(9): warning C4251: 'BoundingBox::vertexes': struct 'D3DXVECTOR3' needs to have dll-interface to be used by clients of class 'BoundingBox'
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\dx\include\d3dx9math.h(162): note: see declaration of 'D3DXVECTOR3'
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\model.h(24): warning C4251: 'Model::positions': class 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Model'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\model.h(24): note: see declaration of 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\model.h(25): warning C4251: 'Model::normals': class 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Model'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\model.h(24): note: see declaration of 'std::vector<D3DXVECTOR3,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR3
+          ]
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\model.h(26): warning C4251: 'Model::uvs': class 'std::vector<D3DXVECTOR2,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Model'
+          with
+          [
+              _Ty=D3DXVECTOR2
+          ]
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\model.h(26): note: see declaration of 'std::vector<D3DXVECTOR2,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXVECTOR2
+          ]
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\model.h(30): warning C4251: 'Model::vertexes': class 'std::vector<Vertex,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Model'
+          with
+          [
+              _Ty=Vertex
+          ]
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\model.h(30): note: see declaration of 'std::vector<Vertex,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Vertex
+          ]
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\model.h(31): warning C4251: 'Model::indexes': class 'std::vector<WORD,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Model'
+          with
+          [
+              _Ty=WORD
+          ]
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\model.h(31): note: see declaration of 'std::vector<WORD,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=WORD
+          ]
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\composite.h(14): warning C4251: 'Composite::components': class 'std::vector<Component *,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Composite'
+          with
+          [
+              _Ty=Component *
+          ]
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\composite.h(14): note: see declaration of 'std::vector<Component *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Component *
+          ]
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\composite.h(15): warning C4251: 'Composite::name': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Composite'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\xstring(4373): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\composite.h(16): warning C4251: 'Composite::childKeyName': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Composite'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\xstring(4373): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\transform.h(8): warning C4251: 'Transform::_pos': struct 'D3DXVECTOR3' needs to have dll-interface to be used by clients of class 'Transform'
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\dx\include\d3dx9math.h(162): note: see declaration of 'D3DXVECTOR3'
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\transform.h(9): warning C4251: 'Transform::_rot': struct 'D3DXVECTOR3' needs to have dll-interface to be used by clients of class 'Transform'
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\dx\include\d3dx9math.h(162): note: see declaration of 'D3DXVECTOR3'
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\transform.h(10): warning C4251: 'Transform::_sca': struct 'D3DXVECTOR3' needs to have dll-interface to be used by clients of class 'Transform'
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\dx\include\d3dx9math.h(162): note: see declaration of 'D3DXVECTOR3'
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\transform.h(11): warning C4251: 'Transform::localModelMatrix': struct 'D3DXMATRIX' needs to have dll-interface to be used by clients of class 'Transform'
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\dx\include\d3dx9math.h(312): note: see declaration of 'D3DXMATRIX'
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\transform.h(12): warning C4251: 'Transform::worldMatrix': struct 'D3DXMATRIX' needs to have dll-interface to be used by clients of class 'Transform'
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\dx\include\d3dx9math.h(312): note: see declaration of 'D3DXMATRIX'
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\camera.h(14): warning C4251: 'Camera::viewMatrix': struct 'D3DXMATRIX' needs to have dll-interface to be used by clients of class 'Camera'
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\dx\include\d3dx9math.h(312): note: see declaration of 'D3DXMATRIX'
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\camera.h(15): warning C4251: 'Camera::projMatrix': struct 'D3DXMATRIX' needs to have dll-interface to be used by clients of class 'Camera'
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\dx\include\d3dx9math.h(312): note: see declaration of 'D3DXMATRIX'
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\bsp.h(11): warning C4251: 'BSP::allObjects': class 'std::list<Composite *,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'BSP'
+          with
+          [
+              _Ty=Composite *
+          ]
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\bsp.h(11): note: see declaration of 'std::list<Composite *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Composite *
+          ]
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\bsp.h(12): warning C4251: 'BSP::objectsToDraw': class 'std::list<Composite *,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'BSP'
+          with
+          [
+              _Ty=Composite *
+          ]
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\bsp.h(11): note: see declaration of 'std::list<Composite *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Composite *
+          ]
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\bsp.h(13): warning C4251: 'BSP::BSPplanes': class 'std::vector<D3DXPLANE *,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'BSP'
+          with
+          [
+              _Ty=D3DXPLANE *
+          ]
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\bsp.h(13): note: see declaration of 'std::vector<D3DXPLANE *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=D3DXPLANE *
+          ]
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\bsp.h(16): warning C4251: 'BSP::planos': class 'std::vector<Composite *,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'BSP'
+          with
+          [
+              _Ty=Composite *
+          ]
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\bsp.h(16): note: see declaration of 'std::vector<Composite *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Composite *
+          ]
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\meshrenderer.h(19): warning C4251: 'MeshRenderer::_posUV': struct 'D3DXVECTOR2' needs to have dll-interface to be used by clients of class 'MeshRenderer'
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\dx\include\d3dx9math.h(87): note: see declaration of 'D3DXVECTOR2'
+c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\gametest.h(31): warning C4251: 'GameTest::objectsToDraw': class 'std::list<Composite *,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'GameTest'
+          with
+          [
+              _Ty=Composite *
+          ]
+  c:\users\def\desktop\accesos\enginemm-y-sumo-chocadores\sumo chocadores\engine\bsp.h(11): note: see declaration of 'std::list<Composite *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Composite *
+          ]
+  Generating Code...
+     Creating library C:\Users\def\Desktop\Accesos\EngineMM-y-Sumo-Chocadores\Sumo Chocadores\Debug\EngineMM.lib and object C:\Users\def\Desktop\Accesos\EngineMM-y-Sumo-Chocadores\Sumo Chocadores\Debug\EngineMM.exp
+  Engine.vcxproj -> C:\Users\def\Desktop\Accesos\EngineMM-y-Sumo-Chocadores\Sumo Chocadores\Debug\EngineMM.dll
+  C:\Users\def\Desktop\Accesos\EngineMM-y-Sumo-Chocadores\Sumo Chocadores\Libraries\Assimp\bin\x86\assimp.exe
+  C:\Users\def\Desktop\Accesos\EngineMM-y-Sumo-Chocadores\Sumo Chocadores\Libraries\Assimp\bin\x86\Assimp32.dll
+  C:\Users\def\Desktop\Accesos\EngineMM-y-Sumo-Chocadores\Sumo Chocadores\Libraries\Assimp\bin\x86\assimp_view.exe
+  C:\Users\def\Desktop\Accesos\EngineMM-y-Sumo-Chocadores\Sumo Chocadores\Libraries\Assimp\bin\x86\D3DCompiler_42.dll
+  C:\Users\def\Desktop\Accesos\EngineMM-y-Sumo-Chocadores\Sumo Chocadores\Libraries\Assimp\bin\x86\D3DX9_42.dll
+          5 file(s) copied.
